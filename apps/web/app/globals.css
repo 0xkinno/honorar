@@ -529,7 +529,7 @@ textarea {
   }
 
   .app-shell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .sidebar {
@@ -559,5 +559,87 @@ textarea {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo span {
+    display: none;
+  }
+
+  .nav-item {
+    padding: 8px 8px;
+    font-size: 13px;
+  }
+
+  .nav-links .hide-xs {
+    display: none;
+  }
+
+  .nav {
+    padding-left: 8px;
+  }
+}
+
+.card {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.wrap > *,
+.app-main > * {
+  min-width: 0;
+}
+
+.hero-scene {
+  position: absolute;
+  inset: 0 0 0 36%;
+  z-index: 0;
+}
+
+.hero-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 38%, rgba(245, 242, 252, 0.7) 50%, rgba(245, 242, 252, 0) 70%);
+}
+
+.marquee {
+  overflow: hidden;
+  margin: 8px 16px;
+  border-block: 1px solid var(--line);
+  padding: 14px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  color: var(--ink-2);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-scene {
+    inset: auto 0 0 0;
+    height: 46%;
+  }
+
+  .hero-fade {
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper) 52%, rgba(245, 242, 252, 0) 78%);
+  }
+
+  .hero-card {
+    min-height: 920px;
   }
 }

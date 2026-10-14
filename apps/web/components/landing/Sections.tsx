@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState, type CSSProperties } from 'react';
 import { AGENT_URL, type Stats } from '@/lib/api';
 import { CountUp, GlowCard, Reveal, StickyStage, Words } from '../motion';
-import { HeroObject } from '../HeroObject';
+import { HeroScene } from '../HeroScene';
 
 export type FeaturedProps = {
   sentence: string;
@@ -43,6 +43,8 @@ export function Hero({ questions, featured }: { questions: string[]; featured: F
   const live = (stats?.strikes ?? 0) > 0;
   return (
     <section className="hero-card" id="product">
+      <HeroScene />
+      <div className="hero-fade" />
       <div className="hero-grid">
         <div>
           <p className="kicker">
@@ -73,7 +75,7 @@ export function Hero({ questions, featured }: { questions: string[]; featured: F
             ))}
           </div>
         </div>
-        <HeroObject />
+        <div />
       </div>
       <div className="ticker" aria-live="polite">
         {featured

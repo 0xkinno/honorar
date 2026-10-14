@@ -29,7 +29,7 @@ export default function ProofPage() {
   return (
     <>
       <Nav />
-      <main className="wrap page-pad" style={{ display: 'grid', gap: 24 }}>
+      <main className="wrap page-pad" style={{ display: 'grid', gap: 24, gridTemplateColumns: 'minmax(0, 1fr)' }}>
         <header>
           <p className="kicker">Proof</p>
           <h1 className="h2" style={{ margin: '8px 0' }}>

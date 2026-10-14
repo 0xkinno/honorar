@@ -1,0 +1,17 @@
+{
+  "chainId": 5042,
+  "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+  "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+  "treasury": "0x61633ad4E068355Ea45a4787150aB69aDF5aE682",
+  "agent": "0x85D786C256d1924aa56b4CFD41904042513dC943",
+  "owner": "0x61633ad4E068355Ea45a4787150aB69aDF5aE682",
+  "registryTx": "0x9890c1b4edf5172461f1dc7c1f674f36ca8bb60e84ba6a1cd53bab8d63a21e72",
+  "ledgerTx": "0xd93371c890023e129efbc58261c9f9f86bc64e2cda016258492103fe7995f808",
+  "block": 25917108,
+  "deployedAt": "2026-10-14T11:46:13.201Z",
+  "compiler": {
+    "solc": "0.8.28",
+    "optimizerRuns": 200,
+    "evmVersion": "cancun"
+  }
+}

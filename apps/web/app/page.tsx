@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { Nav } from '@/components/Nav';
+import { Bento, Marquee, Story } from '@/components/landing/Extras';
 import { Audience, Close, Decides, Follow, Hero, HowItPays, Problem, ProofStrip, TwoClocks, type ProofTile } from '@/components/landing/Sections';
 import { benchmark, breakResults, deployment, discoveryE1, featured, testCounts } from '@/lib/evidence';
 
@@ -37,6 +38,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero questions={questions()} featured={f} />
+        <Marquee />
+        <Bento />
         <Follow f={f} />
         <Problem
           bench={b ? { misdirectedPct: Object.fromEntries(Object.entries(b.arms).map(([k, v]) => [k, v.misdirectedPct])), questions: b.questions } : null}
@@ -46,6 +49,7 @@ export default function Home() {
         <TwoClocks medianSeconds={median} />
         <Decides />
         <ProofStrip tiles={tiles} />
+        <Story />
         <Audience />
         <Close />
       </main>
