@@ -1,0 +1,20 @@
+{
+  "id": "CONTROL",
+  "attack": "Untouched clean answer",
+  "targets": [
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "I5",
+    "I6",
+    "I7",
+    "I8"
+  ],
+  "expected": "passes every check",
+  "observed": "V1:PASS V2:PASS V3:PASS V4:PASS V5:PASS V6:PASS V7:PASS V8:PASS V9:UNKNOWN",
+  "verdict": "PASSED_CONTROL",
+  "env": "verifier",
+  "ranAt": "2026-10-14T10:55:33.045Z",
+  "commit": "65294ae313308af610b00ea2b3bb2d9ad3d4a87d"
+}

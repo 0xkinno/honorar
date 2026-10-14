@@ -1,0 +1,13 @@
+{
+  "id": "B8",
+  "attack": "Seller drops the connection after the agent signed",
+  "targets": [
+    "I11"
+  ],
+  "expected": "no retry, UNCONFIRMED, resolved by searchTransfers, paid once",
+  "observed": "requires mainnet run (E4)",
+  "verdict": "FAILED",
+  "env": "mainnet",
+  "ranAt": "2026-10-14T10:55:34.756Z",
+  "commit": "65294ae313308af610b00ea2b3bb2d9ad3d4a87d"
+}

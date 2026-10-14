@@ -1,0 +1,31 @@
+{
+  "name": "@honorar/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@circle-fin/x402-batching": "3.5.0",
+    "@hono/node-server": "1.19.5",
+    "@honorar/chain": "workspace:*",
+    "@honorar/kernel": "workspace:*",
+    "@honorar/verifier": "workspace:*",
+    "@x402/core": "2.3.0",
+    "@x402/evm": "2.3.0",
+    "hono": "4.9.9",
+    "pg": "8.16.3",
+    "viem": "2.57.6",
+    "zod": "4.1.11"
+  },
+  "devDependencies": {
+    "@types/pg": "8.15.5",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  }
+}

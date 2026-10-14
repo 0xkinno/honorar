@@ -1,0 +1,13 @@
+{
+  "id": "B10",
+  "attack": "Operator inflates frontedReadingFees or edits transfer ids",
+  "targets": [
+    "I8"
+  ],
+  "expected": "verifier V6/V8 FAIL",
+  "observed": "fronted: FAIL; ids: FAIL",
+  "verdict": "REJECTED",
+  "env": "verifier",
+  "ranAt": "2026-10-14T10:55:33.043Z",
+  "commit": "65294ae313308af610b00ea2b3bb2d9ad3d4a87d"
+}

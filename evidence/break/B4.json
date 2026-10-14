@@ -1,0 +1,13 @@
+{
+  "id": "B4",
+  "attack": "Agent retries a strike after a timeout",
+  "targets": [
+    "I4"
+  ],
+  "expected": "second strike reverts (AlreadyStruck)",
+  "observed": "forge test_I4_duplicate_answer_reverts: Success",
+  "verdict": "REJECTED",
+  "env": "foundry",
+  "ranAt": "2026-10-14T10:55:34.756Z",
+  "commit": "65294ae313308af610b00ea2b3bb2d9ad3d4a87d"
+}

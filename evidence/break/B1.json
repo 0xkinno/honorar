@@ -1,0 +1,13 @@
+{
+  "id": "B1",
+  "attack": "Model cites a sentence that is not in the source",
+  "targets": [
+    "I1"
+  ],
+  "expected": "REFUSED_NOT_IN_SOURCE, unpaid",
+  "observed": "REFUSED_NOT_IN_SOURCE, leaves=0",
+  "verdict": "REJECTED",
+  "env": "kernel",
+  "ranAt": "2026-10-14T10:55:33.029Z",
+  "commit": "65294ae313308af610b00ea2b3bb2d9ad3d4a87d"
+}

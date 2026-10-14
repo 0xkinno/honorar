@@ -1,0 +1,55 @@
+{
+  "total": 12,
+  "passed": 11,
+  "failed": 1,
+  "ids": [
+    {
+      "id": "B1",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B2",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B3",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B7",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B9",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B10",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "CONTROL",
+      "verdict": "PASSED_CONTROL"
+    },
+    {
+      "id": "B4",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B5",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B6",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B11",
+      "verdict": "REJECTED"
+    },
+    {
+      "id": "B8",
+      "verdict": "FAILED"
+    }
+  ]
+}
