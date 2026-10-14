@@ -3,8 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useAccount } from 'wagmi';
 import { AGENT_URL, clockLabel, getJson, type TransferView } from '@/lib/api';
-import { useFetch } from '@/lib/hooks';
+import { parseAbiItem } from 'viem';
+import { arcClient, useFetch } from '@/lib/hooks';
 import { Notice, PageHead, Skeleton, TxLink, usdc } from '@/components/ui';
+
+const registered = parseAbiItem('event WorkRegistered(bytes32 indexed workId, bytes32 contentHash, address indexed registrant, string uri)');
+const quoteStruck = parseAbiItem('event QuoteStruck(bytes32 indexed answerId, bytes32 indexed workId, bytes32 spanHash, uint64 amount)');
 
 type Quote = { workId: string; spanHash: string; amount: bigint; answerId: string; txHash: string; block: bigint };
 
@@ -18,9 +22,39 @@ export default function EarningsPage() {
   useEffect(() => {
     if (!address) return;
     let live = true;
-    getJson<{ answerId: string; workId: string; spanHash: string; amount: string; txHash: string; block: number }[]>(`/quotes?writer=${address}`)
-      .then((rows) => live && setQuotes(rows.map((r) => ({ workId: r.workId, spanHash: r.spanHash, amount: BigInt(r.amount), answerId: r.answerId, txHash: r.txHash, block: BigInt(r.block) }))))
-      .catch((e: unknown) => live && setErr((e as Error).message));
+    type Row = { answerId: string; workId: string; spanHash: string; amount: string; txHash: string; block: number };
+    const fromRows = (rows: Row[]): Quote[] => rows.map((r) => ({ workId: r.workId, spanHash: r.spanHash, amount: BigInt(r.amount), answerId: r.answerId, txHash: r.txHash, block: BigInt(r.block) }));
+    const viaChain = async (): Promise<Quote[]> => {
+      const cfg = await getJson<{ registry: string; ledger: string; deployBlock: number | null }>('/config');
+      const c = arcClient();
+      const latest = await c.getBlockNumber();
+      const STEP = 4_900n;
+      const ranges: [bigint, bigint][] = [];
+      for (let lo = BigInt(cfg.deployBlock ?? 0); lo <= latest; lo += STEP) ranges.push([lo, lo + STEP - 1n > latest ? latest : lo + STEP - 1n]);
+      const ids: `0x${string}`[] = [];
+      for (let i = 0; i < ranges.length; i += 6) {
+        const part = await Promise.all(
+          ranges.slice(i, i + 6).map(([lo, hi]) => c.getLogs({ address: cfg.registry as `0x${string}`, event: registered, args: { registrant: address }, fromBlock: lo, toBlock: hi })),
+        );
+        for (const logs of part) ids.push(...logs.map((l) => l.args.workId as `0x${string}`));
+      }
+      if (ids.length === 0) return [];
+      const out: Quote[] = [];
+      for (let i = 0; i < ranges.length; i += 6) {
+        const part = await Promise.all(
+          ranges.slice(i, i + 6).map(([lo, hi]) => c.getLogs({ address: cfg.ledger as `0x${string}`, event: quoteStruck, args: { workId: ids }, fromBlock: lo, toBlock: hi })),
+        );
+        for (const logs of part) {
+          for (const l of logs) {
+            out.push({ workId: l.args.workId as string, spanHash: l.args.spanHash as string, amount: l.args.amount as bigint, answerId: l.args.answerId as string, txHash: l.transactionHash, block: l.blockNumber });
+          }
+        }
+      }
+      return out;
+    };
+    getJson<Row[]>(`/quotes?writer=${address}`)
+      .then((rows) => live && setQuotes(fromRows(rows)))
+      .catch(() => viaChain().then((q) => live && setQuotes(q)).catch((e: unknown) => live && setErr((e as Error).message)));
     return () => {
       live = false;
     };
