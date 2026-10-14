@@ -1,0 +1,165 @@
+{
+  "createdBeforeResults": true,
+  "questions": [
+    {
+      "id": 1,
+      "text": "How do stablecoins settle payments faster than card networks?"
+    },
+    {
+      "id": 2,
+      "text": "Why do stablecoin payments clear on weekends?"
+    },
+    {
+      "id": 3,
+      "text": "What is the difference between a stablecoin and a bank deposit?"
+    },
+    {
+      "id": 4,
+      "text": "How does a USDC transfer differ from a wire transfer?"
+    },
+    {
+      "id": 5,
+      "text": "What risks come with algorithmic stablecoins?"
+    },
+    {
+      "id": 6,
+      "text": "Why do some stablecoins lose their peg?"
+    },
+    {
+      "id": 7,
+      "text": "How are fees paid on a chain where gas is denominated in dollars?"
+    },
+    {
+      "id": 8,
+      "text": "What does deterministic finality mean for a payment?"
+    },
+    {
+      "id": 9,
+      "text": "How do nanopayments make sub-cent pricing possible?"
+    },
+    {
+      "id": 10,
+      "text": "Why are micropayments hard on traditional rails?"
+    },
+    {
+      "id": 11,
+      "text": "What is x402 and what problem does it address?"
+    },
+    {
+      "id": 12,
+      "text": "How can an AI agent pay for an API call on its own?"
+    },
+    {
+      "id": 13,
+      "text": "What does it mean to batch many small payments into one settlement?"
+    },
+    {
+      "id": 14,
+      "text": "Why does netting hide individual payments from a public ledger?"
+    },
+    {
+      "id": 15,
+      "text": "How do writers get paid when AI systems read their work?"
+    },
+    {
+      "id": 16,
+      "text": "Why is a citation not proof that a source was used?"
+    },
+    {
+      "id": 17,
+      "text": "What makes a quotation verifiable?"
+    },
+    {
+      "id": 18,
+      "text": "How can a payment be tied to the exact sentence that earned it?"
+    },
+    {
+      "id": 19,
+      "text": "What is a Merkle tree and why commit its root on chain?"
+    },
+    {
+      "id": 20,
+      "text": "Why should a smart contract never hold user funds in transit?"
+    },
+    {
+      "id": 21,
+      "text": "What are spending caps and why do agents need them?"
+    },
+    {
+      "id": 22,
+      "text": "How does a mandate limit what an agent can spend?"
+    },
+    {
+      "id": 23,
+      "text": "What is prompt injection and how does it affect citation systems?"
+    },
+    {
+      "id": 24,
+      "text": "Why should a model never decide an amount to pay?"
+    },
+    {
+      "id": 25,
+      "text": "How do creators price per-read access to their writing?"
+    },
+    {
+      "id": 26,
+      "text": "What is the case for per-stream royalties over subscriptions?"
+    },
+    {
+      "id": 27,
+      "text": "How do co-authors split revenue on chain?"
+    },
+    {
+      "id": 28,
+      "text": "What happens to a payment when a work is edited after it was priced?"
+    },
+    {
+      "id": 29,
+      "text": "How can anyone verify a payout without trusting the operator?"
+    },
+    {
+      "id": 30,
+      "text": "What is an on-chain identity for an AI agent?"
+    },
+    {
+      "id": 31,
+      "text": "How does reputation for agents work on chain?"
+    },
+    {
+      "id": 32,
+      "text": "Why do exchanges and issuers blocklist some addresses?"
+    },
+    {
+      "id": 33,
+      "text": "How do cross-chain USDC transfers work?"
+    },
+    {
+      "id": 34,
+      "text": "What is the role of a treasury fee in a protocol?"
+    },
+    {
+      "id": 35,
+      "text": "Why is exactly-once payment hard when networks fail?"
+    },
+    {
+      "id": 36,
+      "text": "What should an agent do when a signed payment gets no reply?"
+    },
+    {
+      "id": 37,
+      "text": "How do readers evaluate whether an AI answer is grounded?"
+    },
+    {
+      "id": 38,
+      "text": "What does it cost to settle one answer on a dollar-gas chain?"
+    },
+    {
+      "id": 39,
+      "text": "Why do publishers block AI crawlers?"
+    },
+    {
+      "id": 40,
+      "text": "How could licensing work for text that machines read at scale?"
+    }
+  ]
+}
