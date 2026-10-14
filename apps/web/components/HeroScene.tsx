@@ -70,7 +70,7 @@ export function HeroScene() {
 
   return (
     <div ref={ref} className="hero-scene" aria-hidden="true">
-      <svg viewBox="0 0 1200 760" preserveAspectRatio="xMaxYMid slice" width="100%" height="100%">
+      <svg viewBox="300 0 900 760" preserveAspectRatio="xMidYMax meet" width="100%" height="100%">
         <defs>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#E9E0FF" />

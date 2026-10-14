@@ -28,249 +28,326 @@
       - /url: /app/ask
   - main [ref=e22]:
     - generic [ref=e23]:
-      - generic [ref=e24]:
-        - generic [ref=e25]:
-          - paragraph [ref=e26]: Live on Arc mainnet
-          - heading "EVERY QUOTE earns A FEE." [level=1] [ref=e28]:
-            - generic "EVERY QUOTE earns" [ref=e29]:
-              - generic [ref=e30]: EVERY
-              - generic [ref=e31]: QUOTE
-              - emphasis [ref=e33]: earns
-            - generic "A FEE." [ref=e34]:
-              - generic [ref=e35]: A
-              - generic [ref=e36]: FEE.
-          - paragraph [ref=e37]: Honorar pays writers every time an AI quotes them, and shows them the exact sentence that earned it. Per-stream royalties, for the words AI reads. Settled in USDC on Arc.
-          - generic [ref=e38]:
-            - link "Ask without a wallet" [ref=e39] [cursor=pointer]:
-              - /url: /app/ask
-            - link "Follow one sentence" [ref=e40] [cursor=pointer]:
-              - /url: "#follow"
-          - generic [ref=e41]:
-            - link "How do stablecoins settle payments faster than card networks?" [ref=e42] [cursor=pointer]:
-              - /url: /app/ask?q=How%20do%20stablecoins%20settle%20payments%20faster%20than%20card%20networks%3F
-            - link "Why do stablecoin payments clear on weekends?" [ref=e43] [cursor=pointer]:
-              - /url: /app/ask?q=Why%20do%20stablecoin%20payments%20clear%20on%20weekends%3F
-            - link "What is the difference between a stablecoin and a bank deposit?" [ref=e44] [cursor=pointer]:
-              - /url: /app/ask?q=What%20is%20the%20difference%20between%20a%20stablecoin%20and%20a%20bank%20deposit%3F
-            - link "How does a USDC transfer differ from a wire transfer?" [ref=e45] [cursor=pointer]:
-              - /url: /app/ask?q=How%20does%20a%20USDC%20transfer%20differ%20from%20a%20wire%20transfer%3F
-        - img "An arc of light carries a quoted sentence from manuscript pages into a coin" [ref=e47]:
-          - generic [ref=e82]: “”
-          - generic [ref=e85]: “”
-          - generic [ref=e88]: “”
-      - generic [ref=e89]: Waiting for the first strike on Arc mainnet
-    - generic [ref=e93]:
-      - generic [ref=e94]:
-        - paragraph [ref=e95]: 01 · Follow one sentence
-        - heading "One sentence, paid." [level=2] [ref=e96]:
+      - img [ref=e25]:
+        - generic [ref=e67]: HONORAR
+        - generic [ref=e191]:
+          - generic [ref=e196]: “”
+          - generic [ref=e199]: “”
+          - generic [ref=e202]: “”
+          - generic [ref=e205]: “”
+        - generic [ref=e206]:
+          - generic [ref=e222]:
+            - generic [ref=e226]: Struck · final
+            - generic [ref=e227]: 0.004 USDC
+          - generic [ref=e228]:
+            - generic [ref=e231]: In the source ✓
+            - generic [ref=e232]: In the answer ✓
+          - generic [ref=e233]:
+            - generic [ref=e235]: REFUSED_NOT_IN_SOURCE
+            - generic [ref=e236]: unpaid, shown
+      - generic [ref=e238]:
+        - paragraph [ref=e239]: Live on Arc mainnet
+        - heading "EVERY QUOTE earns A FEE." [level=1] [ref=e241]:
+          - generic "EVERY QUOTE earns" [ref=e242]:
+            - generic [ref=e243]: EVERY
+            - generic [ref=e244]: QUOTE
+            - emphasis [ref=e246]: earns
+          - generic "A FEE." [ref=e247]:
+            - generic [ref=e248]: A
+            - generic [ref=e249]: FEE.
+        - paragraph [ref=e250]: Honorar pays writers every time an AI quotes them, and shows them the exact sentence that earned it. Per-stream royalties, for the words AI reads. Settled in USDC on Arc.
+        - generic [ref=e251]:
+          - link "Ask without a wallet" [ref=e252] [cursor=pointer]:
+            - /url: /app/ask
+          - link "Follow one sentence" [ref=e253] [cursor=pointer]:
+            - /url: "#follow"
+        - generic [ref=e254]:
+          - link "How do stablecoins settle payments faster than card networks?" [ref=e255] [cursor=pointer]:
+            - /url: /app/ask?q=How%20do%20stablecoins%20settle%20payments%20faster%20than%20card%20networks%3F
+          - link "Why do stablecoin payments clear on weekends?" [ref=e256] [cursor=pointer]:
+            - /url: /app/ask?q=Why%20do%20stablecoin%20payments%20clear%20on%20weekends%3F
+          - link "What is the difference between a stablecoin and a bank deposit?" [ref=e257] [cursor=pointer]:
+            - /url: /app/ask?q=What%20is%20the%20difference%20between%20a%20stablecoin%20and%20a%20bank%20deposit%3F
+          - link "How does a USDC transfer differ from a wire transfer?" [ref=e258] [cursor=pointer]:
+            - /url: /app/ask?q=How%20does%20a%20USDC%20transfer%20differ%20from%20a%20wire%20transfer%3F
+      - generic [ref=e259]: Waiting for the first strike on Arc mainnet
+    - generic [ref=e261]:
+      - generic [ref=e262]: Arc mainnet
+      - generic [ref=e264]: Circle Gateway nanopayments
+      - generic [ref=e266]: USDC gas
+      - generic [ref=e268]: ERC-8004 identity
+      - generic [ref=e270]: Merkle roots on chain
+      - generic [ref=e272]: Offline verifier
+      - generic [ref=e274]: x402
+      - generic [ref=e276]: Deterministic finality
+      - generic [ref=e278]: Arc mainnet
+      - generic [ref=e280]: Circle Gateway nanopayments
+      - generic [ref=e282]: USDC gas
+      - generic [ref=e284]: ERC-8004 identity
+      - generic [ref=e286]: Merkle roots on chain
+      - generic [ref=e288]: Offline verifier
+      - generic [ref=e290]: x402
+      - generic [ref=e292]: Deterministic finality
+    - generic [ref=e294]:
+      - generic [ref=e295]:
+        - paragraph [ref=e296]: What is inside
+        - heading "A press house for machine readers." [level=2] [ref=e297]:
+          - text: A press house for
+          - generic [ref=e298]: machine readers.
+      - generic [ref=e299]:
+        - generic [ref=e301]:
+          - img [ref=e302]
+          - heading "Per sentence, not per site" [level=3] [ref=e308]
+          - paragraph [ref=e309]: Each verified quote earns its own honorarium, priced by the writer on chain.
+        - generic [ref=e311]:
+          - img [ref=e312]
+          - heading "Exact-span receipts" [level=3] [ref=e317]
+          - paragraph [ref=e318]: The earnings page shows the sentence, the answer it went into and the transaction.
+        - generic [ref=e320]:
+          - img [ref=e321]
+          - heading "Kernel, not vibes" [level=3] [ref=e327]
+          - paragraph [ref=e328]: A quote is paid only if it is in the source and in the answer. Paraphrase is refused.
+        - generic [ref=e330]:
+          - img [ref=e331]
+          - heading "One root per answer" [level=3] [ref=e339]
+          - paragraph [ref=e340]: Leaves fold into a Merkle root committed in the same transaction that pays.
+        - generic [ref=e342]:
+          - img [ref=e343]
+          - heading "Un-netted reading fees" [level=3] [ref=e349]
+          - paragraph [ref=e350]: Gateway batches hide individual payments. The reconciler pulls each one back out.
+        - generic [ref=e352]:
+          - img [ref=e353]
+          - heading "No custody" [level=3] [ref=e359]
+          - paragraph [ref=e360]: The ledger never holds money. A reader mandate caps every answer and every day.
+    - generic [ref=e364]:
+      - generic [ref=e365]:
+        - paragraph [ref=e366]: 01 · Follow one sentence
+        - heading "One sentence, paid." [level=2] [ref=e367]:
           - text: One sentence,
-          - generic [ref=e97]: paid.
-        - list [ref=e98]:
-          - listitem [ref=e99]:
-            - generic [ref=e100]: "01"
+          - generic [ref=e368]: paid.
+        - list [ref=e369]:
+          - listitem [ref=e370]:
+            - generic [ref=e371]: "01"
             - text: Written
-          - listitem [ref=e101]:
-            - generic [ref=e102]: "02"
+          - listitem [ref=e372]:
+            - generic [ref=e373]: "02"
             - text: Read
-          - listitem [ref=e103]:
-            - generic [ref=e104]: "03"
+          - listitem [ref=e374]:
+            - generic [ref=e375]: "03"
             - text: Quoted
-          - listitem [ref=e105]:
-            - generic [ref=e106]: "04"
+          - listitem [ref=e376]:
+            - generic [ref=e377]: "04"
             - text: Checked
-          - listitem [ref=e107]:
-            - generic [ref=e108]: "05"
+          - listitem [ref=e378]:
+            - generic [ref=e379]: "05"
             - text: Struck
-          - listitem [ref=e109]:
-            - generic [ref=e110]: "06"
+          - listitem [ref=e380]:
+            - generic [ref=e381]: "06"
             - text: Netted, then un-netted
-          - listitem [ref=e111]:
-            - generic [ref=e112]: "07"
+          - listitem [ref=e382]:
+            - generic [ref=e383]: "07"
             - text: Paid, provably
-      - generic [ref=e114]:
-        - generic [ref=e115]:
-          - paragraph [ref=e116]: Beat 1 of 7
-          - heading "Written" [level=3] [ref=e117]
-          - paragraph [ref=e118]: A writer registers an article once. Its content hash is committed on Arc.
-          - generic [ref=e120]: This beat fills from the first mainnet answer
-        - generic [ref=e121]:
-          - paragraph [ref=e122]: Beat 2 of 7
-          - heading "Read" [level=3] [ref=e123]
-          - paragraph [ref=e124]: "An agent opens the page. A reading fee starts its clock: Authorized."
-          - generic [ref=e126]: This beat fills from the first mainnet answer
-        - generic [ref=e127]:
-          - paragraph [ref=e128]: Beat 3 of 7
-          - heading "Quoted" [level=3] [ref=e129]
-          - paragraph [ref=e130]: The sentence is lifted into an answer, inside quotation marks.
-          - generic [ref=e132]: This beat fills from the first mainnet answer
-        - generic [ref=e133]:
-          - paragraph [ref=e134]: Beat 4 of 7
-          - heading "Checked" [level=3] [ref=e135]
-          - paragraph [ref=e136]: "In the source. In the answer. A fabricated citation is stopped: REFUSED_NOT_IN_SOURCE."
-          - generic [ref=e138]: This beat fills from the first mainnet answer
-        - generic [ref=e139]:
-          - paragraph [ref=e140]: Beat 5 of 7
-          - heading "Struck" [level=3] [ref=e141]
-          - paragraph [ref=e142]: The verified sentence becomes a Merkle leaf. The root and the payment land in one transaction.
-          - generic [ref=e144]: This beat fills from the first mainnet answer
-        - generic [ref=e145]:
-          - paragraph [ref=e146]: Beat 6 of 7
-          - heading "Netted, then un-netted" [level=3] [ref=e147]
-          - paragraph [ref=e148]: "The reading fee joins a batch of other payers. The reconciler pulls it back out: Batched, Confirmed, Settled."
-          - generic [ref=e150]: This beat fills from the first mainnet answer
-        - generic [ref=e151]:
-          - paragraph [ref=e152]: Beat 7 of 7
-          - heading "Paid, provably" [level=3] [ref=e153]
-          - paragraph [ref=e154]: The earnings card names the sentence, the answer, the transaction. Anyone can verify it.
-          - generic [ref=e156]: This beat fills from the first mainnet answer
-    - generic [ref=e157]:
-      - generic [ref=e158]:
-        - paragraph [ref=e159]: 02 · The problem, measured
-        - heading "A citation is a claim. A payment should be proof." [level=2] [ref=e160]:
+      - generic [ref=e385]:
+        - generic [ref=e386]:
+          - paragraph [ref=e387]: Beat 1 of 7
+          - heading "Written" [level=3] [ref=e388]
+          - paragraph [ref=e389]: A writer registers an article once. Its content hash is committed on Arc.
+          - generic [ref=e391]: This beat fills from the first mainnet answer
+        - generic [ref=e392]:
+          - paragraph [ref=e393]: Beat 2 of 7
+          - heading "Read" [level=3] [ref=e394]
+          - paragraph [ref=e395]: "An agent opens the page. A reading fee starts its clock: Authorized."
+          - generic [ref=e397]: This beat fills from the first mainnet answer
+        - generic [ref=e398]:
+          - paragraph [ref=e399]: Beat 3 of 7
+          - heading "Quoted" [level=3] [ref=e400]
+          - paragraph [ref=e401]: The sentence is lifted into an answer, inside quotation marks.
+          - generic [ref=e403]: This beat fills from the first mainnet answer
+        - generic [ref=e404]:
+          - paragraph [ref=e405]: Beat 4 of 7
+          - heading "Checked" [level=3] [ref=e406]
+          - paragraph [ref=e407]: "In the source. In the answer. A fabricated citation is stopped: REFUSED_NOT_IN_SOURCE."
+          - generic [ref=e409]: This beat fills from the first mainnet answer
+        - generic [ref=e410]:
+          - paragraph [ref=e411]: Beat 5 of 7
+          - heading "Struck" [level=3] [ref=e412]
+          - paragraph [ref=e413]: The verified sentence becomes a Merkle leaf. The root and the payment land in one transaction.
+          - generic [ref=e415]: This beat fills from the first mainnet answer
+        - generic [ref=e416]:
+          - paragraph [ref=e417]: Beat 6 of 7
+          - heading "Netted, then un-netted" [level=3] [ref=e418]
+          - paragraph [ref=e419]: "The reading fee joins a batch of other payers. The reconciler pulls it back out: Batched, Confirmed, Settled."
+          - generic [ref=e421]: This beat fills from the first mainnet answer
+        - generic [ref=e422]:
+          - paragraph [ref=e423]: Beat 7 of 7
+          - heading "Paid, provably" [level=3] [ref=e424]
+          - paragraph [ref=e425]: The earnings card names the sentence, the answer, the transaction. Anyone can verify it.
+          - generic [ref=e427]: This beat fills from the first mainnet answer
+    - generic [ref=e428]:
+      - generic [ref=e429]:
+        - paragraph [ref=e430]: 02 · The problem, measured
+        - heading "A citation is a claim. A payment should be proof." [level=2] [ref=e431]:
           - text: A citation is a claim. A payment should be
-          - generic [ref=e161]: proof.
-      - generic [ref=e162]:
-        - generic [ref=e164]:
-          - paragraph [ref=e167]: Money misdirected by model self-citation
-          - generic [ref=e168]: benchmark pending
-        - generic [ref=e170]:
-          - paragraph [ref=e173]: Money misdirected by Honorar verified quotes
-          - generic [ref=e174]: benchmark pending
-        - generic [ref=e176]:
-          - paragraph [ref=e179]: Median seconds from authorization to settled
-          - generic [ref=e180]: measurement pending
-    - generic [ref=e181]:
-      - paragraph [ref=e182]: 03 · How it pays
-      - heading "Four moves, one receipt." [level=2] [ref=e183]:
+          - generic [ref=e432]: proof.
+      - generic [ref=e433]:
+        - generic [ref=e435]:
+          - paragraph [ref=e438]: Money misdirected by model self-citation
+          - generic [ref=e439]: benchmark pending
+        - generic [ref=e441]:
+          - paragraph [ref=e444]: Money misdirected by Honorar verified quotes
+          - generic [ref=e445]: benchmark pending
+        - generic [ref=e447]:
+          - paragraph [ref=e450]: Median seconds from authorization to settled
+          - generic [ref=e451]: measurement pending
+    - generic [ref=e452]:
+      - paragraph [ref=e453]: 03 · How it pays
+      - heading "Four moves, one receipt." [level=2] [ref=e454]:
         - text: Four moves,
-        - generic [ref=e184]: one
+        - generic [ref=e455]: one
         - text: receipt.
-      - generic [ref=e186]:
-        - generic [ref=e187]:
-          - generic [ref=e188]: "01"
-          - heading "Register" [level=3] [ref=e189]
-        - paragraph [ref=e190]: A writer signs one transaction. The content hash, price per read and price per quote live on Arc.
-      - generic [ref=e192]:
-        - generic [ref=e193]:
-          - generic [ref=e194]: "02"
-          - heading "Read" [level=3] [ref=e195]
-        - paragraph [ref=e196]: Every source an agent opens is a real nanopayment through Circle Gateway, capped and pinned to the registered payee.
-      - generic [ref=e198]:
-        - generic [ref=e199]:
-          - generic [ref=e200]: "03"
-          - heading "Quote" [level=3] [ref=e201]
-        - paragraph [ref=e202]: The model proposes citations. The kernel keeps only sentences that are in the source and in the answer.
-      - generic [ref=e204]:
-        - generic [ref=e205]:
-          - generic [ref=e206]: "04"
-          - heading "Strike" [level=3] [ref=e207]
-        - paragraph [ref=e208]: One transaction commits the Merkle root and pays writers, the protocol fee and the reading fees fronted.
-    - generic [ref=e211]:
-      - paragraph [ref=e212]: 04 · Two clocks
-      - heading "Final now. Final later." [level=2] [ref=e213]:
+      - generic [ref=e457]:
+        - generic [ref=e458]:
+          - generic [ref=e459]: "01"
+          - heading "Register" [level=3] [ref=e460]
+        - paragraph [ref=e461]: A writer signs one transaction. The content hash, price per read and price per quote live on Arc.
+      - generic [ref=e463]:
+        - generic [ref=e464]:
+          - generic [ref=e465]: "02"
+          - heading "Read" [level=3] [ref=e466]
+        - paragraph [ref=e467]: Every source an agent opens is a real nanopayment through Circle Gateway, capped and pinned to the registered payee.
+      - generic [ref=e469]:
+        - generic [ref=e470]:
+          - generic [ref=e471]: "03"
+          - heading "Quote" [level=3] [ref=e472]
+        - paragraph [ref=e473]: The model proposes citations. The kernel keeps only sentences that are in the source and in the answer.
+      - generic [ref=e475]:
+        - generic [ref=e476]:
+          - generic [ref=e477]: "04"
+          - heading "Strike" [level=3] [ref=e478]
+        - paragraph [ref=e479]: One transaction commits the Merkle root and pays writers, the protocol fee and the reading fees fronted.
+    - generic [ref=e482]:
+      - paragraph [ref=e483]: 04 · Two clocks
+      - heading "Final now. Final later." [level=2] [ref=e484]:
         - text: Final now. Final
-        - generic [ref=e214]: later.
-      - generic [ref=e215]:
-        - generic [ref=e216]:
-          - paragraph [ref=e217]: Honorarium
-          - generic [ref=e219]: Struck · final in one block
-        - generic [ref=e220]:
-          - paragraph [ref=e221]: Reading fee
-          - generic [ref=e223]:
-            - generic [ref=e224]: Authorized
-            - generic [ref=e225]: Batched
-            - generic [ref=e226]: Confirmed
-            - generic [ref=e227]: Settled on Arc
-          - paragraph [ref=e228]: timing pending measurement
-    - generic [ref=e229]:
-      - paragraph [ref=e230]: 05 · What may decide what
-      - heading "The model proposes. Code decides." [level=2] [ref=e231]:
+        - generic [ref=e485]: later.
+      - generic [ref=e486]:
+        - generic [ref=e487]:
+          - paragraph [ref=e488]: Honorarium
+          - generic [ref=e490]: Struck · final in one block
+        - generic [ref=e491]:
+          - paragraph [ref=e492]: Reading fee
+          - generic [ref=e494]:
+            - generic [ref=e495]: Authorized
+            - generic [ref=e496]: Batched
+            - generic [ref=e497]: Confirmed
+            - generic [ref=e498]: Settled on Arc
+          - paragraph [ref=e499]: timing pending measurement
+    - generic [ref=e500]:
+      - paragraph [ref=e501]: 05 · What may decide what
+      - heading "The model proposes. Code decides." [level=2] [ref=e502]:
         - text: The model proposes. Code
-        - generic [ref=e232]: decides.
-      - generic [ref=e233]:
-        - generic [ref=e235]:
-          - heading "Model" [level=3] [ref=e236]
-          - paragraph [ref=e237]: Proposes who to credit. Never an amount, an address or a price.
-          - generic [ref=e238]: I10
-        - generic [ref=e240]:
-          - heading "Kernel" [level=3] [ref=e241]
-          - paragraph [ref=e242]: Keeps only quotes that are in the source and in the answer. Adds the ones the model missed.
-          - generic [ref=e243]: I1 I2 I3
-        - generic [ref=e245]:
-          - heading "Ledger" [level=3] [ref=e246]
-          - paragraph [ref=e247]: Takes prices from the registry, enforces mandate caps and once-only strikes, holds no money.
-          - generic [ref=e248]: I4 I5 I6 I7
-        - generic [ref=e250]:
-          - heading "Arc" [level=3] [ref=e251]
-          - paragraph [ref=e252]: Decides what happened. Reading fees are un-netted from Gateway batches and reconciled.
-          - generic [ref=e253]: I8 I9
-    - generic [ref=e254]:
-      - paragraph [ref=e255]: 06 · Proof, live
-      - heading "Counted from the chain and from files." [level=2] [ref=e256]:
+        - generic [ref=e503]: decides.
+      - generic [ref=e504]:
+        - generic [ref=e506]:
+          - heading "Model" [level=3] [ref=e507]
+          - paragraph [ref=e508]: Proposes who to credit. Never an amount, an address or a price.
+          - generic [ref=e509]: I10
+        - generic [ref=e511]:
+          - heading "Kernel" [level=3] [ref=e512]
+          - paragraph [ref=e513]: Keeps only quotes that are in the source and in the answer. Adds the ones the model missed.
+          - generic [ref=e514]: I1 I2 I3
+        - generic [ref=e516]:
+          - heading "Ledger" [level=3] [ref=e517]
+          - paragraph [ref=e518]: Takes prices from the registry, enforces mandate caps and once-only strikes, holds no money.
+          - generic [ref=e519]: I4 I5 I6 I7
+        - generic [ref=e521]:
+          - heading "Arc" [level=3] [ref=e522]
+          - paragraph [ref=e523]: Decides what happened. Reading fees are un-netted from Gateway batches and reconciled.
+          - generic [ref=e524]: I8 I9
+    - generic [ref=e525]:
+      - paragraph [ref=e526]: 06 · Proof, live
+      - heading "Counted from the chain and from files." [level=2] [ref=e527]:
         - text: Counted from the chain and from
-        - generic [ref=e257]: files.
-      - generic [ref=e258]:
-        - link "0/12 Break campaign passed" [ref=e259] [cursor=pointer]:
+        - generic [ref=e528]: files.
+      - generic [ref=e529]:
+        - link "0/12 Break campaign passed" [ref=e530] [cursor=pointer]:
           - /url: /proof#break
-          - generic [ref=e260] [cursor=pointer]:
-            - generic [ref=e262] [cursor=pointer]: 0/12
-            - generic [ref=e263] [cursor=pointer]: Break campaign passed
-        - link "0 Named invariants" [ref=e264] [cursor=pointer]:
+          - generic [ref=e531] [cursor=pointer]:
+            - generic [ref=e533] [cursor=pointer]: 0/12
+            - generic [ref=e534] [cursor=pointer]: Break campaign passed
+        - link "0 Named invariants" [ref=e535] [cursor=pointer]:
           - /url: /proof#invariants
-          - generic [ref=e265] [cursor=pointer]:
-            - generic [ref=e267] [cursor=pointer]: "0"
-            - generic [ref=e268] [cursor=pointer]: Named invariants
-        - link "pending Tests passing" [ref=e269] [cursor=pointer]:
+          - generic [ref=e536] [cursor=pointer]:
+            - generic [ref=e538] [cursor=pointer]: "0"
+            - generic [ref=e539] [cursor=pointer]: Named invariants
+        - link "0 Tests passing" [ref=e540] [cursor=pointer]:
           - /url: /proof#tests
-          - generic [ref=e270] [cursor=pointer]:
-            - generic [ref=e272] [cursor=pointer]: pending
-            - generic [ref=e273] [cursor=pointer]: Tests passing
-        - link "pending Contracts verified" [ref=e274] [cursor=pointer]:
+          - generic [ref=e541] [cursor=pointer]:
+            - generic [ref=e543] [cursor=pointer]: "0"
+            - generic [ref=e544] [cursor=pointer]: Tests passing
+        - link "0 Contracts verified" [ref=e545] [cursor=pointer]:
           - /url: /proof#contracts
-          - generic [ref=e275] [cursor=pointer]:
-            - generic [ref=e277] [cursor=pointer]: pending
-            - generic [ref=e278] [cursor=pointer]: Contracts verified
-        - link "pending Benchmark questions" [ref=e279] [cursor=pointer]:
+          - generic [ref=e546] [cursor=pointer]:
+            - generic [ref=e548] [cursor=pointer]: "0"
+            - generic [ref=e549] [cursor=pointer]: Contracts verified
+        - link "pending Benchmark questions" [ref=e550] [cursor=pointer]:
           - /url: /proof#benchmark
-          - generic [ref=e280] [cursor=pointer]:
-            - generic [ref=e282] [cursor=pointer]: pending
-            - generic [ref=e283] [cursor=pointer]: Benchmark questions
-        - link "pending Discovery experiments" [ref=e284] [cursor=pointer]:
+          - generic [ref=e551] [cursor=pointer]:
+            - generic [ref=e553] [cursor=pointer]: pending
+            - generic [ref=e554] [cursor=pointer]: Benchmark questions
+        - link "pending Discovery experiments" [ref=e555] [cursor=pointer]:
           - /url: /proof#discovery
-          - generic [ref=e285] [cursor=pointer]:
-            - generic [ref=e287] [cursor=pointer]: pending
-            - generic [ref=e288] [cursor=pointer]: Discovery experiments
-    - generic [ref=e289]:
-      - paragraph [ref=e290]: 07 · For writers, for agents
-      - generic [ref=e291]:
-        - generic [ref=e292]:
-          - heading "Register a work" [level=3] [ref=e293]
-          - paragraph [ref=e294]: Paste a URL, set two prices, sign once. Your Earnings page shows each sentence and each transaction.
-          - link "Open the library" [ref=e295] [cursor=pointer]:
+          - generic [ref=e556] [cursor=pointer]:
+            - generic [ref=e558] [cursor=pointer]: pending
+            - generic [ref=e559] [cursor=pointer]: Discovery experiments
+    - generic [ref=e562]:
+      - generic [ref=e563]:
+        - paragraph [ref=e564]: The writer
+        - heading "Ifeoma, Lagos. Read daily. Paid never." [level=2] [ref=e565]:
+          - text: Ifeoma, Lagos.
+          - generic [ref=e566]: Read daily. Paid never.
+        - paragraph [ref=e567]: She writes deep explainers on stablecoins. Assistants clearly read her, she sees her phrasing in their answers, and she has no way to prove which sentences they used. With Honorar she registers once, and every quote shows up with its sentence and its transaction.
+      - generic [ref=e568]:
+        - generic [ref=e569]:
+          - generic [ref=e570]: "01"
+          - generic [ref=e571]: Writes once, registers with her wallet
+        - generic [ref=e572]:
+          - generic [ref=e573]: "02"
+          - generic [ref=e574]: "Agents open her article: a reading fee"
+        - generic [ref=e575]:
+          - generic [ref=e576]: "03"
+          - generic [ref=e577]: "An answer quotes her: an honorarium, with a receipt"
+    - generic [ref=e578]:
+      - paragraph [ref=e579]: 07 · For writers, for agents
+      - generic [ref=e580]:
+        - generic [ref=e581]:
+          - heading "Register a work" [level=3] [ref=e582]
+          - paragraph [ref=e583]: Paste a URL, set two prices, sign once. Your Earnings page shows each sentence and each transaction.
+          - link "Open the library" [ref=e584] [cursor=pointer]:
             - /url: /app/library
-        - generic [ref=e296]:
-          - heading "Pay writers from your agent" [level=3] [ref=e297]
-          - paragraph [ref=e298]: Use the public API, set a hard on-chain cap, and let anyone verify the receipts.
-          - link "Verify an answer" [ref=e299] [cursor=pointer]:
+        - generic [ref=e585]:
+          - heading "Pay writers from your agent" [level=3] [ref=e586]
+          - paragraph [ref=e587]: Use the public API, set a hard on-chain cap, and let anyone verify the receipts.
+          - link "Verify an answer" [ref=e588] [cursor=pointer]:
             - /url: /verify
-    - generic [ref=e301]:
-      - heading "Honorar pays writers every time an AI quotes them." [level=2] [ref=e302]:
+    - generic [ref=e590]:
+      - heading "Honorar pays writers every time an AI quotes them." [level=2] [ref=e591]:
         - text: Honorar pays writers every time an AI
-        - emphasis [ref=e303]: quotes
+        - emphasis [ref=e592]: quotes
         - text: them.
-      - paragraph [ref=e304]: The model proposed. The kernel decided. Arc settled.
-      - generic [ref=e305]:
-        - link "Ask without a wallet" [ref=e306] [cursor=pointer]:
+      - paragraph [ref=e593]: The model proposed. The kernel decided. Arc settled.
+      - generic [ref=e594]:
+        - link "Ask without a wallet" [ref=e595] [cursor=pointer]:
           - /url: /app/ask
-        - link "Verify an answer" [ref=e307] [cursor=pointer]:
+        - link "Verify an answer" [ref=e596] [cursor=pointer]:
           - /url: /verify
-      - generic [ref=e308]:
-        - link "Proof" [ref=e309] [cursor=pointer]:
+      - generic [ref=e597]:
+        - link "Proof" [ref=e598] [cursor=pointer]:
           - /url: /proof
-        - link "Ledger" [ref=e310] [cursor=pointer]:
+        - link "Ledger" [ref=e599] [cursor=pointer]:
           - /url: /app/ledger
-        - link "Credits" [ref=e311] [cursor=pointer]:
+        - link "Credits" [ref=e600] [cursor=pointer]:
           - /url: /credits
-        - generic [ref=e312]: Built by 0xkinno
-  - alert [ref=e313]
+        - generic [ref=e601]: Built by 0xkinno
+  - alert [ref=e602]
 ```

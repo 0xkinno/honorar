@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-14T11:45:02.983Z",
+  "ranAt": "2026-10-14T12:21:32.153Z",
   "results": [
     {
       "viewport": "iphone-se",
@@ -8,7 +8,7 @@
       "h1s": 1,
       "overlaps": 0,
       "heroClear": true,
-      "stickyOk": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -96,7 +96,7 @@
       "h1s": 1,
       "overlaps": 0,
       "heroClear": true,
-      "stickyOk": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -108,7 +108,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -184,7 +184,7 @@
       "h1s": 1,
       "overlaps": 0,
       "heroClear": true,
-      "stickyOk": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -272,7 +272,7 @@
       "h1s": 1,
       "overlaps": 0,
       "heroClear": true,
-      "stickyOk": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -360,7 +360,7 @@
       "h1s": 1,
       "overlaps": 0,
       "heroClear": true,
-      "stickyOk": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -447,8 +447,8 @@
       "noHScroll": true,
       "h1s": 1,
       "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": false,
+      "heroClear": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -535,8 +535,8 @@
       "noHScroll": true,
       "h1s": 1,
       "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": false,
+      "heroClear": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -623,8 +623,8 @@
       "noHScroll": true,
       "h1s": 1,
       "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": false,
+      "heroClear": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },
@@ -711,8 +711,8 @@
       "noHScroll": true,
       "h1s": 1,
       "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": false,
+      "heroClear": false,
+      "stickyOk": true,
       "consoleErrors": 1,
       "failedRequests": 0
     },

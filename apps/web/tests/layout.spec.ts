@@ -77,12 +77,13 @@ for (const vp of VIEWPORTS) {
         let stickyOk = true;
         if (route === '/') {
           for (let step = 1; step <= 10; step++) {
-            const ok = await page.evaluate((s) => {
+            const ok = await page.evaluate(async (s) => {
               const el = document.querySelector('#follow section') as HTMLElement | null;
               if (!el) return true;
               const total = el.offsetHeight - window.innerHeight;
               const top = el.getBoundingClientRect().top + window.scrollY;
-              window.scrollTo(0, top + (total * s) / 10);
+              window.scrollTo({ top: top + (total * s) / 10, behavior: 'instant' });
+              await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
               const stage = el.querySelector('.sticky-stage')?.firstElementChild as HTMLElement | null;
               if (!stage) return true;
               const r = stage.getBoundingClientRect();
@@ -91,7 +92,7 @@ for (const vp of VIEWPORTS) {
             if (!ok) stickyOk = false;
             await page.waitForTimeout(80);
           }
-          await page.evaluate(() => window.scrollTo(0, 0));
+          await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
         }
 
         mkdirSync(qaDir, { recursive: true });

@@ -77,9 +77,9 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [x] wallet integration, disconnect power button
 
 ## P10 Phase Q: QA  [GATE Q]
-- [ ] Playwright matrix on 9 viewports
+- [x] Playwright matrix on 9 viewports
 - [ ] Lighthouse and contrast
-- [ ] evidence/qa.json
+- [x] evidence/qa.json
 
 ## P11 Phase R: docs  [GATE R]
 - [x] README per 19.1
