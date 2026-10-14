@@ -13,8 +13,10 @@ const schema = z.object({
   LLM_BASE_URL: z.string().url().optional(),
   LLM_API_KEY: z.string().optional(),
   LLM_MODEL_MAIN: z.string().default('main'),
+  LLM_SECOND_BASE_URL: z.string().url().optional(),
+  LLM_SECOND_API_KEY: z.string().optional(),
   LLM_MODEL_SECOND: z.string().optional(),
-  DATABASE_URL: z.string().optional(),
+  DATABASE_URL: z.string().optional().transform((v) => (v ? v : undefined)),
   DATA_DIR: z.string().default('.data'),
   READING_BUDGET_USDC6: z.coerce.bigint().default(5000n),
   MAX_SOURCES: z.coerce.number().default(3),
@@ -37,5 +39,6 @@ export function loadEnvFile(path: string): Record<string, string> {
 
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
   const file = loadEnvFile('../../.env.local');
+  for (const k of Object.keys(file)) if (file[k] === '') delete file[k];
   return schema.parse({ ...file, ...env });
 }

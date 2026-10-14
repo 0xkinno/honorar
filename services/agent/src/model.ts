@@ -13,22 +13,31 @@ export interface Model {
 type ChatConfig = { baseUrl: string; apiKey: string; model: string };
 
 async function chat(cfg: ChatConfig, system: string, user: string): Promise<string> {
-  const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/chat/completions`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', authorization: `Bearer ${cfg.apiKey}` },
-    body: JSON.stringify({
-      model: cfg.model,
-      temperature: 0.2,
-      response_format: { type: 'json_object' },
-      messages: [
-        { role: 'system', content: system },
-        { role: 'user', content: user },
-      ],
-    }),
+  const body = JSON.stringify({
+    model: cfg.model,
+    temperature: 0.2,
+    response_format: { type: 'json_object' },
+    messages: [
+      { role: 'system', content: system },
+      { role: 'user', content: user },
+    ],
   });
-  if (!res.ok) throw new Error(`model request failed: ${res.status}`);
-  const j = (await res.json()) as { choices?: { message?: { content?: string } }[] };
-  return j.choices?.[0]?.message?.content ?? '';
+  let status = 0;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/chat/completions`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', authorization: `Bearer ${cfg.apiKey}` },
+      body,
+    });
+    status = res.status;
+    if (res.ok) {
+      const j = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+      return j.choices?.[0]?.message?.content ?? '';
+    }
+    if (status !== 429 && status < 500) break;
+    await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
+  }
+  throw new Error(`model request failed: ${status}`);
 }
 
 function parseJson(text: string): unknown {

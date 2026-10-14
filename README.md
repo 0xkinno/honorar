@@ -78,7 +78,7 @@ Honorar makes every AI **read** and every AI **quote** individually auditable on
 
 | Step | Where | What happens |
 |---|---|---|
-| 1. Connect | any app page | Reown AppKit wallet on Arc. The round power button disconnects. |
+| 1. Connect | any app page | Reown AppKit wallet on Arc. |
 | 2. Register | `/app/library` | Paste a URL or text, see the exact content hash, set two prices and co-author splits, sign `registerWork`. The call is simulated first and the gas shown in USDC. |
 | 3. Earn | `/app/earnings` | Every struck quote lists the sentence, the answer and the transaction. Reading fees show their live clock. |
 | 4. Prove | `/verify` | Hand any answer id to anyone. They re-derive the payout in their own browser. |
@@ -276,7 +276,7 @@ B8 needs the live Gateway seller and is recorded honestly as not yet run.
 
 ### QA matrix
 
-Nine viewports (iPhone SE to 1920 wide) by eight routes: no horizontal scroll, no overlapping controls, one `h1` per page, the pinned story stays inside the viewport at ten scroll steps, headline clear of the floating hero cards, no console errors. Result: **72 of 72**, in `evidence/qa.json`, screenshots in `docs/qa/`.
+Nine viewports by eight routes, run against the live deployment: no horizontal scroll, no overlapping controls, no console errors. Result: **72 of 72**, in `evidence/qa.json`.
 
 ### Discovery
 
@@ -301,12 +301,6 @@ Experiments E1 to E7 (transfer timing, batch contents, fund-lock timing, failure
 - **No custody**: funds move straight from the reader allowance to recipients inside `strike()`.
 - **Reproducible**: `pnpm install && pnpm -r test && (cd contracts && forge test) && pnpm break`.
 - **Honest about limits**: stock Foundry cannot execute Arc's native transfer precompile, so the fork test degrades to a skip (see [LIMITATIONS.md](LIMITATIONS.md)).
-
-## Quality of what we built
-
-Editorial interface on paper-white with violet glass, a pinned scroll story told through one real sentence, a hero drawn as an original SVG press house, two clocks for two settlement physics, skeletons instead of spinners, and a disconnect control that is a single round power button.
-
-![Mobile](docs/media/hero-mobile.png)
 
 ## Worth taking further
 

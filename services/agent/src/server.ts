@@ -37,9 +37,9 @@ const reconciler = new Reconciler({
 const models: Record<string, Model> = {};
 if (cfg.LLM_BASE_URL && cfg.LLM_API_KEY) {
   models.main = chatModel({ baseUrl: cfg.LLM_BASE_URL, apiKey: cfg.LLM_API_KEY, model: cfg.LLM_MODEL_MAIN });
-  if (cfg.LLM_MODEL_SECOND) {
-    models.second = chatModel({ baseUrl: cfg.LLM_BASE_URL, apiKey: cfg.LLM_API_KEY, model: cfg.LLM_MODEL_SECOND });
-  }
+}
+if (cfg.LLM_SECOND_BASE_URL && cfg.LLM_SECOND_API_KEY && cfg.LLM_MODEL_SECOND) {
+  models.second = chatModel({ baseUrl: cfg.LLM_SECOND_BASE_URL, apiKey: cfg.LLM_SECOND_API_KEY, model: cfg.LLM_MODEL_SECOND });
 }
 
 const app = new Hono();

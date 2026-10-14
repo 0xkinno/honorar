@@ -8,6 +8,6 @@
   "observed": "REFUSED_NOT_IN_SOURCE, leaves=0",
   "verdict": "REJECTED",
   "env": "kernel",
-  "ranAt": "2026-10-14T10:55:33.030Z",
-  "commit": "65294ae313308af610b00ea2b3bb2d9ad3d4a87d"
+  "ranAt": "2026-10-14T14:59:58.113Z",
+  "commit": "0abccd6e4eea6299149be995fe70c0b03f8741fb"
 }
