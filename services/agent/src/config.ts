@@ -39,6 +39,7 @@ export function loadEnvFile(path: string): Record<string, string> {
 
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
   const file = loadEnvFile('../../.env.local');
+  if (!env.PUBLIC_AGENT_URL && env.RENDER_EXTERNAL_URL) file.PUBLIC_AGENT_URL = env.RENDER_EXTERNAL_URL;
   for (const k of Object.keys(file)) if (file[k] === '') delete file[k];
   return schema.parse({ ...file, ...env });
 }
