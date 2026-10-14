@@ -1,0 +1,4 @@
+#!/bin/sh
+if grep -qiE '^(co-authored-by|generated with|signed-off-by)' "$1"; then
+  echo "commit trailer not allowed"; exit 1
+fi

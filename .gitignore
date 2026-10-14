@@ -1,0 +1,23 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.key
+keystore/
+private-evidence/
+.claude/
+# isolation
+reference/
+HONORAR_BUILD_INSTRUCTION.md
+# build
+node_modules/
+.next/
+dist/
+out/
+cache/
+broadcast/
+coverage/
+*.log
+.DS_Store
+.vercel/
+.tools/
