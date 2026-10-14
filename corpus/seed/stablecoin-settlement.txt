@@ -1,0 +1,7 @@
+How stablecoins settle
+
+A stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.
+
+Because a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.
+
+For writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.

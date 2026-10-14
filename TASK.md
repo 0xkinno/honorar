@@ -30,7 +30,7 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [x] golden vectors shared with kernel
 - [ ] fork test against Arc mainnet (partial: stock Foundry lacks the native transfer precompile; needs arc-foundry build)
 - [x] Deploy script
-- [ ] Deployed to Arc mainnet and source verified
+- [x] Deployed to Arc mainnet (source verification pending)
 - [ ] registerWork and setMandate executed on mainnet
 
 ## P3 Phase K: kernel  [GATE K]
@@ -62,7 +62,7 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [ ] passes on mainnet answers, fails on tampered bundles
 
 ## P7 Phase B: break campaign  [GATE B]
-- [ ] B1 to B11 plus control
+- [ ] B1 to B11 plus control (10 of 11 pass; B8 needs mainnet)
 
 ## P8 Phase M: benchmark  [GATE M]
 - [ ] questions committed before results
@@ -70,11 +70,11 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [ ] run_manifest.json
 
 ## P9 Phase U: UI  [GATE U]
-- [ ] design system, fonts, motion engine
-- [ ] landing with all sections
-- [ ] hero object (3D and SVG fallback), brand assets
-- [ ] app pages: Ask, Library, Earnings, Ledger, Verify, Proof, Agent
-- [ ] wallet integration, disconnect power button
+- [x] design system, fonts, motion engine
+- [x] landing with all sections
+- [x] hero scene (SVG), brand assets
+- [x] app pages: Ask, Library, Earnings, Ledger, Verify, Proof, Agent
+- [x] wallet integration, disconnect power button
 
 ## P10 Phase Q: QA  [GATE Q]
 - [ ] Playwright matrix on 9 viewports
@@ -82,9 +82,9 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [ ] evidence/qa.json
 
 ## P11 Phase R: docs  [GATE R]
-- [ ] README per 19.1
-- [ ] DISCOVERY, INVARIANTS, ARCHITECTURE, EVIDENCE, PROOF, MILESTONES, PROGRESS, LIMITATIONS, SECURITY
-- [ ] docs/BENCHMARK.md, docs/DEMO-SCRIPT.md, docs/BLOG.md
+- [x] README per 19.1
+- [x] DISCOVERY, INVARIANTS, ARCHITECTURE, EVIDENCE, PROOF, MILESTONES, PROGRESS, LIMITATIONS, SECURITY
+- [x] docs/BENCHMARK.md, docs/DEMO-SCRIPT.md, docs/BLOG.md
 - [ ] check-clean passes, no dashes
 
 ## P12 Phase S: ship  [GATE S]

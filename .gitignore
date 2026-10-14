@@ -22,3 +22,5 @@ coverage/
 .vercel/
 .tools/
 contracts/lib/
+test-results/
+playwright-report/
