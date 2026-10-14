@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-14T17:28:56.836Z",
+  "ranAt": "2026-10-14T18:54:02.121Z",
   "results": [
     {
       "viewport": "iphone-se",
@@ -86,7 +86,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 1,
       "failedRequests": 0
     },
     {
@@ -163,7 +163,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 3,
       "failedRequests": 0
     },
     {
@@ -174,7 +174,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 1,
       "failedRequests": 0
     },
     {
@@ -262,7 +262,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 1,
       "failedRequests": 0
     },
     {
@@ -361,7 +361,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 5,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -449,7 +449,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 5,
       "failedRequests": 0
     },
     {
@@ -537,7 +537,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 5,
       "failedRequests": 0
     },
     {
@@ -625,7 +625,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 5,
       "failedRequests": 0
     },
     {
@@ -713,7 +713,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 0,
+      "consoleErrors": 5,
       "failedRequests": 0
     },
     {

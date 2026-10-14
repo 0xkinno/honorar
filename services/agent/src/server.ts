@@ -53,6 +53,7 @@ app.get('/config', (c) =>
     chainId: 5042,
     registry: dep?.registry ?? null,
     ledger: dep?.ledger ?? null,
+    deployBlock: dep?.block ?? null,
     house: houseAddress,
     agent: buyer.address,
     readingBudget: cfg.READING_BUDGET_USDC6.toString(),

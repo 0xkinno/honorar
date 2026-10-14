@@ -13,6 +13,7 @@ export type AgentConfig = {
   chainId: number;
   registry: string | null;
   ledger: string | null;
+  deployBlock: number | null;
   house: string;
   agent: string;
   readingBudget: string;

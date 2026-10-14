@@ -24,10 +24,21 @@ export default function EarningsPage() {
     let live = true;
     (async () => {
       const c = arcClient();
-      const works = await c.getLogs({ address: cfg.registry as `0x${string}`, event: registered, args: { registrant: address }, fromBlock: 0n });
-      const ids = works.map((w) => w.args.workId as `0x${string}`);
+      const latest = await c.getBlockNumber();
+      const from = BigInt(cfg.deployBlock ?? 0);
+      const STEP = 90_000n;
+      const ranges: [bigint, bigint][] = [];
+      for (let lo = from; lo <= latest; lo += STEP) ranges.push([lo, lo + STEP - 1n > latest ? latest : lo + STEP - 1n]);
+      const ids: `0x${string}`[] = [];
+      for (const [lo, hi] of ranges) {
+        const works = await c.getLogs({ address: cfg.registry as `0x${string}`, event: registered, args: { registrant: address }, fromBlock: lo, toBlock: hi });
+        ids.push(...works.map((w) => w.args.workId as `0x${string}`));
+      }
       if (ids.length === 0) return live && setQuotes([]);
-      const logs = await c.getLogs({ address: cfg.ledger as `0x${string}`, event: quoteStruck, args: { workId: ids }, fromBlock: 0n });
+      const logs = [];
+      for (const [lo, hi] of ranges) {
+        logs.push(...(await c.getLogs({ address: cfg.ledger as `0x${string}`, event: quoteStruck, args: { workId: ids }, fromBlock: lo, toBlock: hi })));
+      }
       if (!live) return;
       setQuotes(
         logs.map((l) => ({
