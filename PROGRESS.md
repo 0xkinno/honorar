@@ -18,14 +18,12 @@
 - Reputation feedback for every answer, struck or refused; E7 withdraw on mainnet
 - Wallet fallback: injected browser wallet works without a Reown project id
 
-- Demo film rendered locally (reference/video, not committed): 2:56, 1920x1080, voiceover, real mainnet capture; waits for upload before the README row is updated
+- Demo film rendered locally (reference/video, not committed): 2:56, 1920x1080, voiceover, real mainnet capture; uploaded: https://youtu.be/qlJBYSb3liQ
 
 ## Waiting or partial
 - E6 for 10 leaves: needs ten registered works (1, 2, 3 and 5 leaves measured)
 - E7: withdraw works from the writer key; browser-wallet signing of the burn intent not exercised
 - Explorer-side source verification is behind a bot challenge; both contracts are verified on Sourcify (exact match)
-- Demo video upload and link in the README
 
 ## Next
-- Demo video from the live app
 - Regenerate README and EVIDENCE after any new mainnet run: `node scripts/evidence.mjs && node scripts/readme-sync.mjs`

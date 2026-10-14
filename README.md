@@ -28,7 +28,7 @@
 | **HonorarRegistry** | [`0xA9Cc0e089f78c5d9fEaA7b44B649843fA035F8eb`](https://explorer.arc.io/address/0xA9Cc0e089f78c5d9fEaA7b44B649843fA035F8eb) |
 | **HonorarLedger** | [`0x3A6B60C47D8726D0Ab642742AC9E65CE16173D41`](https://explorer.arc.io/address/0x3A6B60C47D8726D0Ab642742AC9E65CE16173D41) |
 | **All transactions and addresses** | [EVIDENCE.md](EVIDENCE.md) |
-| **Demo video** | script in [docs/DEMO-SCRIPT.md](docs/DEMO-SCRIPT.md), recording follows |
+| **Demo video** | [Watch on YouTube](https://youtu.be/qlJBYSb3liQ) |
 | **Agent API** | [honorar-api.onrender.com](https://honorar-api.onrender.com/health) |
 | **Agent identity (ERC-8004)** | registry [`0x8004A169...a432`](https://explorer.arc.io/address/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432), agent id **2436**, see [EVIDENCE.md](EVIDENCE.md) |
 | **Repository** | [github.com/0xkinno/honorar](https://github.com/0xkinno/honorar) |
@@ -432,7 +432,7 @@ evidence            generated results (tests, break, qa, mainnet)
 docs                media, qa screenshots, demo script, benchmark, blog
 ```
 
-Supporting documents: [DISCOVERY](DISCOVERY.md) · [INVARIANTS](INVARIANTS.md) · [ARCHITECTURE](ARCHITECTURE.md) · [EVIDENCE](EVIDENCE.md) · [PROOF](PROOF.md) · [MILESTONES](MILESTONES.md) · [PROGRESS](PROGRESS.md) · [LIMITATIONS](LIMITATIONS.md) · [SECURITY](SECURITY.md) · [BENCHMARK](docs/BENCHMARK.md) · [DEMO-SCRIPT](docs/DEMO-SCRIPT.md)
+Supporting documents: [DISCOVERY](DISCOVERY.md) · [INVARIANTS](INVARIANTS.md) · [ARCHITECTURE](ARCHITECTURE.md) · [EVIDENCE](EVIDENCE.md) · [PROOF](PROOF.md) · [MILESTONES](MILESTONES.md) · [PROGRESS](PROGRESS.md) · [LIMITATIONS](LIMITATIONS.md) · [SECURITY](SECURITY.md) · [BENCHMARK](docs/BENCHMARK.md)
 
 ## Credits
 
