@@ -369,7 +369,7 @@ textarea {
 .hero-card {
   position: relative;
   margin: 16px;
-  min-height: min(860px, calc(100svh - 32px));
+  min-height: min(780px, calc(100svh - 32px));
   border-radius: var(--r);
   overflow: hidden;
   background:
@@ -384,11 +384,11 @@ textarea {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
   gap: 24px;
   align-items: center;
   min-height: inherit;
-  padding: 120px clamp(20px, 5vw, 64px) 72px;
+  padding: 104px clamp(20px, 5vw, 64px) 64px;
 }
 
 .hero-object {
@@ -594,10 +594,8 @@ textarea {
 
 .hero-scene {
   position: absolute;
-  inset: 0 0 0 50%;
+  inset: 0;
   z-index: 0;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 14%);
 }
 
 .hero-fade {
@@ -605,7 +603,7 @@ textarea {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 46%, rgba(245, 242, 252, 0.5) 54%, rgba(245, 242, 252, 0) 66%);
+  background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 28%, rgba(245, 242, 252, 0.8) 44%, rgba(245, 242, 252, 0) 66%);
 }
 
 .marquee {
@@ -644,4 +642,31 @@ textarea {
   .hero-card {
     min-height: 920px;
   }
+}
+
+.card.tone-rose {
+  color: #5a1230;
+  background: linear-gradient(150deg, #fff1f4 0%, #ffd9e6 55%, #f3c5ff 100%);
+}
+
+.card.tone-mint {
+  color: #0b4a35;
+  background: linear-gradient(150deg, #f1fff8 0%, #c9f6df 55%, #b9e8ff 100%);
+}
+
+.card.tone-sky {
+  color: #231a6b;
+  background: linear-gradient(150deg, #f3f0ff 0%, #d7ccff 55%, #bfe3ff 100%);
+}
+
+.card[class*='tone-']::before {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.85), transparent);
+  pointer-events: none;
 }

@@ -173,27 +173,36 @@ export function Follow({ f }: { f: FeaturedProps }) {
 }
 
 export function Problem({ bench, e1 }: { bench: BenchProps; e1: { p50: number | null; completedPct: number | null } }) {
-  const cards: { label: string; value: number | null; suffix: string; decimals: number; note: string }[] = [
+  const cards: { label: string; value: number | null; suffix: string; decimals: number; note: string; pending: string; tone: 'rose' | 'mint' | 'sky'; bars: number[] }[] = [
     {
       label: 'Money misdirected by model self-citation',
       value: bench?.misdirectedPct.modelAttribution ?? null,
       suffix: '%',
       decimals: 1,
-      note: bench ? `measured over ${bench.questions} questions` : 'benchmark pending',
+      note: bench ? `measured over ${bench.questions} questions` : '',
+      pending: 'Share of USDC paid to sources the answer never quoted, when payout trusts its own citations.',
+      tone: 'rose',
+      bars: [62, 38, 74, 28, 55, 44, 68],
     },
     {
       label: 'Money misdirected by Honorar verified quotes',
       value: bench?.misdirectedPct.honorar ?? null,
       suffix: '%',
       decimals: 1,
-      note: bench ? 'same answers, same corpus' : 'benchmark pending',
+      note: bench ? 'same answers, same corpus' : '',
+      pending: 'Same answers, same corpus. Only verbatim, used quotes are paid, so the target is zero.',
+      tone: 'mint',
+      bars: [4, 2, 5, 3, 2, 4, 3],
     },
     {
       label: 'Median seconds from authorization to settled',
       value: e1.p50,
       suffix: 's',
       decimals: 1,
-      note: e1.completedPct !== null ? `${e1.completedPct}% reached completed` : 'measurement pending',
+      note: e1.completedPct !== null ? `${e1.completedPct}% reached completed` : '',
+      pending: 'Clock of a Gateway reading fee: received, batched, confirmed, completed. Timed per transfer.',
+      tone: 'sky',
+      bars: [20, 34, 52, 70, 82, 90, 96],
     },
   ];
   return (
@@ -207,11 +216,21 @@ export function Problem({ bench, e1 }: { bench: BenchProps; e1: { p50: number | 
       <div className="grid-3">
         {cards.map((c, i) => (
           <Reveal key={c.label} delay={i * 0.07}>
-            <GlowCard style={{ height: '100%' }}>
-              <div style={{ fontSize: 'clamp(40px, 5vw, 64px)', fontWeight: 200 }}>{c.value === null ? <span className="skeleton" style={{ display: 'inline-block', width: 120, height: 48 }} /> : <CountUp value={c.value} decimals={c.decimals} suffix={c.suffix} />}</div>
-              <p style={{ margin: '8px 0 4px' }}>{c.label}</p>
-              <span className="mono" style={{ color: 'var(--muted)' }}>
-                {c.note}
+            <GlowCard className={`tone-${c.tone}`} style={{ height: '100%', minHeight: 330, display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <span className="kicker" style={{ color: 'inherit', opacity: 0.8 }}>
+                {c.value === null ? 'Run pending' : 'Measured'}
+              </span>
+              <div style={{ fontSize: 'clamp(44px, 5vw, 68px)', fontWeight: 200, lineHeight: 1 }}>
+                {c.value === null ? <span className="mono">--{c.suffix}</span> : <CountUp value={c.value} decimals={c.decimals} suffix={c.suffix} />}
+              </div>
+              <svg viewBox="0 0 140 44" width="100%" height="44" aria-hidden="true" preserveAspectRatio="none">
+                {c.bars.map((h, k) => (
+                  <rect key={k} x={k * 20 + 2} y={44 - h * 0.42} width="14" height={h * 0.42} rx="5" fill="currentColor" opacity={0.22 + k * 0.08} />
+                ))}
+              </svg>
+              <p style={{ margin: 0, fontWeight: 500 }}>{c.label}</p>
+              <span className="mono" style={{ opacity: 0.75, marginTop: 'auto' }}>
+                {c.value === null ? c.pending : c.note}
               </span>
             </GlowCard>
           </Reveal>
@@ -330,10 +349,10 @@ export function ProofStrip({ tiles }: { tiles: ProofTile[] }) {
         Counted from the chain and from <span className="serif-accent">files.</span>
       </h2>
       <div className="grid-3">
-        {tiles.map((t) => (
+        {tiles.map((t, i) => (
           <Link key={t.label} href={t.href} style={{ textDecoration: 'none' }}>
-            <GlowCard>
-              <div style={{ fontSize: 44, fontWeight: 200 }}>{t.value === null ? <span className="chip warn">pending</span> : <CountUp value={t.value} suffix={t.suffix ?? ''} />}</div>
+            <GlowCard className={`tone-${(['sky', 'mint', 'rose'] as const)[i % 3]}`}>
+              <div style={{ fontSize: 44, fontWeight: 200 }}>{t.value === null ? <span className="mono">--</span> : <CountUp value={t.value} suffix={t.suffix ?? ''} />}</div>
               <span className="kicker">{t.label}</span>
             </GlowCard>
           </Link>

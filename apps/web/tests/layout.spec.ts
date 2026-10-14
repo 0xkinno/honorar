@@ -66,11 +66,9 @@ for (const vp of VIEWPORTS) {
         if (route === '/') {
           heroClear = await page.evaluate(() => {
             const h = document.querySelector('h1')?.getBoundingClientRect();
-            const o = document.querySelector('.hero-scene')?.getBoundingClientRect();
-            if (!h || !o) return false;
-            const w = Math.min(h.right, o.right) - Math.max(h.left, o.left);
-            const hh = Math.min(h.bottom, o.bottom) - Math.max(h.top, o.top);
-            return !(w > 4 && hh > 4);
+            const chips = Array.from(document.querySelectorAll('.scene-chip')).map((c) => c.getBoundingClientRect());
+            if (!h || chips.length === 0) return false;
+            return chips.every((o) => !(Math.min(h.right, o.right) - Math.max(h.left, o.left) > 4 && Math.min(h.bottom, o.bottom) - Math.max(h.top, o.top) > 4));
           });
         }
 

@@ -24,3 +24,5 @@ coverage/
 contracts/lib/
 test-results/
 playwright-report/
+
+.vercel

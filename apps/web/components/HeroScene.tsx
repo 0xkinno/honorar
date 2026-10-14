@@ -70,7 +70,7 @@ export function HeroScene() {
 
   return (
     <div ref={ref} className="hero-scene" aria-hidden="true">
-      <svg viewBox="300 0 900 760" preserveAspectRatio="xMidYMax meet" width="100%" height="100%">
+      <svg viewBox="0 0 1200 760" preserveAspectRatio="xMaxYMid slice" width="100%" height="100%">
         <defs>
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#E9E0FF" />
@@ -229,7 +229,7 @@ export function HeroScene() {
             <line key={i} x1={600 + (i - 7) * 20} y1="700" x2={600 + (i - 7) * 150} y2="760" stroke="#B9A2FF" strokeOpacity="0.5" />
           ))}
           <ellipse cx="760" cy="716" rx="420" ry="14" fill="#6A2CF0" opacity="0.12" />
-          <motion.g animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}>
+          <motion.g className="scene-chip" animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}>
             <rect x="1010" y="520" width="150" height="60" rx="16" fill="rgba(255,255,255,0.86)" stroke="#fff" />
             <circle cx="1038" cy="550" r="12" fill="#B9F3D6" />
             <path d="M1032 550l5 5 9-10" stroke="#0B6B45" strokeWidth="3" fill="none" strokeLinecap="round" />
@@ -240,22 +240,22 @@ export function HeroScene() {
               0.004 USDC
             </text>
           </motion.g>
-          <motion.g animate={{ y: [0, 7, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}>
-            <rect x="330" y="300" width="190" height="62" rx="16" fill="rgba(255,255,255,0.86)" stroke="#fff" />
-            <rect x="344" y="314" width="8" height="34" rx="3" fill="#8B5CFF" />
-            <text x="362" y="326" fontSize="11" fill="#120D24" fontFamily="Geist Mono Variable, monospace">
+          <motion.g className="scene-chip" animate={{ y: [0, 7, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}>
+            <rect x="860" y="196" width="190" height="62" rx="16" fill="rgba(255,255,255,0.86)" stroke="#fff" />
+            <rect x="874" y="210" width="8" height="34" rx="3" fill="#8B5CFF" />
+            <text x="892" y="222" fontSize="11" fill="#120D24" fontFamily="Geist Mono Variable, monospace">
               In the source ✓
             </text>
-            <text x="362" y="344" fontSize="11" fill="#120D24" fontFamily="Geist Mono Variable, monospace">
+            <text x="892" y="240" fontSize="11" fill="#120D24" fontFamily="Geist Mono Variable, monospace">
               In the answer ✓
             </text>
           </motion.g>
-          <motion.g animate={{ y: [0, -6, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}>
-            <rect x="350" y="590" width="170" height="52" rx="14" fill="rgba(255,255,255,0.86)" stroke="#fff" />
-            <text x="366" y="612" fontSize="11" fill="#B42318" fontFamily="Geist Mono Variable, monospace">
+          <motion.g className="scene-chip" animate={{ y: [0, -6, 0] }} transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}>
+            <rect x="760" y="560" width="170" height="52" rx="14" fill="rgba(255,255,255,0.86)" stroke="#fff" />
+            <text x="776" y="582" fontSize="11" fill="#B42318" fontFamily="Geist Mono Variable, monospace">
               REFUSED_NOT_IN_SOURCE
             </text>
-            <text x="366" y="630" fontSize="10" fill="#6C6683" fontFamily="Geist Mono Variable, monospace">
+            <text x="776" y="600" fontSize="10" fill="#6C6683" fontFamily="Geist Mono Variable, monospace">
               unpaid, shown
             </text>
           </motion.g>
