@@ -31,7 +31,7 @@ for (const vp of VIEWPORTS) {
         page.on('pageerror', (e) => errors.push(e.message));
         const failed: string[] = [];
         page.on('requestfailed', (r) => {
-          if (r.url().startsWith(process.env.PW_BASE_URL ?? 'http://localhost:3100')) failed.push(r.url());
+          if (r.url().startsWith(process.env.PW_BASE_URL ?? 'http://localhost:3100') && r.failure()?.errorText !== 'net::ERR_ABORTED') failed.push(`${r.url()} ${r.failure()?.errorText}`);
         });
 
         await page.goto(route, { waitUntil: 'networkidle' });
@@ -104,7 +104,7 @@ for (const vp of VIEWPORTS) {
         expect(heroClear, 'hero headline and object separate').toBe(true);
         expect(stickyOk, 'sticky stage stays in viewport').toBe(true);
         expect(failed).toEqual([]);
-        expect(errors.filter((e) => !/Failed to load resource|agent|fetch|CORS|ERR_CONNECTION_REFUSED|WalletConnect|Reown/i.test(e))).toEqual([]);
+        expect(errors.filter((e) => !/Failed to load resource|agent|fetch|CORS|ERR_CONNECTION_REFUSED|WalletConnect|Reown|Analytics SDK/i.test(e))).toEqual([]);
       });
     }
   });

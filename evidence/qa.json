@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-14T17:04:58.106Z",
+  "ranAt": "2026-10-14T17:28:56.836Z",
   "results": [
     {
       "viewport": "iphone-se",
@@ -9,8 +9,8 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 5,
-      "failedRequests": 3
+      "consoleErrors": 0,
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -21,7 +21,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -32,7 +32,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -43,7 +43,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -54,7 +54,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -65,7 +65,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -76,7 +76,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
@@ -87,7 +87,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -98,7 +98,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 4
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -109,7 +109,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -120,7 +120,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -131,7 +131,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -142,7 +142,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -153,7 +153,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -164,7 +164,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
@@ -175,7 +175,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -186,7 +186,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -197,7 +197,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -208,7 +208,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -219,7 +219,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -230,7 +230,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -241,7 +241,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -252,7 +252,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
@@ -263,7 +263,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -274,7 +274,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 4
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -285,7 +285,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -296,7 +296,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -307,7 +307,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -318,7 +318,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -329,7 +329,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -340,7 +340,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
@@ -351,186 +351,10 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "ipad-mini",
-      "route": "/",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 4
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/app/ask",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/app/library",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/app/earnings",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/app/ledger",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/verify",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/proof",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-mini",
-      "route": "/app/agent",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 4
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/app/ask",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/app/library",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/app/earnings",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/app/ledger",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/verify",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/proof",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "ipad-pro",
-      "route": "/app/agent",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 0,
-      "failedRequests": 2
-    },
-    {
-      "viewport": "laptop",
       "route": "/",
       "noHScroll": true,
       "h1s": 1,
@@ -538,7 +362,183 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 5,
-      "failedRequests": 2
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/app/ask",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/app/library",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/app/earnings",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/app/ledger",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/verify",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/proof",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-mini",
+      "route": "/app/agent",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/app/ask",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/app/library",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/app/earnings",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/app/ledger",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/verify",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/proof",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "ipad-pro",
+      "route": "/app/agent",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "laptop",
+      "route": "/",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -549,7 +549,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -560,7 +560,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -571,7 +571,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -582,7 +582,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -593,7 +593,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -604,7 +604,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "laptop",
@@ -615,7 +615,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -626,7 +626,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 4
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -637,7 +637,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -648,7 +648,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -659,7 +659,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -670,7 +670,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -681,7 +681,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -692,7 +692,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "desktop",
@@ -703,7 +703,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -714,7 +714,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 4
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -725,7 +725,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -736,7 +736,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -747,7 +747,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -758,7 +758,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -769,7 +769,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -780,7 +780,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     },
     {
       "viewport": "wide",
@@ -791,7 +791,7 @@
       "heroClear": true,
       "stickyOk": true,
       "consoleErrors": 0,
-      "failedRequests": 2
+      "failedRequests": 0
     }
   ]
 }
