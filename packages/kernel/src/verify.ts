@@ -206,6 +206,7 @@ export function runKernel(input: KernelInput): KernelResult {
     answerId: input.answerId,
     question: input.question,
     answer: proposal.answer,
+    citations: proposal.citations,
     sources: [...sources.values()]
       .map((s) => {
         const w = input.registry.get(s.src.workId);
@@ -234,6 +235,7 @@ export function runKernel(input: KernelInput): KernelResult {
     gatewayTransfersHash,
     feeBps: Number(FEE_BPS),
     strike: null,
+    reconciliation: [],
   };
 
   return {

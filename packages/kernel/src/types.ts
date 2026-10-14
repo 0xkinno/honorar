@@ -86,12 +86,22 @@ export type StrikeRecord = {
   registry: Hex;
 };
 
+export type BatchReconciliation = {
+  txHash: Hex;
+  block: number;
+  writer: Hex;
+  honorarSum: string;
+  observedCredit: string | null;
+  verdict: 'MATCH' | 'WRITER_HAS_OTHER_INCOME' | 'MISMATCH' | 'UNKNOWN';
+};
+
 export type Bundle = {
   bundleVersion: 1;
   normVersion: typeof NORM_VERSION;
   answerId: Hex;
   question: string;
   answer: string;
+  citations: { workId: WorkId; quote: string }[];
   sources: BundleSource[];
   unregistered: BundleUnregistered[];
   leaves: {
@@ -110,6 +120,7 @@ export type Bundle = {
   gatewayTransfersHash: Hex;
   feeBps: number;
   strike: StrikeRecord | null;
+  reconciliation: BatchReconciliation[];
 };
 
 export type KernelInput = {

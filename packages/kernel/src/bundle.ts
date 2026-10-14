@@ -25,11 +25,11 @@ export function parseBundle(text: string): Bundle {
 }
 
 /** Rebuild kernel input from a bundle and an independently fetched registry snapshot. */
-export function inputFromBundle(bundle: Bundle, registry: RegistrySnapshot, proposalCitations: KernelInput['proposal']['citations']): KernelInput {
+export function inputFromBundle(bundle: Bundle, registry: RegistrySnapshot): KernelInput {
   return {
     answerId: bundle.answerId as Hex,
     question: bundle.question,
-    proposal: { answer: bundle.answer, citations: proposalCitations },
+    proposal: { answer: bundle.answer, citations: bundle.citations },
     registry,
     sources: bundle.sources.map((s) => ({ workId: s.workId, text: s.text })),
     unregistered: bundle.unregistered,
