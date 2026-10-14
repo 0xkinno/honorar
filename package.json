@@ -13,7 +13,10 @@
     "balances": "node scripts/balances.mjs"
   },
   "devDependencies": {
+    "@circle-fin/x402-batching": "3.5.0",
     "@types/node": "^22.20.5",
+    "@x402/core": "2.3.0",
+    "@x402/evm": "2.3.0",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
     "viem": "2.57.6",

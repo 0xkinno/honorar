@@ -119,8 +119,9 @@ app.post('/ask', async (c) => {
 
   const striker = new Striker(chain, agentKey, cfg.ARC_RPC_URL);
   return streamSSE(c, async (stream) => {
+    const pending: Promise<void>[] = [];
     const emit = (e: LoopEvent): void => {
-      void stream.writeSSE({ event: e.stage, data: JSON.stringify(e) });
+      pending.push(stream.writeSSE({ event: e.stage, data: JSON.stringify(e) }));
     };
     await runAnswer(
       {
@@ -148,6 +149,7 @@ app.post('/ask', async (c) => {
       { question, reader },
       emit,
     );
+    await Promise.all(pending);
   });
 });
 
