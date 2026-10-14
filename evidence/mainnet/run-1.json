@@ -1,0 +1,67 @@
+{
+  "ranAt": "2026-10-14T16:06:20.099Z",
+  "results": [
+    {
+      "question": "When is a stablecoin payment considered final?",
+      "answerId": "0x8436aaaecef2f8f8459c76691b7ce6624f6bdb718409e66ead3b24d0471e6049",
+      "struck": true
+    },
+    {
+      "question": "Why does a stablecoin payment sent on Sunday night clear as fast as one on Monday?",
+      "answerId": "0x7a4c74eb92b96a69a1f1dd36e8e20dd9489be1f0b0adac8556500b7fe467ccc8",
+      "struck": false
+    },
+    {
+      "question": "How do card payments settle compared with stablecoins?",
+      "answerId": "0x5b4d197bd787a84f1aa3b2990eb9e266d5c2eca65eb120702a6218545381696a",
+      "struck": true
+    },
+    {
+      "question": "What makes tiny reading fees practical for writers?",
+      "answerId": "0xf1e0b90655277a2c02dc9754218d7bf4af55a1361cc50460a40efa455299dbc1",
+      "struck": true
+    },
+    {
+      "question": "How does batching make micropayments cheap?",
+      "answerId": "0x547e3d020819660f0c9b1e582e89ef940b702af4ca3c959e5d999adfed94add9",
+      "struck": false
+    },
+    {
+      "question": "What is the difference between an authorization and a settlement?",
+      "answerId": "0x1e368b5894170f2ddb424aa8e3dff4573c7b3b2fcd1c4d6f1155d9a46c0cbc27",
+      "struck": false
+    },
+    {
+      "question": "Why does deterministic finality matter for a payment?",
+      "answerId": "0x3c6b742760aa66bbeaacf68d49622ca2af7817fbbfbcd7b27049c69772f81e9b",
+      "struck": false
+    },
+    {
+      "question": "What does it mean that a stablecoin ledger never closes?",
+      "answerId": "0x73c3d754e2942a4f13a2b62fd85b66d2ed3c1d31d311bffbdb03088cabc82920",
+      "struck": false
+    },
+    {
+      "question": "How are fees quoted when settling stablecoins?",
+      "answerId": "0x8593b3724389daf86e6a7adde8af57c16a2eecf8b1b9504338ca87b5e7eaaf03",
+      "struck": true
+    },
+    {
+      "question": "Why is a card authorization only a promise?",
+      "answerId": "0xe75bb8492cf74dd180be12f810a2dc3c0f152d8c9753b9cbb2afdbea56765ebf",
+      "struck": true
+    },
+    {
+      "question": "How are many small authorizations netted together?",
+      "answerId": null,
+      "struck": false,
+      "error": "model request failed: 400"
+    },
+    {
+      "question": "What changes for writers when the rail has no fixed minimum cost?",
+      "answerId": null,
+      "struck": false,
+      "error": "model request failed: 400"
+    }
+  ]
+}

@@ -28,6 +28,7 @@ async function chat(cfg: ChatConfig, system: string, user: string): Promise<stri
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: `Bearer ${cfg.apiKey}` },
       body,
+      signal: AbortSignal.timeout(30_000),
     });
     status = res.status;
     if (res.ok) {
@@ -54,8 +55,10 @@ const RANK_SYSTEM =
 
 const DRAFT_SYSTEM = [
   'You answer a question using ONLY the provided sources.',
-  'Write a concise answer. When you rely on a source, quote it verbatim inside double quotation marks.',
-  'Each quote must be copied exactly from the source, between 8 and 80 words.',
+  'Write a short answer of two or three sentences.',
+  'The answer text itself MUST contain at least one verbatim quotation from a source, copied character for character and wrapped in double quotation marks.',
+  'Each quotation is a whole sentence or clause between 8 and 80 words. Do not paraphrase inside quotation marks.',
+  'List every quotation you used in citations with the workId of the source it came from.',
   'Reply with JSON {"answer": string, "citations": [{"workId": string, "quote": string}]}.',
   'Never state prices, amounts or addresses.',
 ].join(' ');
@@ -80,6 +83,27 @@ export function chatModel(cfg: ChatConfig): Model {
       const body = sources.map((s) => `[workId ${s.workId}] ${s.title}\n${s.text}`).join('\n\n---\n\n');
       const out = parseJson(await chat(cfg, DRAFT_SYSTEM, `Question: ${question}\n\nSources:\n${body}`));
       return parseProposal(out);
+    },
+  };
+}
+
+/** Tries the primary model and falls back to the second provider when it is unavailable. */
+export function withFallback(primary: Model, fallback: Model): Model {
+  return {
+    id: `${primary.id}|${fallback.id}`,
+    async rank(question, candidates) {
+      try {
+        return await primary.rank(question, candidates);
+      } catch {
+        return fallback.rank(question, candidates);
+      }
+    },
+    async draft(question, sources) {
+      try {
+        return await primary.draft(question, sources);
+      } catch {
+        return fallback.draft(question, sources);
+      }
     },
   };
 }

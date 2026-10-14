@@ -14,7 +14,7 @@ import { ReadSeller } from './gateway/seller';
 import type { BatchReconciliationRow, TransferRecord } from './gateway/records';
 import { runAnswer, type LoopEvent } from './loop';
 import { log } from './log';
-import { chatModel, type Model } from './model';
+import { chatModel, withFallback, type Model } from './model';
 import { openStore } from './store';
 import { Striker } from './strike';
 import { feedbackScore, giveFeedback } from './erc8004';
@@ -40,6 +40,7 @@ if (cfg.LLM_BASE_URL && cfg.LLM_API_KEY) {
 }
 if (cfg.LLM_SECOND_BASE_URL && cfg.LLM_SECOND_API_KEY && cfg.LLM_MODEL_SECOND) {
   models.second = chatModel({ baseUrl: cfg.LLM_SECOND_BASE_URL, apiKey: cfg.LLM_SECOND_API_KEY, model: cfg.LLM_MODEL_SECOND });
+  if (models.main) models.main = withFallback(models.main, models.second);
 }
 
 const app = new Hono();
@@ -62,6 +63,23 @@ if (dep) {
   const seller = new ReadSeller({ chain, registry: dep.registry, corpus, store, publicUrl: cfg.PUBLIC_AGENT_URL });
   app.get('/read/:workId', (c) => seller.handle(c));
 }
+
+app.get('/agent.json', (c) =>
+  c.json({
+    type: 'https://eips.ethereum.org/EIPS/eip-8004#registration-v1',
+    name: 'Honorar',
+    description: 'Pays writers every time an AI quotes them. Deterministic kernel decides which quotes are real and used; one Arc transaction pays and commits the Merkle root.',
+    image: 'https://honorar.vercel.app/brand/icon.svg',
+    endpoints: [
+      { name: 'web', endpoint: 'https://honorar.vercel.app' },
+      { name: 'api', endpoint: cfg.PUBLIC_AGENT_URL },
+    ],
+    chainId: 5042,
+    ledger: dep?.ledger ?? null,
+    registry: dep?.registry ?? null,
+    operator: buyer.address,
+  }),
+);
 
 app.get('/corpus', async (c) => {
   const docs = await corpus.all();

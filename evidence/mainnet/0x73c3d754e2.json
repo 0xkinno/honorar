@@ -1,0 +1,40 @@
+{
+  "answer": "It means that the ledger does not have a closing time; transactions are finalized immediately when the chain reaches finality, so a payment sent on Sunday night clears as quickly as one sent on Monday morning.",
+  "answerId": "0x73c3d754e2942a4f13a2b62fd85b66d2ed3c1d31d311bffbdb03088cabc82920",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "Because a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning.",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "1000",
+  "gatewayTransfersHash": "0x21303e86132fa31673088e18c11418a831d3a2aa94b3e3f30e7c0b8b956ae5e7",
+  "leaves": [],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "What does it mean that a stablecoin ledger never closes?",
+  "reconciliation": [],
+  "refused": [
+    {
+      "quote": "Because a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning.",
+      "reason": "REFUSED_NOT_IN_ANSWER",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "root": "0x",
+  "sources": [
+    {
+      "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+      "text": "How stablecoins settle\n\nA stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.\n\nBecause a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.\n\nFor writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "strike": null,
+  "transferIds": [
+    "edfdfa4f-31fc-429f-bfaf-7ad78bebcdaf"
+  ],
+  "unregistered": []
+}

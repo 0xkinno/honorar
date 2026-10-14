@@ -1,0 +1,51 @@
+{
+  "answer": "Tiny reading fees are practical for writers because stablecoin rails do not impose a fixed minimum cost on transactions. As noted in the text, \"a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost.\"",
+  "answerId": "0xf1e0b90655277a2c02dc9754218d7bf4af55a1361cc50460a40efa455299dbc1",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost.",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "1000",
+  "gatewayTransfersHash": "0xf47f00120bb6530e66bae80e893c92a21f79674354d8e0ed725e3a41b542bd76",
+  "leaves": [
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0xc02b467dff138346bf69133f0e15bc369d7d8869ae4a9e46821c4935a67db18e",
+      "spans": [
+        "a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost."
+      ],
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "What makes tiny reading fees practical for writers?",
+  "reconciliation": [],
+  "refused": [],
+  "root": "0xca2cdb14d95968c4d5f9b4d2d557bfd3e0108f3607809ce50c80385bf60e667d",
+  "sources": [
+    {
+      "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+      "text": "How stablecoins settle\n\nA stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.\n\nBecause a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.\n\nFor writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "strike": {
+    "blockNumber": 25947218,
+    "chainId": 5042,
+    "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "txHash": "0x6c3e91497b71be6696864f5ed0034247aafbb32ef41c229431a6e026dc9743dc"
+  },
+  "transferIds": [
+    "e1939e11-2ff2-49c9-94dc-631f340a71be"
+  ],
+  "unregistered": []
+}

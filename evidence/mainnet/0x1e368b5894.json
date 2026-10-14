@@ -1,0 +1,40 @@
+{
+  "answer": "An authorization is only a promise, and the money moves through clearing and settlement windows that can take days, whereas settlement is the final transfer that makes the payment irrevocable on the ledger.",
+  "answerId": "0x1e368b5894170f2ddb424aa8e3dff4573c7b3b2fcd1c4d6f1155d9a46c0cbc27",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "1000",
+  "gatewayTransfersHash": "0x9c522565e71c2ae4ee0585b0eb8047d9e8168821cd1ff7646c699bc36deee852",
+  "leaves": [],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "What is the difference between an authorization and a settlement?",
+  "reconciliation": [],
+  "refused": [
+    {
+      "quote": "an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.",
+      "reason": "REFUSED_NOT_IN_ANSWER",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "root": "0x",
+  "sources": [
+    {
+      "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+      "text": "How stablecoins settle\n\nA stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.\n\nBecause a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.\n\nFor writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "strike": null,
+  "transferIds": [
+    "465ae07a-20b8-41c6-b630-f57295a1ef6c"
+  ],
+  "unregistered": []
+}

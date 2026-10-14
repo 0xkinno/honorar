@@ -1,0 +1,40 @@
+{
+  "answer": "Deterministic finality means the payment becomes final as soon as the ledger records it, arriving in a single block instead of waiting days. This allows stablecoin payments to clear instantly, even on weekends, and supports micro‑payments with low fees.",
+  "answerId": "0x3c6b742760aa66bbeaacf68d49622ca2af7817fbbfbcd7b27049c69772f81e9b",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "A stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day.",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "1000",
+  "gatewayTransfersHash": "0x9784db73365066c3cb096539dd1c5dd662d10f1ef8f0b3cd78444f5d00f20c5f",
+  "leaves": [],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "Why does deterministic finality matter for a payment?",
+  "reconciliation": [],
+  "refused": [
+    {
+      "quote": "A stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day.",
+      "reason": "REFUSED_NOT_IN_ANSWER",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "root": "0x",
+  "sources": [
+    {
+      "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+      "text": "How stablecoins settle\n\nA stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.\n\nBecause a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.\n\nFor writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "strike": null,
+  "transferIds": [
+    "dae504da-4b6d-438d-bb81-2d1088ed4200"
+  ],
+  "unregistered": []
+}
