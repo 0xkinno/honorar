@@ -1,0 +1,99 @@
+{
+  "answer": "A quotation is the right unit to pay a writer for because \"the quotation is the smallest unit of work that anyone can point at, and it is the right unit to pay for.\" This approach ensures that \"payment becomes the byproduct of a record that stands on its own\" while allowing the writer to maintain verifiable evidence of their work. Furthermore, by using a contract to move money, \"the funds stay in the owner's wallet until the moment they are spent, which removes the need to trust an intermediary with custody.\"",
+  "answerId": "0x858eaac553e08042fa8f790a4a99537ff331c048ede3d72eba734967ec0a22db",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "the quotation is the smallest unit of work that anyone can point at, and it is the right unit to pay for.",
+      "workId": "0xb1037b4d74e764784a4241a0e4e0fc825295421e774dee0a43e3801a4a144ce2"
+    },
+    {
+      "quote": "payment becomes the byproduct of a record that stands on its own.",
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "quote": "the funds stay in the owner's wallet until the moment they are spent, which removes the need to trust an intermediary with custody.",
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "3000",
+  "gatewayTransfersHash": "0x1433cc49a5725c595d1c98e5e788c87dde53a7253ab76c5ac62a7e0e9f57e0fa",
+  "leaves": [
+    {
+      "amount": "4500",
+      "origin": "kernel",
+      "spanHash": "0x34335202e2006344b0a4bdd2210f1076491b6692033010d0f595683363ffd7a1",
+      "spans": [
+        "payment becomes the byproduct of a record that stands on its own"
+      ],
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0x2d15c4da3681d05f0bbcf12fcf2d4d76576685b976ae00e89a440651115ea139",
+      "spans": [
+        "the funds stay in the owner's wallet until the moment they are spent, which removes the need to trust an intermediary with custody."
+      ],
+      "version": 1,
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    },
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0x5e9db30f826395240b14dda29583fecc6b4a17f4e596f791c8eec466342c6cbf",
+      "spans": [
+        "the quotation is the smallest unit of work that anyone can point at, and it is the right unit to pay for."
+      ],
+      "version": 1,
+      "workId": "0xb1037b4d74e764784a4241a0e4e0fc825295421e774dee0a43e3801a4a144ce2"
+    }
+  ],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "Why is a quotation the right unit to pay a writer for?",
+  "reconciliation": [],
+  "refused": [
+    {
+      "quote": "payment becomes the byproduct of a record that stands on its own.",
+      "reason": "REFUSED_NOT_IN_ANSWER",
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    }
+  ],
+  "root": "0xf131964aac640407833861e3c1d674c7927893143d743d6ec5cc6a3122f07fe6",
+  "sources": [
+    {
+      "contentHash": "0xdde786e36025126b03dcb44a9d9d77ca618d990e8211ade8465219c9052e2c9f",
+      "text": "A writer who is quoted by machines usually has nothing to show for it. A receipt changes that. When the receipt names the exact sentence, the answer that carried it and the transaction that paid for it, the writer holds evidence that can be checked by a stranger without trusting anyone. That evidence has a second use: a public history of verified quotations lets a writer price her work, and lets a reader decide whom to read. Payment becomes the byproduct of a record that stands on its own.",
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "contentHash": "0xf6111cfc53561df760772f009ccbd85583a2132e1fa1204c144dc677a3a093ce",
+      "text": "Software agents that pay for things need limits that they cannot talk their way around. A limit stored inside the agent is only a suggestion, because the agent can be misconfigured or manipulated. A limit enforced by the contract that moves the money is different: the owner of the funds chooses a maximum per task and a maximum per day, and the contract refuses any transfer beyond them. Such a mandate can be revoked at any time, and the funds stay in the owner's wallet until the moment they are spent, which removes the need to trust an intermediary with custody.",
+      "version": 1,
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    },
+    {
+      "contentHash": "0x0391a10344630db9dea53b680fd7d997c83f646c0bca68a9750ff47567069721",
+      "text": "Why an AI quote should earn a fee\n\nEvery answer an assistant writes is built from sentences that a person once wrote. When the assistant quotes one of them, the quotation is the smallest unit of work that anyone can point at, and it is the right unit to pay for. A subscription pays for access and a licence pays for a catalogue, but a quotation pays for use, which is the only thing a writer actually wants to know about.\n\nPaying per quotation only works if the quotation can be checked. The words must be found in the saved text of the source, and the answer must really contain them. When both are true, a payment can be sent in the same moment, and the writer receives a receipt that any stranger can verify without asking anyone's permission.",
+      "version": 1,
+      "workId": "0xb1037b4d74e764784a4241a0e4e0fc825295421e774dee0a43e3801a4a144ce2"
+    }
+  ],
+  "strike": {
+    "blockNumber": 25968609,
+    "chainId": 5042,
+    "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "txHash": "0x7c0598ce4a7c232e892a112470cadd9e5ecaf780bc6aef6fb7d9c738877613cb"
+  },
+  "transferIds": [
+    "390c0599-b559-421e-915b-cdbce32ded44",
+    "457d37c7-e11c-447c-b846-c4cd2cc7b588",
+    "ddec1eee-5a04-4e53-bc3a-b752458f6f0e"
+  ],
+  "unregistered": []
+}

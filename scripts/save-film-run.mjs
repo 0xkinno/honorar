@@ -1,0 +1,10 @@
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+const { canonicalJson } = await import('../packages/kernel/src/index.ts');
+const API = 'https://honorar-api.onrender.com';
+const ask = JSON.parse(readFileSync('reference/video/takes/chain-ask2.json', 'utf8'));
+const chain = JSON.parse(readFileSync('reference/video/takes/chain-marks.json', 'utf8'));
+const b = await (await fetch(`${API}/bundle/${ask.answerId}`)).json();
+writeFileSync(`evidence/mainnet/wallet-${ask.answerId.slice(0, 12)}.json`, canonicalJson(b));
+const hashes = existsSync('reference/video/takes/wallet-hashes.jsonl') ? readFileSync('reference/video/takes/wallet-hashes.jsonl', 'utf8').trim().split('\n').map((l) => JSON.parse(l)) : [];
+writeFileSync('evidence/mainnet/film-run.json', `${JSON.stringify({ registerTx: chain.registerTx, strikeTx: ask.strikeTx, answerId: ask.answerId, walletTransactions: hashes.filter((h) => h.hash).map((h) => ({ method: h.method, to: h.to, hash: h.hash })), note: 'Signed by the project owner wallet through the Capture wallet provider while recording the demo film.' }, null, 2)}\n`);
+console.log('saved', hashes.length);

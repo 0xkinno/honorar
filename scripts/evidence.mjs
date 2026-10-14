@@ -79,5 +79,11 @@ const med = existsSync('evidence/mainnet/medium.json') ? JSON.parse(readFileSync
 if (med) {
   lines.push('## Builder articles registered', '', ...med.works.map((w) => `- ${w.title}: [${(w.registerTx ?? 'registered').slice(0, 12)}](${x}/tx/${w.registerTx}) workId \`${w.workId.slice(0, 12)}...\``), '');
 }
+const film = existsSync('evidence/mainnet/film-run.json') ? JSON.parse(readFileSync('evidence/mainnet/film-run.json', 'utf8')) : null;
+if (film) {
+  lines.push('## Demo film', '', film.note, '');
+  for (const h of film.walletTransactions) lines.push(`- ${h.method} to ${h.to.slice(0, 10)}...: [${h.hash}](${x}/tx/${h.hash})`);
+  lines.push(`- strike for the film answer: [${film.strikeTx}](${x}/tx/${film.strikeTx})`, '');
+}
 writeFileSync('EVIDENCE.md', `${lines.join('\n')}\n`);
 process.stdout.write(`evidence written: ${JSON.stringify(counts)}\n`);

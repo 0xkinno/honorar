@@ -302,7 +302,7 @@ Nine viewports by eight routes, run against the live deployment: no horizontal s
 | `0xf1e0b906` | "a reading fee of a tenth of a cent only makes sense when the rail h..." | [0x6c3e9149...](https://explorer.arc.io/tx/0x6c3e91497b71be6696864f5ed0034247aafbb32ef41c229431a6e026dc9743dc) | 25947218 |
 | `0x8a9951ba` | "an authorization is only a promise, and the money moves through cle..." | [0x772378c2...](https://explorer.arc.io/tx/0x772378c27319e887bc14c0f8114ae720aab675f3fe2b494c0e4aa23071af1211) | 25946799 |
 
-Tally: **21 answers run on mainnet, 16 struck, 5 refused** (REFUSED_NOT_IN_ANSWER x5). Largest strike: 5 quotes from 5 different registered works in one transaction.
+Tally: **22 answers run on mainnet, 17 struck, 5 refused** (REFUSED_NOT_IN_ANSWER x5). Largest strike: 5 quotes from 5 different registered works in one transaction.
 
 ERC-8004 agent id **2436** ([registration](https://explorer.arc.io/tx/0x3482f79593f458963d9f35728119a1c0713554476f54467b9a54e13aa0381420)), 11 validator feedback entries recorded.
 <!-- mainnet:end -->

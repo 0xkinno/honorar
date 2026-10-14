@@ -1,0 +1,23 @@
+{
+  "registerTx": "0xaca15045bdf22907f12ee1972a3dfb16ba3ec43b96d31824fcc9f8e591eb0d55",
+  "strikeTx": "0x7c0598ce4a7c232e892a112470cadd9e5ecaf780bc6aef6fb7d9c738877613cb",
+  "answerId": "0x858eaac553e08042fa8f790a4a99537ff331c048ede3d72eba734967ec0a22db",
+  "walletTransactions": [
+    {
+      "method": "eth_sendTransaction",
+      "to": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+      "hash": "0xaca15045bdf22907f12ee1972a3dfb16ba3ec43b96d31824fcc9f8e591eb0d55"
+    },
+    {
+      "method": "eth_sendTransaction",
+      "to": "0x3600000000000000000000000000000000000000",
+      "hash": "0x2de4b51d6e8eea103f3f68c25dcd50b3968a149b5f0f6fc8bc52526ba66a1d5c"
+    },
+    {
+      "method": "eth_sendTransaction",
+      "to": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+      "hash": "0x1f52b6d176600a4fea8c13ac46aa965dcb845cabdc9598b68ed69876fbae8a9f"
+    }
+  ],
+  "note": "Signed by the project owner wallet through the Capture wallet provider while recording the demo film."
+}
