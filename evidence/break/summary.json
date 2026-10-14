@@ -1,7 +1,7 @@
 {
   "total": 12,
-  "passed": 11,
-  "failed": 1,
+  "passed": 12,
+  "failed": 0,
   "ids": [
     {
       "id": "B1",
@@ -49,7 +49,7 @@
     },
     {
       "id": "B8",
-      "verdict": "FAILED"
+      "verdict": "RECOVERED"
     }
   ]
 }

@@ -1,0 +1,205 @@
+{
+  "experiment": "E1",
+  "question": "How long from received to completed for Gateway reading fees?",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:12:46.822Z",
+  "note": "latencySeconds is Gateway updatedAt minus createdAt for transfers that reached completed (authoritative). The per-status secondsTo values depend on when polling started and are indicative only.",
+  "latencySeconds": {
+    "n": 14,
+    "p50": 527.7,
+    "p95": 875.1,
+    "min": 53.4,
+    "max": 875.1
+  },
+  "distinctSettlementTxs": 2,
+  "settlementField": "txHash",
+  "summary": {
+    "n": 14,
+    "completedPct": 100,
+    "p50Seconds": {
+      "completed": 527.7
+    },
+    "p95Seconds": {
+      "completed": 875.1
+    },
+    "detail": {
+      "n": 14,
+      "received": {
+        "observed": 0,
+        "p50": null,
+        "p95": null
+      },
+      "batched": {
+        "observed": 0,
+        "p50": null,
+        "p95": null
+      },
+      "confirmed": {
+        "observed": 0,
+        "p50": null,
+        "p95": null
+      },
+      "completed": {
+        "observed": 14,
+        "p50": 783.2,
+        "p95": 1167.9
+      }
+    },
+    "fieldsInTransferObject": [
+      "id",
+      "status",
+      "token",
+      "sendingNetwork",
+      "recipientNetwork",
+      "fromAddress",
+      "toAddress",
+      "amount",
+      "nonce",
+      "txHash",
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "transfers": [
+    {
+      "id": "a8e903ae-402f-4efe-82ff-f72f70676fa2",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 1167.9
+      }
+    },
+    {
+      "id": "8e0ec9c1-782a-4137-919a-e0f2410452a3",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 1089.4
+      }
+    },
+    {
+      "id": "009f7236-14e4-4dfb-bca1-7ba95609ad4a",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 1027.8
+      }
+    },
+    {
+      "id": "7506fe14-8583-457f-92a9-d131fde3f664",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 954.2
+      }
+    },
+    {
+      "id": "ec33dd1a-556f-4a2c-ab0e-75e3c9e7e135",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 863.1
+      }
+    },
+    {
+      "id": "7ff39843-5853-41bb-b5bc-ae98ab98f500",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 825.4
+      }
+    },
+    {
+      "id": "8185e7e8-7a5d-44d9-ac3d-52eae035b6cb",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 783.2
+      }
+    },
+    {
+      "id": "e1939e11-2ff2-49c9-94dc-631f340a71be",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 744
+      }
+    },
+    {
+      "id": "0ae574bf-53d5-4a11-8eed-107e3af018fb",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 708.6
+      }
+    },
+    {
+      "id": "465ae07a-20b8-41c6-b630-f57295a1ef6c",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 658.8
+      }
+    },
+    {
+      "id": "dae504da-4b6d-438d-bb81-2d1088ed4200",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 608.8
+      }
+    },
+    {
+      "id": "edfdfa4f-31fc-429f-bfaf-7ad78bebcdaf",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 565.4
+      }
+    },
+    {
+      "id": "5d446bb3-4e44-43e0-aa46-5b048657b773",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 494
+      }
+    },
+    {
+      "id": "a399813b-60a6-45b6-b63c-4e81bc626885",
+      "secondsTo": {
+        "received": null,
+        "batched": null,
+        "confirmed": null,
+        "completed": 433.3
+      }
+    }
+  ],
+  "rawSample": {
+    "id": "a8e903ae-402f-4efe-82ff-f72f70676fa2",
+    "status": "completed",
+    "token": "USDC",
+    "sendingNetwork": "eip155:5042",
+    "recipientNetwork": "eip155:5042",
+    "fromAddress": "0x85d786c256d1924aa56b4cfd41904042513dc943",
+    "toAddress": "0xe038c8868db7666a96121bd59944c57a22555d64",
+    "amount": "1000",
+    "nonce": "0x76077757c7379c81018232daa1c07cc2b4c970d944026c0d106bcad70620de7d",
+    "txHash": "0x5c327c80d043dfde96129b02a0e47e62845c0bb0b154078fb0db7c6f96aa5eda",
+    "createdAt": "2026-10-14T15:53:10.687Z",
+    "updatedAt": "2026-10-14T15:54:04.109Z"
+  }
+}

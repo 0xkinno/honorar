@@ -1,0 +1,11 @@
+{
+  "experiment": "E5",
+  "question": "Can a writer batch credit be reconciled from observable state?",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:15:53.350Z",
+  "method": "Writer Gateway balance via getBalances(writer) compared with the sum of completed transfers to that writer. Per-block archive reads of GatewayWallet were not used.",
+  "transfersToWriter": 15,
+  "completedToWriterBaseUnits": "14000",
+  "writerGatewayTotal": "14000",
+  "verdict": "MATCH"
+}

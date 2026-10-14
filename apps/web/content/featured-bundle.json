@@ -1,0 +1,12 @@
+{
+  "sentence": "an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.",
+  "workTitle": "How stablecoins settle",
+  "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+  "answerId": "0x8a9951baaa5160fada7d45926f8cd85a5267ed56ffd1eb691cbcdf7e306dd3ee",
+  "strikeTx": "0x772378c27319e887bc14c0f8114ae720aab675f3fe2b494c0e4aa23071af1211",
+  "block": 25946799,
+  "amount": "0.004",
+  "batchTx": "0xb7302cb3aa7cd09aa23ab14f03790abf8de8dce72ea084ab188e4aaa25202021",
+  "transferId": "7506fe14-8583-457f-92a9-d131fde3f664",
+  "medianSeconds": 527.7
+}

@@ -45,7 +45,27 @@ if (dep) {
 }
 lines.push('');
 if (seed) {
-  lines.push('## First struck answer', '', `- registerWork: [${seed.registerTx}](${x}/tx/${seed.registerTx})`, `- strike: [${seed.strikeTx}](${x}/tx/${seed.strikeTx}) at block ${seed.block}`, `- note: ${seed.note}`, '');
+  lines.push('## Registered work', '', `- workId \`${seed.workId}\``, `- registerWork: [${seed.registerTx}](${x}/tx/${seed.registerTx})`, '');
+}
+import { readdirSync } from 'node:fs';
+const mainnetDir = 'evidence/mainnet';
+if (existsSync(mainnetDir)) {
+  const answers = readdirSync(mainnetDir).filter((n) => /^0x[0-9a-f]{10}\.json$/.test(n) || n === 'answer-1.json');
+  const rows = [];
+  for (const n of answers) {
+    const b = JSON.parse(readFileSync(`${mainnetDir}/${n}`, 'utf8'));
+    if (!b.strike) continue;
+    rows.push(`| \`${b.answerId.slice(0, 12)}\` | ${b.leaves.length} | [${b.strike.txHash.slice(0, 12)}...](${x}/tx/${b.strike.txHash}) | ${b.strike.blockNumber} | ${b.transferIds.length} |`);
+  }
+  if (rows.length) lines.push('## Struck answers on mainnet', '', '| Answer | Leaves | Strike tx | Block | Reading fees |', '|---|---|---|---|---|', ...rows, '', 'Each bundle is in `evidence/mainnet/` and verifies with the CLI.', '');
+  if (existsSync(`${mainnetDir}/erc8004.json`)) {
+    const r = JSON.parse(readFileSync(`${mainnetDir}/erc8004.json`, 'utf8'));
+    lines.push('## ERC-8004 agent identity', '', `- Agent id ${r.agentId}, registration tx [${r.txHash}](${x}/tx/${r.txHash}), metadata ${r.metadataUri}`, '');
+  }
+  if (existsSync(`${mainnetDir}/feedback.json`)) {
+    const f = JSON.parse(readFileSync(`${mainnetDir}/feedback.json`, 'utf8'));
+    lines.push(`- Validator feedback entries: ${f.feedback.length}`, ...f.feedback.map((e) => `  - ${e.answerId.slice(0, 12)} score ${e.score}: [${e.tx.slice(0, 12)}...](${x}/tx/${e.tx})`), '');
+  }
 }
 writeFileSync('EVIDENCE.md', `${lines.join('\n')}\n`);
 process.stdout.write(`evidence written: ${JSON.stringify(counts)}\n`);

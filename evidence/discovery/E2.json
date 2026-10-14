@@ -1,0 +1,35 @@
+{
+  "experiment": "E2",
+  "question": "What does a Gateway batch transaction contain?",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:13:11.896Z",
+  "note": "individualTransferIdsVisibleOnChain is false when no log argument equals a Gateway transfer id (UUIDs are never on chain).",
+  "batches": [
+    {
+      "txHash": "0x5c327c80d043dfde96129b02a0e47e62845c0bb0b154078fb0db7c6f96aa5eda",
+      "block": 25946461,
+      "to": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+      "logCount": 1,
+      "distinctEventTopics": 1,
+      "eventTopicCounts": {
+        "0x8e9878875610f80a970e0cea1889a4c7de3012c1a52ae169d9d5d3ab2c08b670": 1
+      },
+      "honorarTransfersInBatch": 1,
+      "honorarAmountSum": "1000",
+      "individualTransferIdsVisibleOnChain": false
+    },
+    {
+      "txHash": "0xb7302cb3aa7cd09aa23ab14f03790abf8de8dce72ea084ab188e4aaa25202021",
+      "block": 25948238,
+      "to": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+      "logCount": 1,
+      "distinctEventTopics": 1,
+      "eventTopicCounts": {
+        "0x8e9878875610f80a970e0cea1889a4c7de3012c1a52ae169d9d5d3ab2c08b670": 1
+      },
+      "honorarTransfersInBatch": 13,
+      "honorarAmountSum": "13000",
+      "individualTransferIdsVisibleOnChain": false
+    }
+  ]
+}

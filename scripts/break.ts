@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { delimiter, sep } from 'node:path';
 import { canonicalJson, contentHash, runKernel, type Hex, type RegistryWork, type WorkId } from '../packages/kernel/src/index';
@@ -109,8 +109,13 @@ try {
   for (const m of Object.values(contractMap)) rec({ ...m, observed: `forge failed: ${(e as Error).message.slice(0, 120)}`, verdict: 'FAILED', env: 'foundry' });
 }
 
-// B8 needs the live Gateway seller (Phase D E4); recorded as pending until evidence/discovery/E4.json exists.
-rec({ id: 'B8', attack: 'Seller drops the connection after the agent signed', targets: ['I11'], expected: 'no retry, UNCONFIRMED, resolved by searchTransfers, paid once', observed: 'requires mainnet run (E4)', verdict: 'FAILED', env: 'mainnet' });
+// B8 is a mainnet run (scripts/discovery/b8.ts) against the real Gateway facilitator.
+try {
+  const b8 = JSON.parse(readFileSync('evidence/discovery/E4-b8.json', 'utf8')) as { verdict: string; signedRequestsReceivedBySeller: number; transfersFoundBySearch: unknown[]; payCallError: string };
+  rec({ id: 'B8', attack: 'Seller drops the connection after the agent signed', targets: ['I11'], expected: 'no retry, resolved by searchTransfers, paid exactly once', observed: `pay() error "${b8.payCallError}", signed requests at seller ${b8.signedRequestsReceivedBySeller}, transfers found ${b8.transfersFoundBySearch.length}`, verdict: b8.verdict === 'RECOVERED' ? 'RECOVERED' : 'FAILED', env: 'mainnet' });
+} catch {
+  rec({ id: 'B8', attack: 'Seller drops the connection after the agent signed', targets: ['I11'], expected: 'no retry, resolved by searchTransfers, paid once', observed: 'evidence/discovery/E4-b8.json missing', verdict: 'FAILED', env: 'mainnet' });
+}
 
 mkdirSync('evidence/break', { recursive: true });
 for (const v of results) writeFileSync(`evidence/break/${v.id}.json`, `${JSON.stringify(v, null, 2)}\n`);

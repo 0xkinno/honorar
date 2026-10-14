@@ -1,0 +1,51 @@
+{
+  "experiment": "E6",
+  "question": "What does a strike cost?",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:15:53.350Z",
+  "note": "Only single-leaf strikes were exercised on mainnet; 3, 5 and 10 leaf costs are UNKNOWN until more works are registered.",
+  "strikes": [
+    {
+      "leaves": 1,
+      "gasUsed": "208875",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.004178",
+      "txHash": "0x33353a9432f6fd46e268c2237d0fe5bca122a2607d8f9470aeae80eb745fe4d3"
+    },
+    {
+      "leaves": 1,
+      "gasUsed": "208887",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.004178",
+      "txHash": "0xb5dd69f1fe5b25c4b503c8e8656fd3c138eebcf68b6cfd23bff8027f64158847"
+    },
+    {
+      "leaves": 1,
+      "gasUsed": "208887",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.004178",
+      "txHash": "0xece04bb09a53035e00df4bcd9e1bf24a80e542d1f7687d234c4eac553c279dfd"
+    },
+    {
+      "leaves": 1,
+      "gasUsed": "208887",
+      "effectiveGasPrice": "20000000001",
+      "usdc": "0.004178",
+      "txHash": "0xb6e055664ac1ff058fdf1d13f2983dd284def29f45a3645637a27dc7ec05f16c"
+    },
+    {
+      "leaves": 1,
+      "gasUsed": "208875",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.004178",
+      "txHash": "0x6c3e91497b71be6696864f5ed0034247aafbb32ef41c229431a6e026dc9743dc"
+    },
+    {
+      "leaves": 1,
+      "gasUsed": "209151",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.004183",
+      "txHash": "0x772378c27319e887bc14c0f8114ae720aab675f3fe2b494c0e4aa23071af1211"
+    }
+  ]
+}

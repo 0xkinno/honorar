@@ -44,6 +44,11 @@ for (const st of states) {
   const xs = list.map((t) => secs(t.id, st)).filter((x): x is number => x !== null);
   summary[st] = { observed: xs.length, p50: pct(xs, 50), p95: pct(xs, 95) };
 }
+const latencies = Object.values(raw)
+  .map((r) => r as { status: string; createdAt: string; updatedAt: string; txHash?: string })
+  .filter((r) => r.status === 'completed')
+  .map((r) => Math.round((Date.parse(r.updatedAt) - Date.parse(r.createdAt)) / 100) / 10);
+const batchTxs = new Set(Object.values(raw).map((r) => (r as { txHash?: string }).txHash).filter(Boolean));
 const completed = list.filter((t) => seen[t.id]?.completed !== undefined).length;
 const sample = Object.values(raw)[0] as Record<string, unknown> | undefined;
 mkdirSync('evidence/discovery', { recursive: true });
@@ -55,8 +60,11 @@ writeFileSync(
       question: 'How long from received to completed for Gateway reading fees?',
       commit: execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim(),
       ranAt: new Date().toISOString(),
-      note: 'Seconds are measured from the seller record createdAt to the first poll that observed the status, polled every 5s, so they are upper bounds by up to 5s.',
-      summary: { n: list.length, completedPct: Math.round((completed / Math.max(1, list.length)) * 1000) / 10, p50Seconds: Object.fromEntries(states.map((s) => [s, (summary[s] as { p50: number | null }).p50])), p95Seconds: Object.fromEntries(states.map((s) => [s, (summary[s] as { p95: number | null }).p95])), detail: summary, fieldsInTransferObject: sample ? Object.keys(sample) : [] },
+      note: 'latencySeconds is Gateway updatedAt minus createdAt for transfers that reached completed (authoritative). The per-status secondsTo values depend on when polling started and are indicative only.',
+      latencySeconds: { n: latencies.length, p50: pct(latencies, 50), p95: pct(latencies, 95), min: latencies.length ? Math.min(...latencies) : null, max: latencies.length ? Math.max(...latencies) : null },
+      distinctSettlementTxs: batchTxs.size,
+      settlementField: 'txHash',
+      summary: { n: list.length, completedPct: Math.round((completed / Math.max(1, list.length)) * 1000) / 10, p50Seconds: { completed: pct(latencies, 50) }, p95Seconds: { completed: pct(latencies, 95) }, detail: summary, fieldsInTransferObject: sample ? Object.keys(sample) : [] },
       transfers: list.map((t) => ({ id: t.id, secondsTo: Object.fromEntries(states.map((s) => [s, secs(t.id, s)])) })),
       rawSample: sample ?? null,
     },

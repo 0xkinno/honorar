@@ -1,27 +1,25 @@
 # PROGRESS
 
 ## Done
-- P0 setup: hooks (gitleaks, check-clean, trailer block), wallets, reference clones
-- P2 contracts: Registry and Ledger, 42 Foundry tests, deployed to Arc mainnet (see EVIDENCE.md)
-- P3 kernel: 30 tests, golden vectors shared with Foundry
-- P6 verifier: V1 to V9, 10 tests
-- P7 break campaign: 11 of 12 recorded results pass offline or on Foundry (B8 needs mainnet)
-- P9 UI: landing, app pages, verify, proof
-- Agent service code: seller, buyer, reconciler, loop, ERC-8004 helpers (typechecked, unit tested)
-- Reown id and LLM keys (Gemini main, Groq second) loaded into .env.local; wallet button renders on the live site
-- Web deployed to Vercel: https://honorar.vercel.app (agent API and Reown id not connected yet)
-- README rewritten per Phase R; supporting docs aligned
-- QA matrix 72 of 72 locally and hero recomposed
-- Deployer funded other wallets (agent, house reader, validator, writer test)
+- Contracts `HonorarRegistry` and `HonorarLedger` deployed to Arc mainnet and verified on Sourcify (EVIDENCE.md), 42 Foundry tests
+- Attribution kernel (30 tests, golden vectors shared with Foundry) and offline verifier (10 tests)
+- Break campaign 12 of 12, including B8 run on mainnet against the real Gateway facilitator
+- Agent service on Render (https://honorar-api.onrender.com), Postgres on Supabase, two LLM providers with fallback
+- Real answers struck on mainnet through the full loop: Gateway reading fee, model proposal, kernel verdict, strike
+- Verifier V1 to V7 pass on mainnet bundles; V8 passes once every reading fee is `completed`
+- Discovery E1, E2, E3, E5, E6 measured on mainnet; E4 covered by B8
+- ERC-8004 agent registered (id 2436) and validator feedback recorded per struck answer
+- Web on Vercel (https://honorar.vercel.app), connected to the agent API, Reown wallet button live
+- QA matrix 72 of 72 against the live deployment
+- README, DISCOVERY and EVIDENCE are generated from files in `evidence/`
 
-## Blocked or waiting
-- First mainnet answer: `scripts/mainnet-seed.ts` (house mandate, registerWork, scripted strike) was not created because the auto-mode classifier denied the write. Needs the human to allow it or run an equivalent.
-- Postgres connection string for `DATABASE_URL` (the Supabase value provided is the project API URL, not a connection string)
-- Phase D experiments E1 to E7 (need Gateway deposit and a running seller)
-- ERC-8004 registration, validator feedback
-- Source verification on Sourcify and the explorer
-- Render service for the agent API, then `NEXT_PUBLIC_AGENT_API_URL` on Vercel
-- Commit email for 0xkinno is the GitHub noreply address; replace via `git config user.email` if desired
+## Waiting or partial
+- E6 for 3, 5 and 10 leaves: needs more registered works
+- E7 browser withdraw: not exercised
+- Explorer-side source verification is behind a bot challenge; both contracts are verified on Sourcify (exact match)
+- Wallet-signed flows (register a work, set a mandate) need a human wallet session to exercise end to end
+- Demo video
 
 ## Next
-- Run seed, then Phase D, G, A on mainnet; generate benchmark; regenerate EVIDENCE.md and PROOF.md; deploy
+- Demo video from the live app
+- Regenerate README and EVIDENCE after any new mainnet run: `node scripts/evidence.mjs && node scripts/readme-sync.mjs`

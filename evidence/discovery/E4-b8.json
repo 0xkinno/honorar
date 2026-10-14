@@ -1,0 +1,23 @@
+{
+  "experiment": "E4-B8",
+  "attack": "Seller drops the connection after the agent signed",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:14:31.602Z",
+  "payCallError": "fetch failed",
+  "signedBeforeError": true,
+  "signedRequestsReceivedBySeller": 1,
+  "sellerSettled": {
+    "success": true,
+    "payer": "0x85d786c256d1924aa56b4cfd41904042513dc943",
+    "transaction": "8563ee1b-8f85-401b-8981-a91dcdba2d3c",
+    "network": "eip155:5042"
+  },
+  "transfersFoundBySearch": [
+    {
+      "id": "8563ee1b-8f85-401b-8981-a91dcdba2d3c",
+      "status": "received",
+      "amount": "1000"
+    }
+  ],
+  "verdict": "RECOVERED"
+}

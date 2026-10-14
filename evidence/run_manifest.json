@@ -1,0 +1,26 @@
+{
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:36:13.684Z",
+  "modelIds": [
+    "gemini-3.1-flash-lite",
+    "openai/gpt-oss-20b"
+  ],
+  "corpusHash": "b75fabd7b7e077733a0b9ed729dce7e1594d3c37865a5cb43915d124e2f016ba",
+  "files": {
+    "evidence/benchmark.json": "4247d4fc2357b3e4b4228be63e810c365a598757b7808a1a47ae4e966776d618",
+    "bench/questions.json": "c14d3dfe8af7c2919af45eed3203b73140acebe933f0406158a2aba5827fdd7c",
+    "evidence/break/B1.json": "1798b932028ab1c9ed54c6eae72a68946bb2bef4012a2606b7f74550cee68bd7",
+    "evidence/break/B10.json": "6cab29fa4402362130221a5196dd40952564d5194489254171e50945b91b2f98",
+    "evidence/break/B11.json": "dfce95a2258c2036581257886c76804ea3fd76e5527cc99ee82603a461a69623",
+    "evidence/break/B2.json": "fc114ffebe2762df785b8a16cad1cc7498b56b0d33509568a363bad2eab75150",
+    "evidence/break/B3.json": "966f071a4a91d6d17688066a301905bd25f48cc392672496810e3de19bad67dd",
+    "evidence/break/B4.json": "ea88f483d61e52c2e97fd6467f3900370e29a58bf0ef3c4c3d0da2d0b0660897",
+    "evidence/break/B5.json": "c0ee889d6060891ee80f0ccad18b8c4bbe271564967900aea88d617b60af1456",
+    "evidence/break/B6.json": "9c6fe3ae5051ba3a08250923e2d00e21ad1d1ecc95b6ecf1db7ba9915b797f65",
+    "evidence/break/B7.json": "3fa0a26f27c9f7e7c1ccc4b924349b1d90ee8a0eb250a5a5f27ae9be7a1dfac3",
+    "evidence/break/B8.json": "816c2f765e7065c2d3a4aa1170aa66cbe9a6704e3db805ffcb6e4931a7395e55",
+    "evidence/break/B9.json": "3e463cdc0b23752c366cf20ef0fd0fb6304e3c76bc3c5cf1dc1df112feb5fd92",
+    "evidence/break/CONTROL.json": "ff88e89016cb00233ced81a511d85f33336cfbce43c769e54dcd6a0bd4720f01",
+    "evidence/break/summary.json": "4302dec71e75e2c85cf291af268879d47fc0ec5e6028174364a66b6fb51ea6fd"
+  }
+}

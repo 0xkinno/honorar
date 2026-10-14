@@ -12,9 +12,9 @@ Each invariant is independently checkable.
 | I6 | VERSION | Strike reverts if the work changed since pricing | contract | `Ledger.t.sol` test_I6_version_swap_reverts | V7 | B6 |
 | I7 | ROOT | On-chain root equals the recomputed Merkle root | contract + verifier | `Ledger.t.sol` test_I7_forged_root_reverts, `Vectors.t.sol` | V5 | B7 |
 | I8 | FRONTED | Fronted reading fees equal the committed Gateway transfers | reconciler | `verifier.test.ts` | V8 | B10 |
-| I9 | NETTING | Transfers to a writer in a batch do not exceed observed credit | reconciler | `agent.test.ts` | V9 | pending mainnet data |
+| I9 | NETTING | Transfers to a writer in a batch do not exceed observed credit | reconciler | `agent.test.ts`, `evidence/discovery/E5.json` | V9 | n/a |
 | I10 | NO-MODEL-MONEY | No model output is typed as amount, address or price | kernel types | `kernel.test.ts` model money | n/a | B11 |
-| I11 | NO-RETRY-AFTER-SIGN | A signed payment is never retried | agent | buyer hooks never return recovered | n/a | B8 |
+| I11 | NO-RETRY-AFTER-SIGN | A signed payment is never retried | agent | `evidence/discovery/E4-b8.json` (mainnet) | n/a | B8 |
 | I12 | CLEAN-ROOM | Verifier needs only the bundle and an Arc RPC | verifier | `ChainReader` interface | V1 to V7 | n/a |
 
 Normalization is `NORM_V1`: NFKC, lowercase, curly quotes to straight, strip zero-width characters, unify dashes, collapse whitespace. Nothing else.

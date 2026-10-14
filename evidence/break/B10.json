@@ -8,6 +8,6 @@
   "observed": "fronted: FAIL; ids: FAIL",
   "verdict": "REJECTED",
   "env": "verifier",
-  "ranAt": "2026-10-14T14:59:58.134Z",
-  "commit": "0abccd6e4eea6299149be995fe70c0b03f8741fb"
+  "ranAt": "2026-10-14T16:36:28.154Z",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9"
 }

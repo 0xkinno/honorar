@@ -1,0 +1,17 @@
+{
+  "experiment": "E3",
+  "question": "When are buyer funds locked and how does the Gateway balance move?",
+  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
+  "ranAt": "2026-10-14T16:15:53.350Z",
+  "depositedBaseUnits": "40000",
+  "transfersFromAgent": 15,
+  "transfersSumBaseUnits": "15000",
+  "expectedAvailable": "25000",
+  "observedGateway": {
+    "total": "25000",
+    "available": "25000",
+    "withdrawing": "0",
+    "withdrawable": "0"
+  },
+  "matchesExpected": true
+}
