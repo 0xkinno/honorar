@@ -2,59 +2,29 @@
 
 import { useEffect, useState } from 'react';
 import { useAccount } from 'wagmi';
-import { parseAbiItem } from 'viem';
-import { AGENT_URL, clockLabel, type TransferView } from '@/lib/api';
-import { arcClient, useAgentConfig, useFetch } from '@/lib/hooks';
+import { AGENT_URL, clockLabel, getJson, type TransferView } from '@/lib/api';
+import { useFetch } from '@/lib/hooks';
 import { Notice, PageHead, Skeleton, TxLink, usdc } from '@/components/ui';
 
 type Quote = { workId: string; spanHash: string; amount: bigint; answerId: string; txHash: string; block: bigint };
 
-const registered = parseAbiItem('event WorkRegistered(bytes32 indexed workId, bytes32 contentHash, address indexed registrant, string uri)');
-const quoteStruck = parseAbiItem('event QuoteStruck(bytes32 indexed answerId, bytes32 indexed workId, bytes32 spanHash, uint64 amount)');
 
 export default function EarningsPage() {
   const { address } = useAccount();
-  const { data: cfg } = useAgentConfig();
   const { data: transfers, loading } = useFetch<TransferView[]>(address ? `/transfers?writer=${address}` : null, 10000);
   const [quotes, setQuotes] = useState<Quote[] | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!address || !cfg?.registry || !cfg.ledger) return;
+    if (!address) return;
     let live = true;
-    (async () => {
-      const c = arcClient();
-      const latest = await c.getBlockNumber();
-      const from = BigInt(cfg.deployBlock ?? 0);
-      const STEP = 90_000n;
-      const ranges: [bigint, bigint][] = [];
-      for (let lo = from; lo <= latest; lo += STEP) ranges.push([lo, lo + STEP - 1n > latest ? latest : lo + STEP - 1n]);
-      const ids: `0x${string}`[] = [];
-      for (const [lo, hi] of ranges) {
-        const works = await c.getLogs({ address: cfg.registry as `0x${string}`, event: registered, args: { registrant: address }, fromBlock: lo, toBlock: hi });
-        ids.push(...works.map((w) => w.args.workId as `0x${string}`));
-      }
-      if (ids.length === 0) return live && setQuotes([]);
-      const logs = [];
-      for (const [lo, hi] of ranges) {
-        logs.push(...(await c.getLogs({ address: cfg.ledger as `0x${string}`, event: quoteStruck, args: { workId: ids }, fromBlock: lo, toBlock: hi })));
-      }
-      if (!live) return;
-      setQuotes(
-        logs.map((l) => ({
-          workId: l.args.workId as string,
-          spanHash: l.args.spanHash as string,
-          amount: l.args.amount as bigint,
-          answerId: l.args.answerId as string,
-          txHash: l.transactionHash,
-          block: l.blockNumber,
-        })),
-      );
-    })().catch((e: unknown) => live && setErr((e as Error).message));
+    getJson<{ answerId: string; workId: string; spanHash: string; amount: string; txHash: string; block: number }[]>(`/quotes?writer=${address}`)
+      .then((rows) => live && setQuotes(rows.map((r) => ({ workId: r.workId, spanHash: r.spanHash, amount: BigInt(r.amount), answerId: r.answerId, txHash: r.txHash, block: BigInt(r.block) }))))
+      .catch((e: unknown) => live && setErr((e as Error).message));
     return () => {
       live = false;
     };
-  }, [address, cfg]);
+  }, [address]);
 
   if (!AGENT_URL) return (<><PageHead title="Earnings" kicker="Writers" /><Notice tone="warn">The live agent service is not connected to this deployment yet. Contracts are on Arc mainnet; the app lights up when the agent API url is set.</Notice></>);
   if (!address) return (<><PageHead title="Earnings" kicker="Writers" /><Notice>Connect the wallet you registered works with.</Notice></>);

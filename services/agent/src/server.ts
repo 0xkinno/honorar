@@ -177,6 +177,28 @@ app.get('/bundle/:answerId', async (c) => {
   return b ? c.json(b) : c.json({ error: 'not found' }, 404);
 });
 
+const workRecipients = new Map<string, string[]>();
+app.get('/quotes', async (c) => {
+  if (!dep) return c.json([]);
+  const writer = (c.req.query('writer') ?? '').toLowerCase();
+  const { readWork } = await import('@honorar/chain');
+  const bundles = await store.list<Bundle>('bundles');
+  const rows: { answerId: string; workId: string; spanHash: string; amount: string; txHash: string; block: number }[] = [];
+  for (const b of bundles) {
+    if (!b.strike) continue;
+    for (const l of b.leaves) {
+      let rec = workRecipients.get(l.workId);
+      if (!rec) {
+        const w = await readWork(chain, dep.registry, l.workId as never).catch(() => null);
+        rec = w ? w.recipients.map((r) => r.toLowerCase()) : [];
+        workRecipients.set(l.workId, rec);
+      }
+      if (rec.includes(writer)) rows.push({ answerId: b.answerId, workId: l.workId, spanHash: l.spanHash, amount: l.amount, txHash: b.strike.txHash, block: b.strike.blockNumber });
+    }
+  }
+  return c.json(rows);
+});
+
 app.get('/feedback', async (c) => c.json((await store.list('feedback')).reverse().slice(0, 100)));
 
 app.get('/answers', async (c) => c.json((await store.list('answers')).reverse().slice(0, 50)));
