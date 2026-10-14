@@ -55,7 +55,7 @@ export class PgStore implements Store {
   private ready: Promise<void>;
 
   constructor(url: string) {
-    this.pool = new pg.Pool({ connectionString: url, max: 5 });
+    this.pool = new pg.Pool({ connectionString: url, max: 5, ssl: /supabase|render.com/.test(url) ? { rejectUnauthorized: false } : undefined });
     this.ready = this.pool
       .query(
         `create table if not exists docs (
