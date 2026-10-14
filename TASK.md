@@ -41,17 +41,17 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [x] unit, property and golden-vector tests green, coverage report
 
 ## P4 Phase G: Gateway rail and reconciler  [GATE G]
-- [x] read endpoint with x402 (code; mainnet run pending)
-- [x] buyer client with caps, payee pinning, no retry after sign
-- [x] reconciler and batch reconciliation
+- [ ] read endpoint with x402 (code written, awaits mainnet run)
+- [ ] buyer client with caps, payee pinning, no retry after sign
+- [ ] reconciler and batch reconciliation
 - [ ] 20 reading fees observed to completed
 
 ## P5 Phase A: agent service  [GATE A]
 - [x] corpus ingest and store
-- [x] loop with SSE stream
+- [ ] loop with SSE stream
 - [x] model proposals only
 - [ ] house reader and connected reader
-- [x] bundle storage and endpoint
+- [ ] bundle storage and endpoint
 - [ ] ERC-8004 registration and validator feedback
 - [ ] connected answer and house answer struck on mainnet
 
