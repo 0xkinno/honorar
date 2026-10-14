@@ -25,6 +25,42 @@
       "answerId": "0xf1e0b90655277a2c02dc9754218d7bf4af55a1361cc50460a40efa455299dbc1",
       "score": 100,
       "tx": "0x0b062ab70c54eb2896da7fa872c5544f28f06805e400d355f39ea31231bf31e8"
+    },
+    {
+      "answerId": "0x1e368b5894170f2ddb424aa8e3dff4573c7b3b2fcd1c4d6f1155d9a46c0cbc27",
+      "score": 0,
+      "tx": "0x18f9c0f66ce5741e672f56bfcaa63aa5032a3326c11cb4eda2a6dafd8933064e",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x3c6b742760aa66bbeaacf68d49622ca2af7817fbbfbcd7b27049c69772f81e9b",
+      "score": 0,
+      "tx": "0xaf61e594f40316a52a055233d0eaadae141ac0d9f8dd10151fc75bf728b5593f",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x547e3d020819660f0c9b1e582e89ef940b702af4ca3c959e5d999adfed94add9",
+      "score": 0,
+      "tx": "0x59f2079439b1be49706505abc1a857b1bd3cff638870410a9cabd0b2b7a14061",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x73c3d754e2942a4f13a2b62fd85b66d2ed3c1d31d311bffbdb03088cabc82920",
+      "score": 0,
+      "tx": "0xcc575843d6c22f1b57fa185573c313f2b09e5732c0539c6c4f6188180c64bdeb",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x7a4c74eb92b96a69a1f1dd36e8e20dd9489be1f0b0adac8556500b7fe467ccc8",
+      "score": 0,
+      "tx": "0xda10632aebcc010def785ba52fd925f116eeb069bd31daf5d31f97c6144e7791",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x8a9951baaa5160fada7d45926f8cd85a5267ed56ffd1eb691cbcdf7e306dd3ee",
+      "score": 100,
+      "tx": "0x31d957b4c01a97fee39659b4225f5795f76154977e9bab03d90c2261cb6262ad",
+      "tag": "answer_settled"
     }
   ]
 }

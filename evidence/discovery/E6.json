@@ -1,16 +1,58 @@
 {
   "experiment": "E6",
   "question": "What does a strike cost?",
-  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9",
-  "ranAt": "2026-10-14T16:15:53.350Z",
+  "commit": "75baba6d9321e9d0bbbc8a98811e3d62445768f3",
+  "ranAt": "2026-10-14T18:21:27.087Z",
   "note": "Only single-leaf strikes were exercised on mainnet; 3, 5 and 10 leaf costs are UNKNOWN until more works are registered.",
   "strikes": [
+    {
+      "leaves": 5,
+      "gasUsed": "520599",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.010412",
+      "txHash": "0x26ac9c025de05128be3090c0c3ef1b927761d62f3e9a7d5ebb5ef0206a411d38"
+    },
+    {
+      "leaves": 2,
+      "gasUsed": "284251",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.005685",
+      "txHash": "0x9c839154c53c8248c7dbce725ab0f55eac70686aef26f04e7f0ea405580f64c7"
+    },
+    {
+      "leaves": 2,
+      "gasUsed": "286597",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.005732",
+      "txHash": "0x09d6697b17b30243de2075f14106b3d5d2fa2d98fdf128fa5891f7e6c0bdcfae"
+    },
+    {
+      "leaves": 3,
+      "gasUsed": "364731",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.007295",
+      "txHash": "0x57cb3d4548ae56cbb9b548a63bd4d4ff46b9b0387a2df1a0379b932e9854d1ca"
+    },
     {
       "leaves": 1,
       "gasUsed": "208875",
       "effectiveGasPrice": "20000001153",
       "usdc": "0.004178",
       "txHash": "0x33353a9432f6fd46e268c2237d0fe5bca122a2607d8f9470aeae80eb745fe4d3"
+    },
+    {
+      "leaves": 5,
+      "gasUsed": "520595",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.010412",
+      "txHash": "0x5cb82e3056d585b35256671d5a243e6db2682800c88ca2af4e7a360c59f7197a"
+    },
+    {
+      "leaves": 2,
+      "gasUsed": "286581",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.005732",
+      "txHash": "0x42888f0e21d82b61e533502a25572105b05800f3c7ea88f1ae78e9ba5456494d"
     },
     {
       "leaves": 1,
@@ -28,10 +70,31 @@
     },
     {
       "leaves": 1,
+      "gasUsed": "206542",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.004131",
+      "txHash": "0xed767b4f1d68c62582d3dc0a5e439a6f1e9f8bd68ad4140e06b2ba55ec390bea"
+    },
+    {
+      "leaves": 2,
+      "gasUsed": "284247",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.005685",
+      "txHash": "0xc032c3f8d15b6987a1e47aeaf456ad0b572304c4df18f369fc59079f0cb2e39c"
+    },
+    {
+      "leaves": 1,
       "gasUsed": "208887",
       "effectiveGasPrice": "20000000001",
       "usdc": "0.004178",
       "txHash": "0xb6e055664ac1ff058fdf1d13f2983dd284def29f45a3645637a27dc7ec05f16c"
+    },
+    {
+      "leaves": 3,
+      "gasUsed": "364735",
+      "effectiveGasPrice": "20000001153",
+      "usdc": "0.007295",
+      "txHash": "0x5062fc60f35f694dae1fc5e47c062d868fd81755436acb508399a5a192ac33c8"
     },
     {
       "leaves": 1,

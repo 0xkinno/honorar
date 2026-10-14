@@ -1,0 +1,42 @@
+{
+  "writer": "0xE038C8868Db7666a96121Bd59944C57a22555D64",
+  "works": [
+    {
+      "id": "micro",
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff",
+      "contentHash": "0xf81679d9f812b40b065079898fce559f591c426dbeae7d7548d50094868f89b4",
+      "quotePrice": "3000",
+      "tx": "0x947693c72b4da8b9219debde3cffae0b6794c95afc60574f3f3598e1cdce3485"
+    },
+    {
+      "id": "attrib",
+      "workId": "0x728d054e6c4b9694ae14ffdd6470d3fffa559fdc17e6f827faad573a5cdf82dc",
+      "contentHash": "0xc7441f8067941bbc34427cc1be4c71f67d87464c9ce8203c9959801110b1087e",
+      "quotePrice": "5000",
+      "tx": "0x4fa8a800b7ac0bd890b1c518ddff5d586317d63f0ebfaa9bd49f7376c327a987"
+    },
+    {
+      "id": "agents",
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c",
+      "contentHash": "0xf6111cfc53561df760772f009ccbd85583a2132e1fa1204c144dc677a3a093ce",
+      "quotePrice": "4000",
+      "tx": "0x68eb1c3c1931c21064fe11834453da5a5341756b94c5d7b5e243884232906b2b"
+    },
+    {
+      "id": "netting",
+      "workId": "0x1eee27f07eff190fae5e17e4c32a0d6ebabd6273036e92068de6b3286bb12d9e",
+      "contentHash": "0x030314c0cbf3cad0ffb375c2d609f0a73965b002d9b6f707d3cc7b83bac63b4a",
+      "quotePrice": "6000",
+      "tx": "0xbdb2d529edb90489284650dd65442936f5fcd9b0cc6de2babe4ae27872489faa"
+    },
+    {
+      "id": "proof",
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08",
+      "contentHash": "0xdde786e36025126b03dcb44a9d9d77ca618d990e8211ade8465219c9052e2c9f",
+      "quotePrice": "4500",
+      "tx": "0xa3aa88700a1433f2f84cf268939a30119f66d5d42bcd1edaad4db005d74afd08"
+    }
+  ],
+  "ranAt": "2026-10-14T18:12:24.932Z",
+  "note": "Original articles written for this build, registered under the project writer wallet."
+}

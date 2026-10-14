@@ -46,6 +46,8 @@ export type Featured = {
   batchTx: string | null;
   transferId: string | null;
   medianSeconds: number | null;
+  batchTransfers: number | null;
+  refused: { answerId: string; reason: string } | null;
 };
 export const featured = (): Featured | null => readJson<Featured>('apps/web/content/featured-bundle.json');
 

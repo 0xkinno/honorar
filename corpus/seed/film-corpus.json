@@ -1,0 +1,12 @@
+[
+  {
+    "id": "netting",
+    "title": "Where netted payments go",
+    "text": "A payment that is netted never appears on the ledger as its own line. Many authorizations are collected, offset against one another, and written once as a net change per participant. For the writer this is a quiet loss of evidence: the money arrives, but the record of who paid for which page does not. Reconciliation is the answer. The operator keeps every transfer identifier, follows each one from authorization to settlement, and proves that the writer's credit in the batch equals the sum of the transfers that were promised to that writer."
+  },
+  {
+    "id": "proof",
+    "title": "What a writer can prove",
+    "text": "A writer who is quoted by machines usually has nothing to show for it. A receipt changes that. When the receipt names the exact sentence, the answer that carried it and the transaction that paid for it, the writer holds evidence that can be checked by a stranger without trusting anyone. That evidence has a second use: a public history of verified quotations lets a writer price her work, and lets a reader decide whom to read. Payment becomes the byproduct of a record that stands on its own."
+  }
+]

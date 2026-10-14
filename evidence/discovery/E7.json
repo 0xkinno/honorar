@@ -1,0 +1,14 @@
+{
+  "experiment": "E7",
+  "question": "Can a writer withdraw Gateway earnings?",
+  "commit": "75baba6d9321e9d0bbbc8a98811e3d62445768f3",
+  "ranAt": "2026-10-14T18:11:28.821Z",
+  "signer": "writer key, SDK withdraw()",
+  "withdrawn": "0.016400",
+  "mintTxHash": "0xad2e8435854b909bbd32f18cbceb9ff16e5b215e6c7a64a4caa9f3a9ac900a5a",
+  "gatewayAvailableBefore": "0.02",
+  "gatewayAvailableAfter": "0.0001",
+  "walletBefore": "0.072366",
+  "walletAfter": "0.086232",
+  "note": "Withdraw needs amount plus a fee from the available balance (observed fee about 0.0035 USDC on a 0.02 balance). Browser-wallet signing of the burn intent was not exercised."
+}

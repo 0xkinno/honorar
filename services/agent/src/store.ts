@@ -10,7 +10,8 @@ export type Collection =
   | 'transfer_events'
   | 'batch_reconciliations'
   | 'strikes'
-  | 'house_usage';
+  | 'house_usage'
+  | 'feedback';
 
 export interface Store {
   put<T>(c: Collection, id: string, value: T): Promise<void>;

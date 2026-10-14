@@ -5,6 +5,7 @@ import { WagmiProvider, type Config } from 'wagmi';
 import { createAppKit } from '@reown/appkit/react';
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 import { arc } from 'viem/chains';
+import { injected } from 'wagmi/connectors';
 import { useState, type ReactNode } from 'react';
 import { Motion } from './motion';
 
@@ -13,7 +14,7 @@ const site = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 
 export const walletReady = projectId.length > 0;
 
-const adapter = new WagmiAdapter({ networks: [arc], projectId: projectId || 'unset', ssr: true });
+const adapter = new WagmiAdapter({ networks: [arc], projectId: projectId || 'unset', ssr: true, connectors: [injected({ shimDisconnect: true })] });
 
 if (walletReady) {
   createAppKit({

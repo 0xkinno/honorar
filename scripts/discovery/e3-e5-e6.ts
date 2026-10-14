@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { GatewayClient } from '@circle-fin/x402-batching/client';
 import { createPublicClient, http, type Hex } from 'viem';
 import { arc } from 'viem/chains';
@@ -19,14 +19,14 @@ const sumAll = all.reduce((a, t) => a + BigInt(t.amount), 0n);
 // E3: buyer funds locked
 const bal = await gw.getBalances();
 const deposited = 40_000n;
-writeFileSync('evidence/discovery/E3.json', `${JSON.stringify({ experiment: 'E3', question: 'When are buyer funds locked and how does the Gateway balance move?', commit, ranAt, depositedBaseUnits: deposited.toString(), transfersFromAgent: all.length, transfersSumBaseUnits: sumAll.toString(), expectedAvailable: (deposited - sumAll).toString(), observedGateway: { total: bal.gateway.total.toString(), available: bal.gateway.available.toString(), withdrawing: bal.gateway.withdrawing.toString(), withdrawable: bal.gateway.withdrawable.toString() }, matchesExpected: bal.gateway.available === deposited - sumAll || bal.gateway.total === deposited - sumAll }, null, 2)}\n`);
+if (!existsSync('evidence/discovery/E3.json')) writeFileSync('evidence/discovery/E3.json', `${JSON.stringify({ experiment: 'E3', question: 'When are buyer funds locked and how does the Gateway balance move?', commit, ranAt, depositedBaseUnits: deposited.toString(), transfersFromAgent: all.length, transfersSumBaseUnits: sumAll.toString(), expectedAvailable: (deposited - sumAll).toString(), observedGateway: { total: bal.gateway.total.toString(), available: bal.gateway.available.toString(), withdrawing: bal.gateway.withdrawing.toString(), withdrawable: bal.gateway.withdrawable.toString() }, matchesExpected: bal.gateway.available === deposited - sumAll || bal.gateway.total === deposited - sumAll }, null, 2)}\n`);
 
 // E5: writer credit versus the sum of transfers to that writer
 const writer = env.WRITER_TEST_ADDRESS as Hex;
 const wb = await gw.getBalances(writer);
 const toWriter = (await gw.searchTransfers({ from: gw.address, to: writer, pageSize: 100 })).transfers;
 const settledToWriter = toWriter.filter((t) => t.status === 'completed').reduce((a, t) => a + BigInt(t.amount), 0n);
-writeFileSync('evidence/discovery/E5.json', `${JSON.stringify({ experiment: 'E5', question: 'Can a writer batch credit be reconciled from observable state?', commit, ranAt, method: 'Writer Gateway balance via getBalances(writer) compared with the sum of completed transfers to that writer. Per-block archive reads of GatewayWallet were not used.', transfersToWriter: toWriter.length, completedToWriterBaseUnits: settledToWriter.toString(), writerGatewayTotal: wb.gateway.total.toString(), verdict: wb.gateway.total === settledToWriter ? 'MATCH' : wb.gateway.total > settledToWriter ? 'WRITER_HAS_OTHER_INCOME' : 'MISMATCH' }, null, 2)}\n`);
+if (!existsSync('evidence/discovery/E5.json')) writeFileSync('evidence/discovery/E5.json', `${JSON.stringify({ experiment: 'E5', question: 'Can a writer batch credit be reconciled from observable state?', commit, ranAt, method: 'Writer Gateway balance via getBalances(writer) compared with the sum of completed transfers to that writer. Per-block archive reads of GatewayWallet were not used.', transfersToWriter: toWriter.length, completedToWriterBaseUnits: settledToWriter.toString(), writerGatewayTotal: wb.gateway.total.toString(), verdict: wb.gateway.total === settledToWriter ? 'MATCH' : wb.gateway.total > settledToWriter ? 'WRITER_HAS_OTHER_INCOME' : 'MISMATCH' }, null, 2)}\n`);
 
 // E6: strike gas
 const rows: { leaves: number; gasUsed: string; effectiveGasPrice: string; usdc: string; txHash: string }[] = [];

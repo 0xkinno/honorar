@@ -33,12 +33,12 @@ export async function registerAgent(client: PublicClient, rpcUrl: string, ownerK
   return { agentId: minted.args.tokenId, txHash };
 }
 
-/** Score 0..100 from the kernel outcome: verified over proposed, each refusal lowers it. */
+/** round(100 * verified / max(1, proposed)), clamped to 0..100. */
 export function feedbackScore(verified: number, proposed: number): number {
-  if (proposed === 0) return verified > 0 ? 100 : 0;
-  const base = Math.round((verified / proposed) * 100);
-  return Math.max(0, Math.min(100, base));
+  return Math.max(0, Math.min(100, Math.round((100 * verified) / Math.max(1, proposed))));
 }
+
+export type FeedbackTag = 'answer_settled' | 'answer_refused';
 
 export async function giveFeedback(
   client: PublicClient,
@@ -47,6 +47,7 @@ export async function giveFeedback(
   agentId: bigint,
   score: number,
   answerId: Hex,
+  tag: FeedbackTag = 'answer_settled',
 ): Promise<Hex> {
   const account = privateKeyToAccount(validatorKey);
   const wallet = createWalletClient({ account, chain: arc, transport: http(rpcUrl) });
@@ -55,7 +56,7 @@ export async function giveFeedback(
     address: ADDRESSES.reputationRegistry,
     abi: reputationAbi,
     functionName: 'giveFeedback',
-    args: [agentId, BigInt(score), 0, 'honorar_answer', '', '', '', keccak256(toHex(answerId))],
+    args: [agentId, BigInt(score), 0, tag, '', '', '', keccak256(toHex(answerId))],
   });
   const txHash = await wallet.writeContract(request);
   await client.waitForTransactionReceipt({ hash: txHash });

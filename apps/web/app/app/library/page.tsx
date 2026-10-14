@@ -5,6 +5,7 @@ import { keccak256, encodeAbiParameters } from 'viem';
 import { useAccount, useSwitchChain, useWriteContract } from 'wagmi';
 import { ARC_CHAIN_ID, honorarRegistryAbi, parseUsdc6 } from '@honorar/chain';
 import { AGENT_URL } from '@/lib/api';
+import { ensureArc, walletError } from '@/lib/wallet';
 import { arcClient, useAgentConfig } from '@/lib/hooks';
 import { Notice, PageHead, TxLink } from '@/components/ui';
 
@@ -43,7 +44,7 @@ export default function LibraryPage() {
     if (!preview || !cfg?.registry || !address) return;
     setError(null);
     try {
-      if (chainId !== ARC_CHAIN_ID) await switchChainAsync({ chainId: ARC_CHAIN_ID });
+      await ensureArc(chainId, switchChainAsync);
       const recipients = splits.map((s) => s.address as `0x${string}`);
       if (recipients[0]?.toLowerCase() !== address.toLowerCase()) throw new Error('the first recipient must be the connected wallet');
       const bps = splits.map((s) => Math.round(Number(s.pct) * 100));
@@ -59,7 +60,7 @@ export default function LibraryPage() {
       await fetch(`${AGENT_URL}/corpus/bind`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id: preview.id, workId }) });
       setStatus('Registered');
     } catch (e) {
-      setError((e as Error).message);
+      setError(walletError(e));
       setStatus(null);
     }
   };

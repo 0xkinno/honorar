@@ -1,0 +1,93 @@
+{
+  "answer": "Stablecoin finality allows for immediate settlement, while batching and netted payments enable cost-effective micropayments by grouping transactions to share fixed costs. \"Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.\" To maintain transparency, operators provide writer receipts that link specific payments to verified citations, ensuring that \"payment becomes the byproduct of a record that stands on its own.\" Meanwhile, agent spending limits are enforced by smart contracts to ensure security without requiring intermediaries.",
+  "answerId": "0x7799747f81f8a5e54b32225c951b8de7cf50db8e7d81dd3738db54afbbb1b6f8",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    },
+    {
+      "quote": "Payment becomes the byproduct of a record that stands on its own.",
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "5000",
+  "gatewayTransfersHash": "0x7bd40f865b059e028f9a189184cdb3c5efbe42eca4afe4176be3ed7b1407ecdc",
+  "leaves": [
+    {
+      "amount": "4500",
+      "origin": "model",
+      "spanHash": "0xd561b2af40ecd2ee7a67179e59fde65617164a08ad0b61bec4d2a6bb7d40b751",
+      "spans": [
+        "payment becomes the byproduct of a record that stands on its own."
+      ],
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0x4c3e8670f3d8eb3e25140298208025b9d75880f746035b18c3611002f75d7c26",
+      "spans": [
+        "batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction."
+      ],
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "Explain how stablecoin finality, micropayment batching, netted payments, verified citations, agent spending limits and writer receipts work together.",
+  "reconciliation": [],
+  "refused": [],
+  "root": "0x126a9add59d8a2dd7d11c59977df187a828dfb91be5000daef33714ef76c66d3",
+  "sources": [
+    {
+      "contentHash": "0xf81679d9f812b40b065079898fce559f591c426dbeae7d7548d50094868f89b4",
+      "text": "A micropayment is a payment so small that the cost of moving it can exceed its value. Card networks charge a fixed fee per transaction, which is why nobody sells a single article for a tenth of a cent on that rail. Batching changes the arithmetic: thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch. The price of that efficiency is visibility. An individual payment is no longer a line on the public ledger, only a contribution to a net balance change, and anyone who wants a receipt has to ask the operator of the batch for it.",
+      "version": 1,
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    },
+    {
+      "contentHash": "0xdde786e36025126b03dcb44a9d9d77ca618d990e8211ade8465219c9052e2c9f",
+      "text": "A writer who is quoted by machines usually has nothing to show for it. A receipt changes that. When the receipt names the exact sentence, the answer that carried it and the transaction that paid for it, the writer holds evidence that can be checked by a stranger without trusting anyone. That evidence has a second use: a public history of verified quotations lets a writer price her work, and lets a reader decide whom to read. Payment becomes the byproduct of a record that stands on its own.",
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "contentHash": "0x030314c0cbf3cad0ffb375c2d609f0a73965b002d9b6f707d3cc7b83bac63b4a",
+      "text": "A payment that is netted never appears on the ledger as its own line. Many authorizations are collected, offset against one another, and written once as a net change per participant. For the writer this is a quiet loss of evidence: the money arrives, but the record of who paid for which page does not. Reconciliation is the answer. The operator keeps every transfer identifier, follows each one from authorization to settlement, and proves that the writer's credit in the batch equals the sum of the transfers that were promised to that writer.",
+      "version": 1,
+      "workId": "0x1eee27f07eff190fae5e17e4c32a0d6ebabd6273036e92068de6b3286bb12d9e"
+    },
+    {
+      "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+      "text": "How stablecoins settle\n\nA stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.\n\nBecause a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.\n\nFor writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    },
+    {
+      "contentHash": "0xf6111cfc53561df760772f009ccbd85583a2132e1fa1204c144dc677a3a093ce",
+      "text": "Software agents that pay for things need limits that they cannot talk their way around. A limit stored inside the agent is only a suggestion, because the agent can be misconfigured or manipulated. A limit enforced by the contract that moves the money is different: the owner of the funds chooses a maximum per task and a maximum per day, and the contract refuses any transfer beyond them. Such a mandate can be revoked at any time, and the funds stay in the owner's wallet until the moment they are spent, which removes the need to trust an intermediary with custody.",
+      "version": 1,
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    }
+  ],
+  "strike": {
+    "blockNumber": 25963089,
+    "chainId": 5042,
+    "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "txHash": "0x42888f0e21d82b61e533502a25572105b05800f3c7ea88f1ae78e9ba5456494d"
+  },
+  "transferIds": [
+    "a2cedd5b-a3f8-4262-b8ed-e03ff8ad13f6",
+    "adb4b53c-e33b-4072-9d06-097f489730b9",
+    "c855e902-6240-44a3-8f62-e071cb856c21",
+    "dd7bd092-20d5-4fb2-9f2d-92cfdc377378",
+    "e194e204-597f-45dc-80af-d60b1657232d"
+  ],
+  "unregistered": []
+}

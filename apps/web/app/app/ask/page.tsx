@@ -7,6 +7,7 @@ import { useAccount, useSwitchChain, useWriteContract } from 'wagmi';
 import { erc20Abi, parseAbi } from 'viem';
 import { ADDRESSES, ARC_CHAIN_ID, formatUsdc6, parseUsdc6 } from '@honorar/chain';
 import { AGENT_URL, clockLabel, type TransferView } from '@/lib/api';
+import { ensureArc, walletError } from '@/lib/wallet';
 import { useAgentConfig } from '@/lib/hooks';
 import { Notice, PageHead, Skeleton, TxLink, usdc } from '@/components/ui';
 
@@ -133,7 +134,7 @@ function ReaderSetup({ ledger }: { ledger: string }) {
   const [msg, setMsg] = useState<string | null>(null);
 
   const ensure = async (): Promise<void> => {
-    if (chainId !== ARC_CHAIN_ID) await switchChainAsync({ chainId: ARC_CHAIN_ID });
+    await ensureArc(chainId, switchChainAsync);
   };
   const approve = async (): Promise<void> => {
     try {
@@ -142,7 +143,7 @@ function ReaderSetup({ ledger }: { ledger: string }) {
       const hash = await writeContractAsync({ address: ADDRESSES.usdc, abi: erc20Abi, functionName: 'approve', args: [ledger as `0x${string}`, amount] });
       setMsg(`Approval sent: ${hash}`);
     } catch (e) {
-      setMsg((e as Error).message);
+      setMsg(walletError(e));
     }
   };
   const mandate = async (): Promise<void> => {
@@ -156,7 +157,7 @@ function ReaderSetup({ ledger }: { ledger: string }) {
       });
       setMsg(`Mandate sent: ${hash}`);
     } catch (e) {
-      setMsg((e as Error).message);
+      setMsg(walletError(e));
     }
   };
   if (!address) return <Notice>Connect a wallet to set a spending mandate, or use the house reader.</Notice>;

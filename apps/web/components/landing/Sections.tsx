@@ -16,11 +16,33 @@ export type FeaturedProps = {
   amount: string;
   batchTx: string | null;
   medianSeconds: number | null;
+  transferId?: string | null;
+  batchTransfers?: number | null;
+  refused?: { answerId: string; reason: string } | null;
 } | null;
 
 export type BenchProps = { misdirectedPct: Record<string, number>; questions: number } | null;
 
 const short = (h: string): string => `${h.slice(0, 8)}...${h.slice(-6)}`;
+
+function beatLine(f: NonNullable<FeaturedProps>, i: number): string {
+  switch (i) {
+    case 0:
+      return `work "${f.workTitle}" · content hash ${short(f.contentHash)}`;
+    case 1:
+      return `reading fee 0.001 USDC · transfer ${f.transferId ? short(f.transferId) : 'pending'} · authorized`;
+    case 2:
+      return `answer ${short(f.answerId)} · quoted verbatim`;
+    case 3:
+      return `In the source ✓  In the answer ✓${f.refused ? `  ·  refused: ${f.refused.reason} · unpaid` : ''}`;
+    case 4:
+      return `struck ${f.amount} USDC · block ${f.block} · tx ${short(f.strikeTx)}`;
+    case 5:
+      return `batch ${f.batchTx ? short(f.batchTx) : 'pending'} · ${f.batchTransfers ?? 0} transfers in 1 log${f.medianSeconds !== null ? ` · median ${f.medianSeconds} s` : ''}`;
+    default:
+      return `verify ${short(f.answerId)} · V1 to V8 PASS`;
+  }
+}
 
 function useStats(): Stats | null {
   const [s, setS] = useState<Stats | null>(null);
@@ -152,11 +174,15 @@ export function Follow({ f }: { f: FeaturedProps }) {
                             &ldquo;{f.sentence}&rdquo;
                           </span>
                         </p>
-                        <span className="mono" style={{ color: 'var(--muted)' }}>
-                          hash {short(f.contentHash)} · struck {f.amount} USDC · block {f.block} · tx {short(f.strikeTx)}
-                          {f.batchTx ? ` · batch ${short(f.batchTx)}` : ''}
-                          {f.medianSeconds !== null ? ` · median ${f.medianSeconds}s` : ''}
-                        </span>
+                        {i === 6 ? (
+                          <a className="mono" style={{ color: 'var(--violet)' }} href={`/verify?answer=${f.answerId}`}>
+                            {beatLine(f, i)}
+                          </a>
+                        ) : (
+                          <span className="mono" style={{ color: 'var(--muted)' }}>
+                            {beatLine(f, i)}
+                          </span>
+                        )}
                       </>
                     ) : (
                       <span className="chip warn">This beat fills from the first mainnet answer</span>

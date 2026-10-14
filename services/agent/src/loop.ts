@@ -44,6 +44,7 @@ export type LoopDeps = {
   readingBudget: bigint;
   maxSources: number;
   onStruck?: (answerId: Hex, result: KernelResult) => Promise<void>;
+  onAnswered?: (answerId: Hex, result: KernelResult, struck: boolean) => Promise<void>;
 };
 
 export type AskInput = { question: string; reader: Hex };
@@ -239,6 +240,7 @@ export async function runAnswer(deps: LoopDeps, input: AskInput, emit: (e: LoopE
       struck: bundle.strike !== null,
     });
     emit({ stage: 'bundle', answerId });
+    await deps.onAnswered?.(answerId, result, bundle.strike !== null).catch((e: unknown) => log.warn('feedback failed', { error: (e as Error).message }));
     emit({ stage: 'done', answerId });
     return bundle;
   } catch (e) {

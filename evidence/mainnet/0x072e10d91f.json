@@ -1,0 +1,135 @@
+{
+  "answer": "Micropayments are made practical for writers through batching, where \"thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch.\" To ensure trust, mechanical citation checks verify that \"the quoted words must be found in the saved text of the source, and the answer must actually contain them.\" Writers then receive a receipt that \"names the exact sentence, the answer that carried it and the transaction that paid for it,\" while spending mandates enforced by smart contracts ensure that \"the owner of the funds chooses a maximum per task and a maximum per day, and the contract refuses any transfer beyond them.\" Finally, stablecoin rails allow these payments to settle instantly because \"a stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day.\"",
+  "answerId": "0x072e10d91fdee8d4d7e16a71db78af8adeaa53a6115fbfb496aa67c4aeffde71",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch.",
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    },
+    {
+      "quote": "names the exact sentence, the answer that carried it and the transaction that paid for it",
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "quote": "the owner of the funds chooses a maximum per task and a maximum per day, and the contract refuses any transfer beyond them.",
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    },
+    {
+      "quote": "the quoted words must be found in the saved text of the source, and the answer must actually contain them.",
+      "workId": "0x728d054e6c4b9694ae14ffdd6470d3fffa559fdc17e6f827faad573a5cdf82dc"
+    },
+    {
+      "quote": "a stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day.",
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "5000",
+  "gatewayTransfersHash": "0xdd7a955e5867128f819ce89f604be1eadd2e88eea910366bc864a5cd0578a1a5",
+  "leaves": [
+    {
+      "amount": "3000",
+      "origin": "model",
+      "spanHash": "0x78cde4752e7f7125f02919cad7a368e570dfe9c951c9a1f6c7b3ef98277dae38",
+      "spans": [
+        "thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch."
+      ],
+      "version": 1,
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    },
+    {
+      "amount": "4500",
+      "origin": "model",
+      "spanHash": "0xdbcf133b01381218531a93483b5163aed77b1698f2517a7a4edbfd80f9aadba8",
+      "spans": [
+        "names the exact sentence, the answer that carried it and the transaction that paid for it"
+      ],
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0xecd75aa458b4c013208cf754afa0eb149eaf9d92d97fb35078308c1e3ed3f56d",
+      "spans": [
+        "a stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day."
+      ],
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    },
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0x6b895e9944049a7110c237ed5a362d0f8237055033029def574a3c333306e8e9",
+      "spans": [
+        "the owner of the funds chooses a maximum per task and a maximum per day, and the contract refuses any transfer beyond them."
+      ],
+      "version": 1,
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    },
+    {
+      "amount": "5000",
+      "origin": "model",
+      "spanHash": "0x95a7f82f065c34a66e1c264e1b9290b23359bc766ab07de87b89363c3d4c5967",
+      "spans": [
+        "the quoted words must be found in the saved text of the source, and the answer must actually contain them."
+      ],
+      "version": 1,
+      "workId": "0x728d054e6c4b9694ae14ffdd6470d3fffa559fdc17e6f827faad573a5cdf82dc"
+    }
+  ],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "How do micropayments, batching, netting, citation checks and spending mandates fit together when paying writers?",
+  "reconciliation": [],
+  "refused": [],
+  "root": "0xbb0b9828f47f0541be2f5be0d52cf2129d55f7ead1bf23a57ea179b51f859ccf",
+  "sources": [
+    {
+      "contentHash": "0xf81679d9f812b40b065079898fce559f591c426dbeae7d7548d50094868f89b4",
+      "text": "A micropayment is a payment so small that the cost of moving it can exceed its value. Card networks charge a fixed fee per transaction, which is why nobody sells a single article for a tenth of a cent on that rail. Batching changes the arithmetic: thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch. The price of that efficiency is visibility. An individual payment is no longer a line on the public ledger, only a contribution to a net balance change, and anyone who wants a receipt has to ask the operator of the batch for it.",
+      "version": 1,
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    },
+    {
+      "contentHash": "0xdde786e36025126b03dcb44a9d9d77ca618d990e8211ade8465219c9052e2c9f",
+      "text": "A writer who is quoted by machines usually has nothing to show for it. A receipt changes that. When the receipt names the exact sentence, the answer that carried it and the transaction that paid for it, the writer holds evidence that can be checked by a stranger without trusting anyone. That evidence has a second use: a public history of verified quotations lets a writer price her work, and lets a reader decide whom to read. Payment becomes the byproduct of a record that stands on its own.",
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "contentHash": "0x544953dbf443503263aeb395b9ef69d61b7dd7c8356b510b2158597a2d03e225",
+      "text": "How stablecoins settle\n\nA stablecoin payment is final when the ledger says it is final, and on a chain with deterministic finality that moment arrives in a single block rather than after a business day. Card payments work differently: an authorization is only a promise, and the money moves through clearing and settlement windows that can take days.\n\nBecause a stablecoin ledger never closes, a payment sent on Sunday night clears as quickly as one sent on a Monday morning. Fees are small and quoted in dollars, which makes very small payments practical for the first time.\n\nFor writers this matters because a reading fee of a tenth of a cent only makes sense when the rail has no fixed minimum cost. Batching is how that is achieved: many tiny authorizations are netted together and settled in one transaction.",
+      "version": 1,
+      "workId": "0x30d4a934841f9f130a8fe843547925391ec2514bbfbfd6dafd2f453c131691aa"
+    },
+    {
+      "contentHash": "0xf6111cfc53561df760772f009ccbd85583a2132e1fa1204c144dc677a3a093ce",
+      "text": "Software agents that pay for things need limits that they cannot talk their way around. A limit stored inside the agent is only a suggestion, because the agent can be misconfigured or manipulated. A limit enforced by the contract that moves the money is different: the owner of the funds chooses a maximum per task and a maximum per day, and the contract refuses any transfer beyond them. Such a mandate can be revoked at any time, and the funds stay in the owner's wallet until the moment they are spent, which removes the need to trust an intermediary with custody.",
+      "version": 1,
+      "workId": "0x4072aec131efc538042bd98bff6d275f9d846c432df1dbf4304db8300956290c"
+    },
+    {
+      "contentHash": "0xc7441f8067941bbc34427cc1be4c71f67d87464c9ce8203c9959801110b1087e",
+      "text": "When an assistant lists a source next to its answer, readers assume the answer was built from that source. That assumption is weak. A model can name a page it only skimmed, attach a link to a claim it produced from memory, or quote a sentence that the page never contained. Attribution that a reader can trust has to be checked mechanically: the quoted words must be found in the saved text of the source, and the answer must actually contain them. Anything less is a claim about provenance, and a claim is not the same thing as evidence that the words were used.",
+      "version": 1,
+      "workId": "0x728d054e6c4b9694ae14ffdd6470d3fffa559fdc17e6f827faad573a5cdf82dc"
+    }
+  ],
+  "strike": {
+    "blockNumber": 25963688,
+    "chainId": 5042,
+    "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "txHash": "0x26ac9c025de05128be3090c0c3ef1b927761d62f3e9a7d5ebb5ef0206a411d38"
+  },
+  "transferIds": [
+    "47fcc335-fb77-40e8-9bb1-acd67ffbcd38",
+    "97e908c2-b2fe-4ae2-b5a7-27033c3d9834",
+    "a53f4856-af2b-4065-8340-35904305afe5",
+    "cecf35cb-7ba6-4f15-adc5-f3b6ee8163fa",
+    "e5c0fdb3-892d-4daf-ac93-adb107d4bcfe"
+  ],
+  "unregistered": []
+}

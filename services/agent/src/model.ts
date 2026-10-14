@@ -55,9 +55,10 @@ const RANK_SYSTEM =
 
 const DRAFT_SYSTEM = [
   'You answer a question using ONLY the provided sources.',
-  'Write a short answer of two or three sentences.',
+  'Write a short answer of two to five sentences.',
   'The answer text itself MUST contain at least one verbatim quotation from a source, copied character for character and wrapped in double quotation marks.',
   'Each quotation is a whole sentence or clause between 8 and 80 words. Do not paraphrase inside quotation marks.',
+  'When several sources are provided, include exactly one verbatim quotation from EACH provided source, in double quotation marks, so that every source appears once. Cover all of them.',
   'List every quotation you used in citations with the workId of the source it came from.',
   'Reply with JSON {"answer": string, "citations": [{"workId": string, "quote": string}]}.',
   'Never state prices, amounts or addresses.',

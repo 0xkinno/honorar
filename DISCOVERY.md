@@ -17,8 +17,8 @@ Source: Circle docs, "Batched settlement". A buyer signs an EIP-3009 authorizati
 | E3 | When buyer funds are locked | Deposited 0.040000 USDC, 15 transfers totalling 0.015000; Gateway available 0.025000 (expected 0.025000, match: true). Funds leave the available balance at authorization, before any batch settles. |
 | E4 | Ambiguous after sign | Seller dropped the socket after settling. pay() threw "fetch failed", the buyer had signed, the seller received 1 signed request, searchTransfers found 1 transfer. Verdict RECOVERED. Insufficient balance and blocklisted payee strings: UNKNOWN. |
 | E5 | Writer credit reconciled | Writer Gateway total 0.014000 versus completed transfers 0.014000 across 15 transfers: MATCH. Method: Writer Gateway balance via getBalances(writer) compared with the sum of completed transfers to that writer. Per-block archive reads of GatewayWallet were not used. |
-| E6 | Strike cost | 208875 gas, 0.004178 USDC for a 1-leaf strike (6 strikes measured). Strikes with 3, 5 and 10 leaves: UNKNOWN. |
-| E7 | Browser withdraw | UNKNOWN. The SDK withdraw signs an EIP-712 burn intent, which a browser wallet can sign, but it was not exercised. |
+| E6 | Strike cost | 1 leaf: 208875 gas, 0.004178 USDC (7 strikes); 2 leafs: 284251 gas, 0.005685 USDC (4 strikes); 3 leafs: 364731 gas, 0.007295 USDC (2 strikes); 5 leafs: 520599 gas, 0.010412 USDC (2 strikes). 10 leaves: UNKNOWN until ten works are registered. |
+| E7 | Withdraw | Withdraw works from the writer key: 0.016400 USDC minted to the wallet, [0xad2e8435...](https://explorer.arc.io/tx/0xad2e8435854b909bbd32f18cbceb9ff16e5b215e6c7a64a4caa9f3a9ac900a5a). The SDK needs amount plus a fee inside the available balance. Browser-wallet signing of the burn intent was not exercised. |
 
 ## 3. Evidence
 

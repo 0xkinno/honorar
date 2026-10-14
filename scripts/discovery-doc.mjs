@@ -12,7 +12,10 @@ const u = 'UNKNOWN';
 const usdc = (b) => (Number(b) / 1e6).toFixed(6);
 
 const batchLine = e2 ? e2.batches.map((b) => `[${b.txHash.slice(0, 10)}...](${x}${b.txHash}) carried ${b.honorarTransfersInBatch} of our transfers in ${b.logCount} log`).join('; ') : u;
-const gas = e6 && e6.strikes.length ? `${e6.strikes[0].gasUsed} gas, ${e6.strikes[0].usdc} USDC for a ${e6.strikes[0].leaves}-leaf strike (${e6.strikes.length} strikes measured)` : u;
+const byLeaves = {};
+if (e6) for (const r of e6.strikes) (byLeaves[r.leaves] ??= []).push(r);
+const gas = e6 && e6.strikes.length ? Object.keys(byLeaves).sort((a, b) => a - b).map((n) => `${n} leaf${n === '1' ? '' : 's'}: ${byLeaves[n][0].gasUsed} gas, ${byLeaves[n][0].usdc} USDC (${byLeaves[n].length} strike${byLeaves[n].length === 1 ? '' : 's'})`).join('; ') : u;
+const e7 = j('evidence/discovery/E7.json');
 
 const md = `# DISCOVERY
 
@@ -33,8 +36,8 @@ Source: Circle docs, "Batched settlement". A buyer signs an EIP-3009 authorizati
 | E3 | When buyer funds are locked | ${e3 ? `Deposited ${usdc(e3.depositedBaseUnits)} USDC, ${e3.transfersFromAgent} transfers totalling ${usdc(e3.transfersSumBaseUnits)}; Gateway available ${usdc(e3.observedGateway.available)} (expected ${usdc(e3.expectedAvailable)}, match: ${e3.matchesExpected}). Funds leave the available balance at authorization, before any batch settles.` : u} |
 | E4 | Ambiguous after sign | ${b8 ? `Seller dropped the socket after settling. pay() threw "${b8.payCallError}", the buyer had signed, the seller received ${b8.signedRequestsReceivedBySeller} signed request, searchTransfers found ${b8.transfersFoundBySearch.length} transfer. Verdict ${b8.verdict}. Insufficient balance and blocklisted payee strings: ${u}.` : u} |
 | E5 | Writer credit reconciled | ${e5 ? `Writer Gateway total ${usdc(e5.writerGatewayTotal)} versus completed transfers ${usdc(e5.completedToWriterBaseUnits)} across ${e5.transfersToWriter} transfers: ${e5.verdict}. Method: ${e5.method}` : u} |
-| E6 | Strike cost | ${gas}. Strikes with 3, 5 and 10 leaves: ${u}. |
-| E7 | Browser withdraw | ${u}. The SDK withdraw signs an EIP-712 burn intent, which a browser wallet can sign, but it was not exercised. |
+| E6 | Strike cost | ${gas}. 10 leaves: ${u} until ten works are registered. |
+| E7 | Withdraw | ${e7 ? `Withdraw works from the writer key: ${e7.withdrawn} USDC minted to the wallet, [${e7.mintTxHash.slice(0, 10)}...](${x}${e7.mintTxHash}). The SDK needs amount plus a fee inside the available balance. Browser-wallet signing of the burn intent was not exercised.` : u} |
 
 ## 3. Evidence
 

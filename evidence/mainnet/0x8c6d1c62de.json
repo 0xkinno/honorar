@@ -1,0 +1,51 @@
+{
+  "answer": "Micropayments are often impractical due to high transaction fees, so systems use batching to aggregate many small payments into a single ledger entry. This process ensures that \"thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch.\"",
+  "answerId": "0x8c6d1c62de9b6b51815b79be8e805c7598dff926971303df609a7b2245bee695",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch.",
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "1000",
+  "gatewayTransfersHash": "0x557607ece859f52e6f78ddef6e5b965939b0ceccac67c0fe2589eec655479e4b",
+  "leaves": [
+    {
+      "amount": "3000",
+      "origin": "model",
+      "spanHash": "0x78cde4752e7f7125f02919cad7a368e570dfe9c951c9a1f6c7b3ef98277dae38",
+      "spans": [
+        "thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch."
+      ],
+      "version": 1,
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    }
+  ],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "How do micropayments, batching, netting, citation checks and spending mandates fit together when paying writers?",
+  "reconciliation": [],
+  "refused": [],
+  "root": "0xf714a67e5d17724c7d65c70c36779ccf5cbd10d20db4413f8950edfc8badc3d9",
+  "sources": [
+    {
+      "contentHash": "0xf81679d9f812b40b065079898fce559f591c426dbeae7d7548d50094868f89b4",
+      "text": "A micropayment is a payment so small that the cost of moving it can exceed its value. Card networks charge a fixed fee per transaction, which is why nobody sells a single article for a tenth of a cent on that rail. Batching changes the arithmetic: thousands of tiny authorizations are collected, netted against one another and written to the ledger as one transaction, so the fixed cost is shared by everyone in the batch. The price of that efficiency is visibility. An individual payment is no longer a line on the public ledger, only a contribution to a net balance change, and anyone who wants a receipt has to ask the operator of the batch for it.",
+      "version": 1,
+      "workId": "0x0601fae42864769504709cc6520e8340f80f1f55703d73dc96363740e9388eff"
+    }
+  ],
+  "strike": {
+    "blockNumber": 25963204,
+    "chainId": 5042,
+    "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "txHash": "0xed767b4f1d68c62582d3dc0a5e439a6f1e9f8bd68ad4140e06b2ba55ec390bea"
+  },
+  "transferIds": [
+    "9e57d17e-afde-4cc4-97f1-8579aba45140"
+  ],
+  "unregistered": []
+}

@@ -1,0 +1,66 @@
+{
+  "agentId": "2436",
+  "feedback": [
+    {
+      "answerId": "0x5b4d197bd787a84f1aa3b2990eb9e266d5c2eca65eb120702a6218545381696a",
+      "score": 100,
+      "tx": "0xdd74e3ce59fa039fa4980787fd1a2cc41654ebbf7ede0ba5b7a46d7fdeca8f96"
+    },
+    {
+      "answerId": "0x8436aaaecef2f8f8459c76691b7ce6624f6bdb718409e66ead3b24d0471e6049",
+      "score": 100,
+      "tx": "0xf90e260c402e2127c6227c5f67710092f5ebf1f6deb8643441fb984779fcde05"
+    },
+    {
+      "answerId": "0x8593b3724389daf86e6a7adde8af57c16a2eecf8b1b9504338ca87b5e7eaaf03",
+      "score": 100,
+      "tx": "0x88d09f245b888b405941e03f8c6bb2283b59c28061c6dbdb92588951f3bbcfa0"
+    },
+    {
+      "answerId": "0xe75bb8492cf74dd180be12f810a2dc3c0f152d8c9753b9cbb2afdbea56765ebf",
+      "score": 100,
+      "tx": "0xc203f68472e82dfb65594d36aafed78d47c0eca21ad5c6fe1880f60eb37a9553"
+    },
+    {
+      "answerId": "0xf1e0b90655277a2c02dc9754218d7bf4af55a1361cc50460a40efa455299dbc1",
+      "score": 100,
+      "tx": "0x0b062ab70c54eb2896da7fa872c5544f28f06805e400d355f39ea31231bf31e8"
+    },
+    {
+      "answerId": "0x1e368b5894170f2ddb424aa8e3dff4573c7b3b2fcd1c4d6f1155d9a46c0cbc27",
+      "score": 0,
+      "tx": "0x18f9c0f66ce5741e672f56bfcaa63aa5032a3326c11cb4eda2a6dafd8933064e",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x3c6b742760aa66bbeaacf68d49622ca2af7817fbbfbcd7b27049c69772f81e9b",
+      "score": 0,
+      "tx": "0xaf61e594f40316a52a055233d0eaadae141ac0d9f8dd10151fc75bf728b5593f",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x547e3d020819660f0c9b1e582e89ef940b702af4ca3c959e5d999adfed94add9",
+      "score": 0,
+      "tx": "0x59f2079439b1be49706505abc1a857b1bd3cff638870410a9cabd0b2b7a14061",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x73c3d754e2942a4f13a2b62fd85b66d2ed3c1d31d311bffbdb03088cabc82920",
+      "score": 0,
+      "tx": "0xcc575843d6c22f1b57fa185573c313f2b09e5732c0539c6c4f6188180c64bdeb",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x7a4c74eb92b96a69a1f1dd36e8e20dd9489be1f0b0adac8556500b7fe467ccc8",
+      "score": 0,
+      "tx": "0xda10632aebcc010def785ba52fd925f116eeb069bd31daf5d31f97c6144e7791",
+      "tag": "answer_refused"
+    },
+    {
+      "answerId": "0x8a9951baaa5160fada7d45926f8cd85a5267ed56ffd1eb691cbcdf7e306dd3ee",
+      "score": 100,
+      "tx": "0x31d957b4c01a97fee39659b4225f5795f76154977e9bab03d90c2261cb6262ad",
+      "tag": "answer_settled"
+    }
+  ]
+}

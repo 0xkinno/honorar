@@ -154,14 +154,14 @@ app.post('/ask', async (c) => {
         publicUrl: cfg.PUBLIC_AGENT_URL,
         readingBudget: cfg.READING_BUDGET_USDC6,
         maxSources: cfg.MAX_SOURCES,
-        onStruck: async (answerId, result) => {
+        onAnswered: async (answerId, result, struck) => {
           const agentId = process.env.ERC8004_AGENT_ID;
           if (!agentId || !cfg.VALIDATOR_PRIVATE_KEY) return;
-          const proposed = result.leaves.filter((l) => l.origin === 'model').length + result.refused.length;
-          const score = feedbackScore(result.leaves.filter((l) => l.origin === 'model').length, proposed);
-          void giveFeedback(chain, cfg.ARC_RPC_URL, cfg.VALIDATOR_PRIVATE_KEY as Hex, BigInt(agentId), score, answerId).catch((e: unknown) =>
-            log.warn('feedback failed', { error: (e as Error).message }),
-          );
+          const proposed = result.bundle.citations.length;
+          const score = feedbackScore(result.leaves.length, proposed);
+          const tag = struck ? 'answer_settled' : 'answer_refused';
+          const tx = await giveFeedback(chain, cfg.ARC_RPC_URL, cfg.VALIDATOR_PRIVATE_KEY as Hex, BigInt(agentId), score, answerId, tag);
+          await store.put('feedback', answerId, { answerId, score, tag, tx, at: new Date().toISOString() });
         },
       },
       { question, reader },
@@ -175,6 +175,8 @@ app.get('/bundle/:answerId', async (c) => {
   const b = await store.get<Bundle>('bundles', c.req.param('answerId'));
   return b ? c.json(b) : c.json({ error: 'not found' }, 404);
 });
+
+app.get('/feedback', async (c) => c.json((await store.list('feedback')).reverse().slice(0, 100)));
 
 app.get('/answers', async (c) => c.json((await store.list('answers')).reverse().slice(0, 50)));
 

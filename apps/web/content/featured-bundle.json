@@ -8,5 +8,10 @@
   "amount": "0.004",
   "batchTx": "0xb7302cb3aa7cd09aa23ab14f03790abf8de8dce72ea084ab188e4aaa25202021",
   "transferId": "7506fe14-8583-457f-92a9-d131fde3f664",
-  "medianSeconds": 527.7
+  "medianSeconds": 527.7,
+  "batchTransfers": 13,
+  "refused": {
+    "answerId": "0x1e368b5894170f2ddb424aa8e3dff4573c7b3b2fcd1c4d6f1155d9a46c0cbc27",
+    "reason": "REFUSED_NOT_IN_ANSWER"
+  }
 }
