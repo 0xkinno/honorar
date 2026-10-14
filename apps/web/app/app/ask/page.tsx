@@ -248,7 +248,7 @@ function AskInner() {
     }
   }, [q, mode, address]);
 
-  if (!AGENT_URL) return <Notice tone="bad">The agent API url is not configured for this build.</Notice>;
+  if (!AGENT_URL) return (<><PageHead title="Ask" kicker="Ask · live on Arc" /><Notice tone="warn">The live agent service is not connected to this deployment yet. Contracts are on Arc mainnet; the app lights up when the agent API url is set.</Notice></>);
 
   return (
     <div style={{ display: 'grid', gap: 20, maxWidth: 920 }}>

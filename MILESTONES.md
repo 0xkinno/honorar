@@ -7,3 +7,5 @@
 | 2026-10-14 | Offline verifier, break campaign, agent service code |
 | 2026-10-14 | Contracts deployed to Arc mainnet |
 | 2026-10-14 | Landing and app UI |
+| 2026-10-14 | Web deployed to Vercel at honorar.vercel.app |
+| 2026-10-14 | README rewritten per Phase R |

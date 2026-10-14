@@ -31,7 +31,7 @@ for (const vp of VIEWPORTS) {
         page.on('pageerror', (e) => errors.push(e.message));
         const failed: string[] = [];
         page.on('requestfailed', (r) => {
-          if (r.url().startsWith('http://localhost:3100')) failed.push(r.url());
+          if (r.url().startsWith(process.env.PW_BASE_URL ?? 'http://localhost:3100')) failed.push(r.url());
         });
 
         await page.goto(route, { waitUntil: 'networkidle' });

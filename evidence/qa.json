@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-14T12:53:39.950Z",
+  "ranAt": "2026-10-14T13:15:52.998Z",
   "results": [
     {
       "viewport": "iphone-se",
@@ -9,56 +9,23 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "iphone-se",
       "route": "/app/library",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 1,
-      "failedRequests": 0
-    },
-    {
-      "viewport": "iphone-se",
-      "route": "/app/earnings",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 1,
-      "failedRequests": 0
-    },
-    {
-      "viewport": "iphone-se",
-      "route": "/app/ledger",
-      "noHScroll": true,
-      "h1s": 1,
-      "overlaps": 0,
-      "heroClear": true,
-      "stickyOk": true,
-      "consoleErrors": 3,
-      "failedRequests": 0
-    },
-    {
-      "viewport": "iphone-se",
-      "route": "/verify",
       "noHScroll": true,
       "h1s": 1,
       "overlaps": 0,
@@ -69,6 +36,39 @@
     },
     {
       "viewport": "iphone-se",
+      "route": "/app/earnings",
+      "noHScroll": true,
+      "h1s": 0,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "iphone-se",
+      "route": "/app/ledger",
+      "noHScroll": true,
+      "h1s": 0,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "iphone-se",
+      "route": "/verify",
+      "noHScroll": true,
+      "h1s": 1,
+      "overlaps": 0,
+      "heroClear": true,
+      "stickyOk": true,
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "viewport": "iphone-se",
       "route": "/proof",
       "noHScroll": true,
       "h1s": 1,
@@ -86,7 +86,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -97,18 +97,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -119,29 +119,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "iphone-15-pro",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -174,7 +174,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -185,18 +185,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -207,29 +207,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "pixel-7",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -262,7 +262,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -273,18 +273,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -295,29 +295,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "galaxy-s20",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -350,7 +350,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -361,18 +361,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "ipad-mini",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -383,29 +383,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "ipad-mini",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "ipad-mini",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -438,7 +438,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -449,18 +449,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "ipad-pro",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -471,29 +471,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "ipad-pro",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "ipad-pro",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -526,7 +526,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -537,18 +537,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "laptop",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -559,29 +559,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "laptop",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "laptop",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -614,7 +614,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -625,18 +625,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "desktop",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -647,29 +647,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "desktop",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "desktop",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -702,7 +702,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -713,18 +713,18 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "wide",
       "route": "/app/ask",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -735,29 +735,29 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "wide",
       "route": "/app/earnings",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
       "viewport": "wide",
       "route": "/app/ledger",
       "noHScroll": true,
-      "h1s": 1,
+      "h1s": 0,
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 3,
+      "consoleErrors": 0,
       "failedRequests": 0
     },
     {
@@ -790,7 +790,7 @@
       "overlaps": 0,
       "heroClear": true,
       "stickyOk": true,
-      "consoleErrors": 1,
+      "consoleErrors": 0,
       "failedRequests": 0
     }
   ]

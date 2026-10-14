@@ -9,7 +9,7 @@ export default function LedgerPage() {
   const answers = useFetch<AnswerRow[]>('/answers', 15000);
   const transfers = useFetch<TransferView[]>('/transfers', 15000);
   const recon = useFetch<ReconView[]>('/reconciliations', 15000);
-  if (!AGENT_URL) return <Notice tone="bad">The agent API url is not configured for this build.</Notice>;
+  if (!AGENT_URL) return (<><PageHead title="Ledger" kicker="Public · no wallet" /><Notice tone="warn">The live agent service is not connected to this deployment yet. Contracts are on Arc mainnet; the app lights up when the agent API url is set.</Notice></>);
   const mismatches = (recon.data ?? []).filter((r) => r.verdict === 'MISMATCH');
   return (
     <div style={{ display: 'grid', gap: 20 }}>

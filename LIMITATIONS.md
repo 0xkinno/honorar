@@ -9,3 +9,4 @@
 - Gateway withdrawal from a browser wallet (E7) has not been established yet. A CLI path is the fallback.
 - The model is optional for payouts: if no model key is configured the answer loop is unavailable, and scripted answers must be labelled as such.
 - Quotes shorter than 8 words or longer than 80 words are refused by design.
+- The live Vercel deployment is not yet connected to an agent API or a wallet project id, so on-site asking, registering and wallet connection are not available there until those two values are set.

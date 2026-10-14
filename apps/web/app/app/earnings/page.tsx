@@ -45,7 +45,7 @@ export default function EarningsPage() {
     };
   }, [address, cfg]);
 
-  if (!AGENT_URL) return <Notice tone="bad">The agent API url is not configured for this build.</Notice>;
+  if (!AGENT_URL) return (<><PageHead title="Earnings" kicker="Writers" /><Notice tone="warn">The live agent service is not connected to this deployment yet. Contracts are on Arc mainnet; the app lights up when the agent API url is set.</Notice></>);
   if (!address) return (<><PageHead title="Earnings" kicker="Writers" /><Notice>Connect the wallet you registered works with.</Notice></>);
 
   const total = (quotes ?? []).reduce((a, q) => a + q.amount, 0n);
