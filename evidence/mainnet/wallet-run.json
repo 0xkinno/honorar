@@ -1,0 +1,25 @@
+{
+  "signer": "project owner wallet through the Capture wallet provider, driven by Playwright Chromium on honorar.vercel.app",
+  "account": "0x61633ad4E068355Ea45a4787150aB69aDF5aE682",
+  "registerWork": {
+    "hash": "0x2a760860dbeac79f2d5cb2e90b64929e7735b30a6e5df6720dc9c54a477986a5",
+    "to": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "block": 25965592
+  },
+  "approve": {
+    "hash": "0x627aeb27f7f556fd165188113412de6f515212f5a95eb3cdd575c13e550976c4",
+    "to": "0x3600000000000000000000000000000000000000",
+    "block": 25965626
+  },
+  "setMandate": {
+    "hash": "0x9ee17e618a34c6bedbe21282ff1aac3edd71eb4b600d99a33ceb8cf053be1c34",
+    "to": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "block": 25965643
+  },
+  "answerId": "0x59ef035ad3370cdba9e7838411fcafa3ba6cfdf454ec14e692c034f3a9cf4f6e",
+  "strike": {
+    "hash": "0x354f705d83e8967cc721c08a709ebfa03b1b96aab13f44668b76c535ff939918",
+    "block": 25966012
+  },
+  "ranAt": "2026-10-14T18:40:17.108Z"
+}

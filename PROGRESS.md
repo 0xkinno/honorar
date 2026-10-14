@@ -13,12 +13,15 @@
 - QA matrix 72 of 72 against the live deployment
 - Live end to end on Vercel: ask on honorar.vercel.app, Render agent, Gateway reading fee, kernel, mainnet strike, in-browser verify V1 to V8 PASS (screenshots in docs/qa/live-*.png)
 - README, DISCOVERY and EVIDENCE are generated from files in `evidence/`
+- Connected-wallet run on mainnet through the live UI: registerWork, approve, setMandate and a wallet-paid answer (docs/WALLET-RUN.md)
+- Multi-writer corpus: six registered works plus two builder articles; strikes with 1, 2, 3 and 5 leaves
+- Reputation feedback for every answer, struck or refused; E7 withdraw on mainnet
+- Wallet fallback: injected browser wallet works without a Reown project id
 
 ## Waiting or partial
-- E6 for 3, 5 and 10 leaves: needs more registered works
-- E7 browser withdraw: not exercised
+- E6 for 10 leaves: needs ten registered works (1, 2, 3 and 5 leaves measured)
+- E7: withdraw works from the writer key; browser-wallet signing of the burn intent not exercised
 - Explorer-side source verification is behind a bot challenge; both contracts are verified on Sourcify (exact match)
-- Wallet-signed flows (register a work, set a mandate) need a human wallet session to exercise end to end
 - Demo video
 
 ## Next

@@ -10,5 +10,5 @@
 - Free-tier model providers rate-limit and return 503 under load; the agent retries and falls back to the second provider, and a failed draft after a paid read leaves that reading fee unreimbursed.
 - Quotes shorter than 8 words or longer than 80 words are refused by design.
 - Reading fees settle in minutes, not seconds (measured p50 and range in DISCOVERY.md). The UI shows the four states and never calls a fee paid before `completed`.
-- Strike cost was measured for single-leaf answers only.
+- Strike cost was measured for 1, 2, 3 and 5 leaves; ten leaves needs ten registered works.
 - The benchmark runs the payout policies offline over a small corpus, so it shows the policy gap, not production-scale traffic.

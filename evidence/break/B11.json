@@ -8,6 +8,6 @@
   "observed": "forge test_B11_price_above_registry_reverts: Success",
   "verdict": "REJECTED",
   "env": "foundry",
-  "ranAt": "2026-10-14T16:36:31.194Z",
-  "commit": "1ba50e6a9122bfc925e90fde735398e3eae1f2e9"
+  "ranAt": "2026-10-14T18:44:00.733Z",
+  "commit": "90179a37ece16c505d3b9b44b0d22c7bc01a5fca"
 }

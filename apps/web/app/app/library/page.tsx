@@ -45,7 +45,7 @@ export default function LibraryPage() {
     setError(null);
     try {
       await ensureArc(chainId, switchChainAsync);
-      const recipients = splits.map((s) => s.address as `0x${string}`);
+      const recipients = splits.map((s, i) => (i === 0 && !s.address ? address : s.address) as `0x${string}`);
       if (recipients[0]?.toLowerCase() !== address.toLowerCase()) throw new Error('the first recipient must be the connected wallet');
       const bps = splits.map((s) => Math.round(Number(s.pct) * 100));
       const workId = keccak256(encodeAbiParameters([{ type: 'bytes32' }, { type: 'address' }], [preview.contentHash as `0x${string}`, address]));

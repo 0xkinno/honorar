@@ -1,0 +1,5 @@
+Why an AI quote should earn a fee
+
+Every answer an assistant writes is built from sentences that a person once wrote. When the assistant quotes one of them, the quotation is the smallest unit of work that anyone can point at, and it is the right unit to pay for. A subscription pays for access and a licence pays for a catalogue, but a quotation pays for use, which is the only thing a writer actually wants to know about.
+
+Paying per quotation only works if the quotation can be checked. The words must be found in the saved text of the source, and the answer must really contain them. When both are true, a payment can be sent in the same moment, and the writer receives a receipt that any stranger can verify without asking anyone's permission.

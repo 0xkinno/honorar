@@ -67,5 +67,17 @@ if (existsSync(mainnetDir)) {
     lines.push(`- Validator feedback entries: ${f.feedback.length}`, ...f.feedback.map((e) => `  - ${e.answerId.slice(0, 12)} score ${e.score}: [${e.tx.slice(0, 12)}...](${x}/tx/${e.tx})`), '');
   }
 }
+const wr = existsSync('evidence/mainnet/wallet-run.json') ? JSON.parse(readFileSync('evidence/mainnet/wallet-run.json', 'utf8')) : null;
+if (wr) {
+  lines.push('## Connected wallet', '', `Signed by ${wr.account.slice(0, 6)}...${wr.account.slice(-4)} through the app on honorar.vercel.app.`, '');
+  for (const [k, l] of [['registerWork', 'registerWork'], ['approve', 'approve USDC'], ['setMandate', 'setMandate'], ['strike', 'strike (connected-wallet answer)']]) {
+    lines.push(`- ${l}: [${wr[k].hash}](${x}/tx/${wr[k].hash}) at block ${wr[k].block}`);
+  }
+  lines.push(`- answer ${wr.answerId}`, '');
+}
+const med = existsSync('evidence/mainnet/medium.json') ? JSON.parse(readFileSync('evidence/mainnet/medium.json', 'utf8')) : null;
+if (med) {
+  lines.push('## Builder articles registered', '', ...med.works.map((w) => `- ${w.title}: [${(w.registerTx ?? 'registered').slice(0, 12)}](${x}/tx/${w.registerTx}) workId \`${w.workId.slice(0, 12)}...\``), '');
+}
 writeFileSync('EVIDENCE.md', `${lines.join('\n')}\n`);
 process.stdout.write(`evidence written: ${JSON.stringify(counts)}\n`);

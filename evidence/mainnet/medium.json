@@ -1,0 +1,22 @@
+{
+  "registrant": "0x61633ad4E068355Ea45a4787150aB69aDF5aE682",
+  "works": [
+    {
+      "slug": "mnemon",
+      "title": "MNEMON: When an Agent’s Memory Disagrees With Itself",
+      "url": "https://medium.com/@ojilerekingsley/mnemon-when-an-agents-memory-disagrees-with-itself-13ceae457c1b",
+      "workId": "0x955f2fb34afb803f858f229ba08bee5137bc345c88527a1f6ebdb95ad0b63ce1",
+      "contentHash": "0x886be9608013238c384fa0bd332069f48e237251511170c56b1084d88af3d246",
+      "registerTx": "0xc7373d27b7453f2b9d515f8b63f7bfcc82a077a6854e03f99f20efbbf1cb3e20"
+    },
+    {
+      "slug": "mantissa",
+      "title": "The Real Value, Hidden in Plain Sight: Building MANTISSA on STRK20",
+      "url": "https://medium.com/@ojilerekingsley/the-real-value-hidden-in-plain-sight-building-mantissa-on-strk20-8bbaa9ddac67",
+      "workId": "0x509313b57d029656ebf08c998fa8cd94fd461be84d5e49281bf7c88aa06da2bb",
+      "contentHash": "0x598c5b0ce80f301d2f2f26027a6cc8321885bd2775c501ad4ad5eb01b1e6a927",
+      "registerTx": "0xf6652eb6e9700627ff2d88f9fa21fcd028eeba5fb6b10b1cb6a9bad6bd274764"
+    }
+  ],
+  "note": "Articles by the builder, registered through the project owner wallet."
+}

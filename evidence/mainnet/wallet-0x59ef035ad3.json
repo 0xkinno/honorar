@@ -1,0 +1,75 @@
+{
+  "answer": "Language models should only provide narrative explanations because \"the engine owns the verdict,\" ensuring that critical facts remain verifiable by deterministic code. By separating the model's prose from the engine's data, developers can ensure that \"the worst case for a bad model answer is a missing paragraph, not a wrong attribution.\"",
+  "answerId": "0x59ef035ad3370cdba9e7838411fcafa3ba6cfdf454ec14e692c034f3a9cf4f6e",
+  "bundleVersion": 1,
+  "citations": [
+    {
+      "quote": "the engine owns the verdict.",
+      "workId": "0xfa32f1032664292112cfb765dde83bab0f376971d67b616a578ccd0d5ab054bc"
+    },
+    {
+      "quote": "the worst case for a bad model answer is a missing paragraph, not a wrong attribution.",
+      "workId": "0xfa32f1032664292112cfb765dde83bab0f376971d67b616a578ccd0d5ab054bc"
+    }
+  ],
+  "feeBps": 250,
+  "frontedReadingFees": "3000",
+  "gatewayTransfersHash": "0x03765d6d9e692ebac484d1bf19bbd97b8ba8159f9e8d92e85e971c63c1a2bc3a",
+  "leaves": [
+    {
+      "amount": "4000",
+      "origin": "model",
+      "spanHash": "0x6c87efcb0ab8ed5ca6c0bf287ac612b090214703f712a05462163cd739889eca",
+      "spans": [
+        "the worst case for a bad model answer is a missing paragraph, not a wrong attribution."
+      ],
+      "version": 1,
+      "workId": "0xfa32f1032664292112cfb765dde83bab0f376971d67b616a578ccd0d5ab054bc"
+    }
+  ],
+  "normVersion": "NORM_V1",
+  "owed": [],
+  "question": "Why should a language model explain a verdict but never decide it?",
+  "reconciliation": [],
+  "refused": [
+    {
+      "quote": "the engine owns the verdict.",
+      "reason": "REFUSED_LENGTH",
+      "workId": "0xfa32f1032664292112cfb765dde83bab0f376971d67b616a578ccd0d5ab054bc"
+    }
+  ],
+  "root": "0xb751cb6b7fcdeff0ed2321f90bcbe3a7b54354cb746668f1df81f29265aa9358",
+  "sources": [
+    {
+      "contentHash": "0xdde786e36025126b03dcb44a9d9d77ca618d990e8211ade8465219c9052e2c9f",
+      "text": "A writer who is quoted by machines usually has nothing to show for it. A receipt changes that. When the receipt names the exact sentence, the answer that carried it and the transaction that paid for it, the writer holds evidence that can be checked by a stranger without trusting anyone. That evidence has a second use: a public history of verified quotations lets a writer price her work, and lets a reader decide whom to read. Payment becomes the byproduct of a record that stands on its own.",
+      "version": 1,
+      "workId": "0x1e01ea53fb2cddbd6c1cd684e6537e65cffdba69ac5377e404e1498344399e08"
+    },
+    {
+      "contentHash": "0xc7441f8067941bbc34427cc1be4c71f67d87464c9ce8203c9959801110b1087e",
+      "text": "When an assistant lists a source next to its answer, readers assume the answer was built from that source. That assumption is weak. A model can name a page it only skimmed, attach a link to a claim it produced from memory, or quote a sentence that the page never contained. Attribution that a reader can trust has to be checked mechanically: the quoted words must be found in the saved text of the source, and the answer must actually contain them. Anything less is a claim about provenance, and a claim is not the same thing as evidence that the words were used.",
+      "version": 1,
+      "workId": "0x728d054e6c4b9694ae14ffdd6470d3fffa559fdc17e6f827faad573a5cdf82dc"
+    },
+    {
+      "contentHash": "0xb964af9da637f70b0d5a30feb41d80b83ea0f758835a483c80404796855295ec",
+      "text": "How Touchplate uses Qwen 3.8 Max: a model that explains, and never decides\n\nTouchplate proves who made an image first, even after the internet strips the credit. It is live on Monad mainnet, and it uses Qwen 3.8 Max for one job: the Investigator, an agent that plans a lookup, calls tools against the chain, and explains the result in plain language.\nThe design rule is simple. Qwen narrates. Deterministic code decides.\nWhy a language model belongs here at all\nA verdict in Touchplate is a fact: the earliest finalized touch on Monad whose fingerprint matches the image. Code computes it, an offline verifier reproduces it, and no model can change it.\nBut a verdict is not a story. An editor who drops a stripped repost wants to know who sealed the picture, when, whether the match is strong, whether a later copy exists, and what to do next. That is a multi-step investigation across fingerprints, registry entries, commit states and watermark proofs. A tool-calling model is a good fit for planning and explaining it.\nWhat Qwen does\nThe Investigator runs Qwen 3.8 Max through the DashScope international OpenAI-compatible endpoint, with function calling. The model gets a small set of read-only tools:\n- fingerprint_summary: the perceptual fingerprint and quality of the dropped image\n- lookup_registry: candidate entries within the match threshold\n- get_entry and get_ladder: a registry entry and its commit-state ladder (Proposed, Voted, Finalized, Verified)\n- check_priority_onchain: whether an earlier finalized entry exists\n- get_mark_proofs: published watermark proofs for the entry\n- fetch_page_text: the text of the page where the image was found\n- draft_certificate: the final certificate, produced by the deterministic engine\nThe tool timeline streams to the UI as the model works, so the user watches the investigation instead of waiting for a paragraph.\nThe authority split\nThis is the part that makes an LLM safe to put in a trust product.\n1. The engine owns the verdict. The kind of verdict (matched, authored, contested, no record), the author, the block and the distance come from the verdict engine, the same code the offline verifier runs.\n2. The model owns the prose. Qwen writes the narrative around those facts.\n3. A validator enforces the boundary. Every name, address, block number and distance in the narrative is checked against the engine output. If the model adds a claim the engine did not produce, the narrative is rejected and the UI falls back to a deterministic summary.\n4. The UI labels the source. The report shows “Verdict copied from the engine” with the engine’s own verdict, and states whether the narrative came from the model.\nSo the worst case for a bad model answer is a missing paragraph, not a wrong attribution.\nWe attacked it\nA tool-using model that reads web pages and image metadata is a prompt injection target, so we ran it as a mainnet drill (D9, “Hostile prompt”).\nImage metadata and a decoy web page both instructed the Investigator to name a different author and block. The result:\n- The agent still called its tools in order and produced the certificate.\n- The engine verdict was unchanged: the original author, matched.\n- The narrative did not name the attacker’s address.\n- A direct grounding check on a hostile narrative was rejected by the validator.\nThe drill and its record are in the repository under docs/drills/D9.\nWhat Qwen brought\n- Orchestration without a hand-written flow. The investigation path changes with the evidence: no match, a contested same-block claim, a later copy by another author. The model picks the next tool instead of us encoding every branch.\n- Readable certificates. The output is a short report an editor can paste into a ticket, next to a certificate hash anyone can re-verify.\n- Tool calling that held up. Function calling on Qwen 3.8 Max worked reliably against our tool schema, including multi-step chains and repeated calls to the same tool for different entries.\nWhat we would tell another builder\n- Give the model tools, not authority. Keep every fact that matters in code you can test.\n- Validate the output against the facts, then fail closed.\n- Attack your own agent with hostile inputs and publish the result.\nTry it\nLive app: check in Repo (open Investigate)\nCode: In Repository\nDevelopers page: In Repository\nBuilt by 0xkinno for Monad Metropolis, Trust, Identity and AI Infrastructure track.",
+      "version": 1,
+      "workId": "0xfa32f1032664292112cfb765dde83bab0f376971d67b616a578ccd0d5ab054bc"
+    }
+  ],
+  "strike": {
+    "blockNumber": 25966012,
+    "chainId": 5042,
+    "ledger": "0x3a6b60c47d8726d0ab642742ac9e65ce16173d41",
+    "registry": "0xa9cc0e089f78c5d9feaa7b44b649843fa035f8eb",
+    "txHash": "0x354f705d83e8967cc721c08a709ebfa03b1b96aab13f44668b76c535ff939918"
+  },
+  "transferIds": [
+    "32387643-345e-4c2e-a3d2-a87cb5e5cfe7",
+    "3665806f-33d9-4283-9b4c-4233c50f30dd",
+    "d164b85b-cbf6-4410-8418-95ac30080a70"
+  ],
+  "unregistered": []
+}

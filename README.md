@@ -282,18 +282,29 @@ Nine viewports by eight routes, run against the live deployment: no horizontal s
 ### On-chain proof
 
 <!-- mainnet:start -->
-**6 answers struck on Arc mainnet**, 6 reading fees through Gateway in those answers, 0.024000 USDC of honoraria to the writer.
+**15 answers struck on Arc mainnet**, 46 reading fees through Gateway in those answers, 0.130500 USDC of honoraria to the writer.
 
 | Answer | Quoted sentence | Strike tx | Block |
 |---|---|---|---|
+| `0x072e10d9` | "thousands of tiny authorizations are collected, netted against one ..." | [0x26ac9c02...](https://explorer.arc.io/tx/0x26ac9c025de05128be3090c0c3ef1b927761d62f3e9a7d5ebb5ef0206a411d38) | 25963688 |
+| `0x21fddc75` | "thousands of tiny authorizations are collected, netted against one ..." | [0x9c839154...](https://explorer.arc.io/tx/0x9c839154c53c8248c7dbce725ab0f55eac70686aef26f04e7f0ea405580f64c7) | 25962972 |
+| `0x42e1adf5` | "a stablecoin payment is final when the ledger says it is final, and..." | [0x09d6697b...](https://explorer.arc.io/tx/0x09d6697b17b30243de2075f14106b3d5d2fa2d98fdf128fa5891f7e6c0bdcfae) | 25963046 |
+| `0x4d68c6d0` | "a stablecoin payment is final when the ledger says it is final, and..." | [0x57cb3d45...](https://explorer.arc.io/tx/0x57cb3d4548ae56cbb9b548a63bd4d4ff46b9b0387a2df1a0379b932e9854d1ca) | 25963747 |
 | `0x5b4d197b` | "a stablecoin payment is final when the ledger says it is final, and..." | [0x33353a94...](https://explorer.arc.io/tx/0x33353a9432f6fd46e268c2237d0fe5bca122a2607d8f9470aeae80eb745fe4d3) | 25947158 |
+| `0x763f2fed` | "thousands of tiny authorizations are collected, netted against one ..." | [0x5cb82e30...](https://explorer.arc.io/tx/0x5cb82e3056d585b35256671d5a243e6db2682800c88ca2af4e7a360c59f7197a) | 25963810 |
+| `0x7799747f` | "payment becomes the byproduct of a record that stands on its own." | [0x42888f0e...](https://explorer.arc.io/tx/0x42888f0e21d82b61e533502a25572105b05800f3c7ea88f1ae78e9ba5456494d) | 25963089 |
 | `0x8436aaae` | "a stablecoin payment is final when the ledger says it is final, and..." | [0xb5dd69f1...](https://explorer.arc.io/tx/0xb5dd69f1fe5b25c4b503c8e8656fd3c138eebcf68b6cfd23bff8027f64158847) | 25946989 |
 | `0x8593b372` | "fees are small and quoted in dollars, which makes very small paymen..." | [0xece04bb0...](https://explorer.arc.io/tx/0xece04bb09a53035e00df4bcd9e1bf24a80e542d1f7687d234c4eac553c279dfd) | 25947776 |
+| `0x8c6d1c62` | "thousands of tiny authorizations are collected, netted against one ..." | [0xed767b4f...](https://explorer.arc.io/tx/0xed767b4f1d68c62582d3dc0a5e439a6f1e9f8bd68ad4140e06b2ba55ec390bea) | 25963204 |
+| `0xa86e57e4` | "a public history of verified quotations lets a writer price her wor..." | [0xc032c3f8...](https://explorer.arc.io/tx/0xc032c3f8d15b6987a1e47aeaf456ad0b572304c4df18f369fc59079f0cb2e39c) | 25963884 |
 | `0xe75bb849` | "an authorization is only a promise, and the money moves through cle..." | [0xb6e05566...](https://explorer.arc.io/tx/0xb6e055664ac1ff058fdf1d13f2983dd284def29f45a3645637a27dc7ec05f16c) | 25947830 |
+| `0xeb68cda5` | "a public history of verified quotations lets a writer price her wor..." | [0x5062fc60...](https://explorer.arc.io/tx/0x5062fc60f35f694dae1fc5e47c062d868fd81755436acb508399a5a192ac33c8) | 25963129 |
 | `0xf1e0b906` | "a reading fee of a tenth of a cent only makes sense when the rail h..." | [0x6c3e9149...](https://explorer.arc.io/tx/0x6c3e91497b71be6696864f5ed0034247aafbb32ef41c229431a6e026dc9743dc) | 25947218 |
 | `0x8a9951ba` | "an authorization is only a promise, and the money moves through cle..." | [0x772378c2...](https://explorer.arc.io/tx/0x772378c27319e887bc14c0f8114ae720aab675f3fe2b494c0e4aa23071af1211) | 25946799 |
 
-ERC-8004 agent id **2436** ([registration](https://explorer.arc.io/tx/0x3482f79593f458963d9f35728119a1c0713554476f54467b9a54e13aa0381420)), 5 validator feedback entries recorded.
+Tally: **21 answers run on mainnet, 16 struck, 5 refused** (REFUSED_NOT_IN_ANSWER x5). Largest strike: 5 quotes from 5 different registered works in one transaction.
+
+ERC-8004 agent id **2436** ([registration](https://explorer.arc.io/tx/0x3482f79593f458963d9f35728119a1c0713554476f54467b9a54e13aa0381420)), 11 validator feedback entries recorded.
 <!-- mainnet:end -->
 
 ### Discovery: what Arc actually does
@@ -307,7 +318,7 @@ Measured on mainnet by `scripts/discovery/`, rendered into [DISCOVERY.md](DISCOV
 - **Funds leave the available balance at authorization.** Deposit 0.040000 USDC, 15 transfers of 0.001, available balance 0.025000 as expected.
 - **A signed payment must never be retried.** When the seller drops the socket after settling, `pay()` throws but the payment exists: 1 transfer found by `searchTransfers`, 1 signed request sent. Verdict: recovered.
 - **Writer credit reconciles.** Writer Gateway total 0.014000 USDC equals completed transfers to that writer (MATCH).
-- **A strike is cheap.** 208875 gas, **0.004178 USDC** for a one-leaf honorarium (6 strikes measured).
+- **A strike is cheap.** 520599 gas, **0.010412 USDC** for a one-leaf honorarium (15 strikes measured).
 <!-- discovery:end -->
 
 ### Benchmark: payout policies over identical answers

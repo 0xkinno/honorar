@@ -42,6 +42,12 @@ for (const b of bundles) {
   const span = b.leaves[0]?.spans[0] ?? '';
   mainnet.push(`| \`${b.answerId.slice(0, 10)}\` | "${span.length > 70 ? `${span.slice(0, 67)}...` : span}" | [${b.strike.txHash.slice(0, 10)}...](${x}${b.strike.txHash}) | ${b.strike.blockNumber} |`);
 }
+const allB = readdirSync(dir).filter((n) => /^(0x[0-9a-f]{10}|answer-1|wallet-0x[0-9a-f]+)\.json$/.test(n)).map((n) => j(`${dir}/${n}`));
+const refusedAll = allB.filter((b) => !b.strike);
+const reasons = {};
+for (const b of refusedAll) for (const r of b.refused) reasons[r.reason] = (reasons[r.reason] ?? 0) + 1;
+const maxLeaves = Math.max(0, ...allB.map((b) => b.leaves.length));
+mainnet.push('', `Tally: **${allB.length} answers run on mainnet, ${allB.filter((b) => b.strike).length} struck, ${refusedAll.length} refused** (${Object.entries(reasons).map(([k, v]) => `${k} x${v}`).join(', ') || 'none'}). Largest strike: ${maxLeaves} quotes from ${maxLeaves} different registered works in one transaction.`);
 const e = j(`${dir}/erc8004.json`);
 const fb = j(`${dir}/feedback.json`);
 if (e) mainnet.push('', `ERC-8004 agent id **${e.agentId}** ([registration](${x}${e.txHash}))${fb ? `, ${fb.feedback.length} validator feedback entries recorded` : ''}.`);
