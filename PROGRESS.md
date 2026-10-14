@@ -11,6 +11,7 @@
 - ERC-8004 agent registered (id 2436) and validator feedback recorded per struck answer
 - Web on Vercel (https://honorar.vercel.app), connected to the agent API, Reown wallet button live
 - QA matrix 72 of 72 against the live deployment
+- Live end to end on Vercel: ask on honorar.vercel.app, Render agent, Gateway reading fee, kernel, mainnet strike, in-browser verify V1 to V8 PASS (screenshots in docs/qa/live-*.png)
 - README, DISCOVERY and EVIDENCE are generated from files in `evidence/`
 
 ## Waiting or partial
