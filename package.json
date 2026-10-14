@@ -18,5 +18,10 @@
     "typescript": "5.9.3",
     "viem": "2.57.6",
     "vitest": "3.2.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@wagmi/connectors": "5.11.2"
+    }
   }
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env -S npx tsx
 import { readFileSync } from 'node:fs';
-import { createArcClient, ARC_CHAIN_ID, ARC_RPC, loadDeployment } from '@honorar/chain';
+import { createArcClient, ARC_CHAIN_ID, ARC_RPC } from '@honorar/chain';
+import { loadDeployment } from '@honorar/chain/deployments';
 import { parseBundle, type Hex } from '@honorar/kernel';
 import { allPass, verifyBundle } from './checks';
 import { rpcReader } from './rpc';
