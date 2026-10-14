@@ -22,23 +22,23 @@ Mark `[x]` only when verified. Phases end with a gate.
 - [ ] DISCOVERY.md complete
 
 ## P2 Phase C: contracts  [GATE C]
-- [ ] HonorarRegistry.sol
-- [ ] HonorarLedger.sol
-- [ ] unit tests for every function and error
-- [ ] fuzz tests
-- [ ] invariant tests
-- [ ] golden vectors shared with kernel
-- [ ] fork test against Arc mainnet
-- [ ] Deploy script
+- [x] HonorarRegistry.sol
+- [x] HonorarLedger.sol
+- [x] unit tests for every function and error
+- [x] fuzz tests
+- [x] invariant tests
+- [x] golden vectors shared with kernel
+- [ ] fork test against Arc mainnet (partial: stock Foundry lacks the native transfer precompile; needs arc-foundry build)
+- [x] Deploy script
 - [ ] Deployed to Arc mainnet and source verified
 - [ ] registerWork and setMandate executed on mainnet
 
 ## P3 Phase K: kernel  [GATE K]
-- [ ] types (I10), normalization NORM_V1
-- [ ] citation verification, refusal reasons
-- [ ] completeness sweep and OWED
-- [ ] leaves, Merkle, bundle
-- [ ] unit, property and golden-vector tests green, coverage report
+- [x] types (I10), normalization NORM_V1
+- [x] citation verification, refusal reasons
+- [x] completeness sweep and OWED
+- [x] leaves, Merkle, bundle
+- [x] unit, property and golden-vector tests green, coverage report
 
 ## P4 Phase G: Gateway rail and reconciler  [GATE G]
 - [ ] read endpoint with x402
